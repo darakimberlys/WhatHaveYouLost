@@ -2,8 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <Nullable>enable</Nullable>
+    <AssemblyName>whatYouHaveLost</AssemblyName>
+    <LangVersion>10.0</LangVersion>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WhatYouHaveLost.Repository\WhatYouHaveLost.Repository.csproj" />
+  </ItemGroup>
 
 </Project>
