@@ -1,4 +1,6 @@
-namespace WhatYouHaveLost.Repository;
+using System;
+
+namespace WhatYouHaveLost.Repository.Data;
 
 public class NewsData
 {

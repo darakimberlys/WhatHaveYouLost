@@ -1,3 +1,4 @@
+using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
 using WhatYouHaveLost.Repository;
 
@@ -14,12 +15,24 @@ public class NewsController
         _newsRepository = newsRepository;
     }
 
+    /// <summary>
+    /// [HttpGet]
+    /// </summary>
+    /// <param name="news"></param>
+    /// <returns></returns>
     [HttpGet]
     public async Task<IActionResult> GetGoodNews(string news)
     {
+        try
+        {
+            var selected = await _newsRepository.GetNewsContent(news);
 
-        var selected = await _newsRepository.GetNewsContent(news);
-
-        return OkResult(selected);
+            return new AcceptedResult("", $"{JsonSerializer.Serialize(selected)}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+            throw;
+        }
     }
 }

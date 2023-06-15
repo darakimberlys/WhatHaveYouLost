@@ -1,5 +1,9 @@
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using Dapper;
 using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Configuration;
+using WhatYouHaveLost.Repository.Data;
 
 namespace WhatYouHaveLost.Repository;
 

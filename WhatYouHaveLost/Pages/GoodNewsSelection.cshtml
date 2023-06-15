@@ -1,0 +1,23 @@
+﻿@page
+@model GoodNewsSelection
+@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Use this page to detail your site's privacy policy.</p>
+    @code
+    {
+        private readonly GoodNewsSelection _goodNewsSelection;
+    }
+<p>
+    Clique nas palavras abaixo:
+
+    
+    @foreach (var palavra in Model.Palavras)
+    
+    {
+        <a href="#" @onclick="() => _goodNewsSelection.PalavraClicada(palavra)">@palavra</a>
+        <span> | </span>
+    }
+</p>

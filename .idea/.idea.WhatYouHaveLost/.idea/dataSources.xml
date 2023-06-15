@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="Azure SQL Database" uuid="da59d6a4-1e7f-47f3-995e-ebb7055d059a">
+      <driver-ref>azure.ms</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
+      <jdbc-url>Server=tcp:sv-techchallenge.database.windows.net,1433;Initial Catalog=db-techchallenge;Persist Security Info=False;User ID=appchallenged;Password={Fiapchallenge64};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+  </component>
+</project>

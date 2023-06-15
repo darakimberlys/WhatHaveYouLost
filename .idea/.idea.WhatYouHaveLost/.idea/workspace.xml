@@ -13,22 +13,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b921db3-f342-4e9d-b359-851261f10bdc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.WhatYouHaveLost/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.WhatYouHaveLost/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.WhatYouHaveLost/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.WhatYouHaveLost/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/config/applicationhost.config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.Repository/INewsRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.Repository/NewsData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.Repository/NewsRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.Repository/WhatYouHaveLost.Repository.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost/Controllers/NewsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.WhatYouHaveLost/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WhatYouHaveLost/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost.Repository/INewsRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost.Repository/NewsData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost.Repository/NewsRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost.Repository/WhatYouHaveLost.Repository.csproj" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/WhatYouHaveLost.sln" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Pages/Error.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Pages/Error.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Controllers/NewsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Controllers/NewsController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Pages/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Pages/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Pages/Index.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Pages/Index.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Pages/Privacy.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Pages/Privacy.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Pages/Privacy.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Pages/GoodNewsSelection.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Pages/Privacy.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Pages/GoodNewsSelection.cshtml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Properties/launchSettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/WhatYouHaveLost.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/WhatYouHaveLost.csproj" afterDir="false" />
     </list>
@@ -36,6 +30,9 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -53,13 +50,18 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "SolutionBuilderGeneralOptionsPage",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "azure"
+    ],
     "rider.external.source.directories": [
       "C:\\Users\\darak\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache",
       "C:\\Users\\darak\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache",
@@ -128,13 +130,49 @@
       <option name="presentableId" value="Default" />
       <updated>1686095920643</updated>
       <workItem from="1686095921824" duration="2888000" />
+      <workItem from="1686344121793" duration="71000" />
+      <workItem from="1686344257566" duration="56000" />
+      <workItem from="1686344377926" duration="2751000" />
+      <workItem from="1686865678764" duration="588000" />
+      <workItem from="1686866311947" duration="4129000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/WhatYouHaveLost/Pages/Index.cshtml</url>
+          <line>6</line>
+          <properties documentPath="C:\Source\techChallenge\WhatYouHaveLost\WhatYouHaveLost\Pages\Index.cshtml" initialLine="6" isMultiMethodBreakpoint="true">
+            <option name="multiMethodBreakpoint" value="true" />
+            <startOffsets>
+              <option value="-1" />
+            </startOffsets>
+            <endOffsets>
+              <option value="-1" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
