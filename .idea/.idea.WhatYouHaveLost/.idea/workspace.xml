@@ -14,17 +14,13 @@
   <component name="ChangeListManager">
     <list default="true" id="0b921db3-f342-4e9d-b359-851261f10bdc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WhatYouHaveLost/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WhatYouHaveLost/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost.Repository/INewsRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost.Repository/NewsData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost.Repository/NewsRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost.Repository/WhatYouHaveLost.Repository.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost.sln" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Controllers/NewsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Controllers/NewsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Pages/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Pages/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Pages/Privacy.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Pages/GoodNewsSelection.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Pages/Privacy.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Pages/GoodNewsSelection.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Pages/GoodNewsSelection.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Pages/GoodNewsSelection.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Properties/launchSettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/WhatYouHaveLost.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/WhatYouHaveLost.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Repository/Data/NewsData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Repository/Data/NewsData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Repository/INewsRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Repository/INewsRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Repository/NewsRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Repository/NewsRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Services/NewsService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Services/NewsService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +51,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "SolutionBuilderGeneralOptionsPage",
+    "settings.editor.selected.configurable": "configurable.group.language",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -135,6 +131,7 @@
       <workItem from="1686344377926" duration="2751000" />
       <workItem from="1686865678764" duration="588000" />
       <workItem from="1686866311947" duration="4129000" />
+      <workItem from="1687210996600" duration="7248000" />
     </task>
     <servers />
   </component>

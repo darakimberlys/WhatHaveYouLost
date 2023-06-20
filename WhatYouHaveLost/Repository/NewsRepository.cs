@@ -17,9 +17,15 @@ public class NewsRepository : INewsRepository
         _connection = new SqlConnection(connectionString);
     }
     
-    public async Task<IEnumerable<NewsData>> GetNewsContent(string selectedNews)
+    public async Task<NewsData> GetNewsContent(string selectedNews)
     {
-        const string query = "SELECT * FROM Exemplos";
-        return await _connection.QueryAsync<NewsData>(query);
+        const string query = "SELECT * FROM NewsTable WHERE NewsName = @Selected";
+        
+        var listResult = await _connection.QueryAsync<NewsData>(query, new
+        {
+            Selected = selectedNews
+        });
+
+        return listResult.FirstOrDefault();
     }
 }

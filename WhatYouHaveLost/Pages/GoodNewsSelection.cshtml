@@ -1,4 +1,6 @@
-﻿@page
+﻿@page "/noticias"
+@using WhatYouHaveLost.Repository.Data
+@using WhatYouHaveLost.Repository
 @model GoodNewsSelection
 @{
     ViewData["Title"] = "Privacy Policy";
@@ -9,15 +11,32 @@
     @code
     {
         private readonly GoodNewsSelection _goodNewsSelection;
+        private readonly INewsRepository _newsRepository;
+
     }
 <p>
-    Clique nas palavras abaixo:
+    Selecione a notícia que quer ver:
+    
+    <button onclick="idosoOAB"Aos 92 anos, advogado é inscrito na OAB-GO></button>
+        <input @bind= "PalavraSelecionada" id="idosoOAB" type="string"/>
+    <button onclick="viniJr"Vini Jr é convidado para chefiar novo comitê antirracista na Fifa></button>
+        <input @bind= "PalavraSelecionada" id="viniJr" type="string"/>
+    <button onclick="pacienteCancer"Paciente que teve remissão de câncer com terapia revolucionária volta a andar></button>
+        <input @bind= "PalavraSelecionada" id="pacienteCancer" type="string"/>
+    <button onclick="idosaFeliz"Idosa que vivia em barraco sem porta e chuveiro ganha casa após vaquinha></button>
+        <input @bind= "PalavraSelecionada" id="idosaFeliz" type="string"/>
+    <button onclick="terapiaCancer"Terapia aplicada no Brasil faz câncer entrar em remissão em 1 mês. Paciente sofria há 13 anos></button>
+        <input @bind= "PalavraSelecionada" id="terapiaCancer" type="string"/>
 
-    
-    @foreach (var palavra in Model.Palavras)
-    
+    @code
     {
-        <a href="#" @onclick="() => _goodNewsSelection.PalavraClicada(palavra)">@palavra</a>
-        <span> | </span>
+        public string PalavraSelecionada { get; set; }
+
+        private async Task<NewsData> GetNews(string palavraSelecionada)
+        {
+
+            return await _newsRepository.GetNewsContent(palavraSelecionada);
+        }
     }
+    
 </p>

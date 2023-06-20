@@ -1,5 +1,7 @@
 using System.Diagnostics.CodeAnalysis;
+using Dapper;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using WhatYouHaveLost.Repository;

@@ -18,7 +18,7 @@ public class NewsService
     {
         var selected = await _newsRepository.GetNewsContent(news);
         
-        var blobName = selected.FirstOrDefault()?.Image;
+        var blobName = selected?.Image;
 
         BlobServiceClient blobServiceClient = new BlobServiceClient("connectionString");
         BlobContainerClient containerClient = blobServiceClient.GetBlobContainerClient("containerName");
