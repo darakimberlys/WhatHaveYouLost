@@ -1,0 +1,21 @@
+﻿@page "/detalhes"
+@model Details
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <title>OQVP</title>
+</head>
+<body>
+<h1>Nesta página você vai selecionar uma das notícias que você pode ter perdido, porque estava no celular</h1>
+<h2>Qual a notícia que quer ver?</h2>
+<p>
+    <a asp-page-handler="PalavraClicada" asp-route-palavra="idosoOAB">Aos 92 anos, advogado é inscrito na OAB-GO</a><br/>
+    <a asp-page-handler="PalavraClicada" asp-route-palavra="viniJr">Vini Jr é convidado para chefiar novo comitê antirracista na Fifa</a><br/>
+    <a asp-page-handler="PalavraClicada" asp-route-palavra="pacienteCancer">Paciente que teve remissão de câncer com terapia revolucionária volta a andar</a><br/>
+    <a asp-page-handler="PalavraClicada" asp-route-palavra="idosaFeliz">Idosa que vivia em barraco sem porta e chuveiro ganha casa após vaquinha</a><br/>
+    <a asp-page-handler="PalavraClicada" asp-route-palavra="terapiaCancer">Terapia aplicada no Brasil faz câncer entrar em remissão em 1 mês. Paciente sofria há 13 anos></a><br/>
+</p>
+</body>
+</html>

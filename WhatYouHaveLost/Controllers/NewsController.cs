@@ -25,7 +25,7 @@ public class NewsController
     {
         try
         {
-            var selected = await _newsRepository.GetNewsContent(news);
+            var selected = _newsRepository.GetNewsContent(news);
 
             return new AcceptedResult("", $"{JsonSerializer.Serialize(selected)}");
         }

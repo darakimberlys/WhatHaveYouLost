@@ -17,11 +17,11 @@ public class NewsRepository : INewsRepository
         _connection = new SqlConnection(connectionString);
     }
     
-    public async Task<NewsData> GetNewsContent(string selectedNews)
+    public NewsData GetNewsContent(string selectedNews)
     {
         const string query = "SELECT * FROM NewsTable WHERE NewsName = @Selected";
         
-        var listResult = await _connection.QueryAsync<NewsData>(query, new
+        var listResult = _connection.Query<NewsData>(query, new
         {
             Selected = selectedNews
         });

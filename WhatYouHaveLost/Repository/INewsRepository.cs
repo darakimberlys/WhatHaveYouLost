@@ -4,5 +4,5 @@ namespace WhatYouHaveLost.Repository;
 
 public interface INewsRepository
 {
-    Task<NewsData> GetNewsContent(string selectedNews);
+    NewsData GetNewsContent(string selectedNews);
 }
