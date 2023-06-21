@@ -20,4 +20,9 @@ public class News : PageModel
         var result = _newsRepository.GetNewsContent(palavra);
         return RedirectToPage("detalhes", new {result});
     }
+    
+    public void OnGet()
+    {
+
+    }
 }
