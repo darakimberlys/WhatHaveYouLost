@@ -1,4 +1,4 @@
-﻿@page "/noticias"
+﻿@page "/Noticias"
 @model News
 
 <!DOCTYPE html>
@@ -11,6 +11,7 @@
 <h1>Nesta página você vai selecionar uma das notícias que você pode ter perdido, porque estava no celular</h1>
 <h2>Qual a notícia que quer ver?</h2>
 <p>
+<a style="color:blue" asp-page="Details" asp-route-id="idosoOAB">Aos 92 anos, advogado é inscrito na OAB-GO</a>
     <a asp-page-handler="PalavraClicada" asp-route-palavra="idosoOAB">Aos 92 anos, advogado é inscrito na OAB-GO</a><br/>
     <a asp-page-handler="PalavraClicada" asp-route-palavra="viniJr">Vini Jr é convidado para chefiar novo comitê antirracista na Fifa</a><br/>
     <a asp-page-handler="PalavraClicada" asp-route-palavra="pacienteCancer">Paciente que teve remissão de câncer com terapia revolucionária volta a andar</a><br/>

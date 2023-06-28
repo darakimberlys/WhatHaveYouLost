@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using WhatYouHaveLost.Repository;
+using WhatYouHaveLost.Repository.Data;
 
 namespace WhatYouHaveLost.Pages;
 
@@ -14,10 +15,24 @@ public class Details : PageModel
     {
         _logger = logger;
     }
-    
-    public IActionResult PalavraClicada(string palavra)
+
+    public void OnGet(string palavraChave)
     {
-        var result = _newsRepository.GetNewsContent(palavra);
-        return RedirectToPage("detalhes", new {result});
+        PalavraClicada(palavraChave);
+    }
+    
+    private ActionResult<NewsData> PalavraClicada(string palavra)
+    {
+        //var result = _newsRepository.GetNewsContent(palavra);
+        //return RedirectToPage("detalhes", new {result});
+        var result = new NewsData
+        {
+            Content = "teste content",
+            Image = "chrome-extension://jgnejnfdbomaelibbccppknilnnhklnk/icons/CamFlip-Dark-64.png",
+            Font = "globo",
+            Title = "Não ha",
+            NewsName = palavra
+        };
+        return result;
     }
 }
