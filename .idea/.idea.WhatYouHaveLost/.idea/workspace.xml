@@ -13,24 +13,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b921db3-f342-4e9d-b359-851261f10bdc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost/wwwroot/flor.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WhatYouHaveLost/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WhatYouHaveLost/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WhatYouHaveLost/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WhatYouHaveLost/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/config/applicationhost.config" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/config/applicationhost.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost.sln" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Controllers/NewsController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Pages/Details.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Pages/Details.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Pages/Details.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Pages/Details.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Pages/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Pages/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Pages/News.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Pages/News.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Pages/News.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Pages/News.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Pages/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Pages/Shared/_Layout.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Properties/launchSettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Repository/NewsRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Repository/NewsRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/WhatYouHaveLost.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/WhatYouHaveLost.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/wwwroot/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/wwwroot/css/site.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/wwwroot/favicon.ico" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
