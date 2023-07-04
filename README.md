@@ -11,4 +11,4 @@ As imagens das notícias são armazenadas no Blob Storage, um serviço de armaze
 No geral, essa aplicação proporciona aos usuários uma maneira fácil e conveniente de acessar e ler notícias relevantes que possam ter perdido enquanto estavam no celular. Ela utiliza tecnologias modernas, como C#, Razor Pages, SQL e Azure, para fornecer uma experiência de usuário intuitiva e eficiente.
 
 ## Diagrama simples:
-![image](https://github.com/darakimberlys/WhatYouHaveLost/assets/40128511/482b2416-2f43-4459-9be0-0ecfd327096c)
+![image](https://github.com/darakimberlys/WhatHaveYouLost/blob/3c87fe934487d3df2095acc26354f3f2aa27c0b0/Diagrama-WHTL.png)
