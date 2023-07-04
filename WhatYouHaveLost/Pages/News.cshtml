@@ -14,24 +14,15 @@
     </div>
 
     <div>
-        <h2>Qual a notícia que quer ver?</h2>
-        <ul>
-            <li>
-                <a asp-page="Details" asp-route-id="idosoOAB">Aos 92 anos, advogado é inscrito na OAB-GO</a>
-            </li>
-            <li>
-                <a asp-page="Details" asp-route-id="viniJr">Vini Jr é convidado para chefiar novo comitê antirracista na Fifa</a>
-            </li>
-            <li>
-                <a asp-page="Details" asp-route-id="pacienteCancer">Paciente que teve remissão de câncer com terapia revolucionária volta a andar</a>
-            </li>
-            <li>
-                <a asp-page="Details" asp-route-id="idosaFeliz">Idosa que vivia em barraco sem porta e chuveiro ganha casa após vaquinha</a>
-            </li>
-            <li>
-                <a asp-page="Details" asp-route-id="terapiaCancer">Terapia aplicada no Brasil faz câncer entrar em remissão em 1 mês. Paciente sofria há 13 anos</a>
-            </li>
-        </ul>
-    </div>
+            <h2>Qual a notícia que quer ver?</h2>
+            <ul>
+                @foreach (var news in Model.NewsList)
+                {
+                    <li>
+                        <a asp-page="Details" asp-route-id="@news.Id">@news.Title</a>
+                    </li>
+                }
+            </ul>
+        </div>
 </body>
 </html>

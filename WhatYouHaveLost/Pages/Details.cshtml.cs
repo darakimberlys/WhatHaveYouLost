@@ -1,34 +1,30 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.Extensions.Logging;
 using WhatYouHaveLost.Repository;
 using WhatYouHaveLost.Repository.Data;
 
-namespace WhatYouHaveLost.Pages
+namespace WhatYouHaveLost.Pages;
+
+public class Details : PageModel
 {
-    public class Details : PageModel
+    private readonly INewsRepository _newsRepository;
+
+    public NewsData News { get; set; }
+
+    public Details(INewsRepository newsRepository)
     {
-        private readonly ILogger<Details> _logger;
-        private readonly INewsRepository _newsRepository;
+        _newsRepository = newsRepository;
+    }
 
-        public NewsData News { get; set; }
+    public IActionResult OnGet(string id)
+    {
+        News = GetNewsById(id);
 
-        public Details(ILogger<Details> logger, INewsRepository newsRepository)
-        {
-            _logger = logger;
-            _newsRepository = newsRepository;
-        }
+        return Page();
+    }
 
-        public IActionResult OnGet(string id)
-        {
-            News = Palavra(id);
-
-            return Page();
-        }
-
-        private NewsData Palavra(string palavra)
-        {
-            return _newsRepository.GetNewsContent(palavra);
-        }
+    private NewsData GetNewsById(string id)
+    {
+        return _newsRepository.GetNewsContent(id);
     }
 }

@@ -13,16 +13,25 @@ public class NewsRepository : INewsRepository
         var connectionString = configuration.GetConnectionString("NewsDataCS");
         _connection = new SqlConnection(connectionString);
     }
-    
+
     public NewsData GetNewsContent(string selectedNews)
     {
-        const string query = "SELECT * FROM NewsData WHERE NewsName = @NewsName";
-        
-        var listResult = _connection.QueryFirstOrDefault<NewsData>(query, 
+        const string query = "SELECT * FROM NewsData WHERE Id = @Id";
+
+        var listResult = _connection.QueryFirstOrDefault<NewsData>(query,
             new
-        {
-            NewsName = selectedNews
-        });
+            {
+                Id = selectedNews
+            });
+
+        return listResult;
+    }
+
+    public List<NewsData> GetAllNews()
+    {
+        const string query = "SELECT * FROM NewsData";
+
+        var listResult = _connection.Query<NewsData>(query).ToList();
 
         return listResult;
     }

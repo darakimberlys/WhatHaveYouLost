@@ -14,7 +14,17 @@
   <component name="ChangeListManager">
     <list default="true" id="0b921db3-f342-4e9d-b359-851261f10bdc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WhatYouHaveLost/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WhatYouHaveLost/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Pages/Details.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Pages/Details.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Pages/Details.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Pages/Details.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Pages/Error.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Pages/Error.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Pages/Index.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Pages/Index.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Pages/News.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Pages/News.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Pages/News.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Pages/News.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Repository/Data/NewsData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Repository/Data/NewsData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Repository/INewsRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Repository/INewsRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Repository/NewsRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Repository/NewsRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -138,6 +148,7 @@
       <workItem from="1687300964619" duration="2036000" />
       <workItem from="1687987674207" duration="4523000" />
       <workItem from="1688423209294" duration="10135000" />
+      <workItem from="1688474396671" duration="6214000" />
     </task>
     <servers />
   </component>
@@ -164,13 +175,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/WhatYouHaveLost/Pages/News.cshtml.cs</url>
-          <line>16</line>
+          <line>19</line>
           <properties documentPath="C:\Source\techChallenge\WhatYouHaveLost\WhatYouHaveLost\Pages\News.cshtml.cs" initialLine="17" containingFunctionPresentation="Method 'Palavra'">
             <startOffsets>
-              <option value="391" />
+              <option value="473" />
             </startOffsets>
             <endOffsets>
-              <option value="392" />
+              <option value="474" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="12" />

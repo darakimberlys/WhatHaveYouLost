@@ -1,3 +1,5 @@
 {
-    "dotnet.defaultSolution": "WhatYouHaveLost.sln"
+    "dotnet.defaultSolution": "WhatYouHaveLost.sln",
+    "appService.preDeployTask": "publish-release",
+    "appService.deploySubpath": "WhatYouHaveLost/bin/Release/net6.0/publish"
 }

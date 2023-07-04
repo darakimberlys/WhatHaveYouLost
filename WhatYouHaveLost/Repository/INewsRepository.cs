@@ -5,4 +5,5 @@ namespace WhatYouHaveLost.Repository;
 public interface INewsRepository
 {
     NewsData GetNewsContent(string selectedNews);
+    List<NewsData> GetAllNews();
 }
