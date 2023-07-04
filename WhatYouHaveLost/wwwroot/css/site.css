@@ -16,3 +16,6 @@ html {
 body {
   margin-bottom: 60px;
 }
+.logo-img {
+  max-width: 45px; 
+}

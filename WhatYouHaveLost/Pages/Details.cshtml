@@ -1,39 +1,31 @@
 ﻿@page "/detalhes"
-@model WhatYouHaveLost.Repository.Data.NewsData
+@model WhatYouHaveLost.Pages.Details
 
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Detalhes da Notícia</title>
-    <style>
-        /* Estilos CSS para melhorar a apresentação */
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .news-container {
-            width: 500px;
-            margin: 0 auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            background-color: #f9f9f9;
-        }
-        h1 {
-            margin-top: 0;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 10px;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Detalhes</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="news-container">
-    <h1>@Model.Title</h1>
-    <img src="@Model.Image" alt="Imagem da Notícia">
-    <p>@Model.Content</p>
-    <p>Fonte: @Model.Font</p>
-    <p>Data de Criação: @Model.CreatedDate.ToString("dd/MM/yyyy")</p>
-</div>
+    <div class="container">
+        <div class="text-center mt-5">
+            <h1 class="display-4">Detalhes</h1>
+        </div>
+
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">@Model.News.Title</h2>
+                        <p class="card-text">@Model.News.Content</p>
+                        <img src="@Model.News.Image" class="img-fluid" alt="News Image" title="@Model.News.CreatedDate.ToString("dd/MM/yyyy")">
+                        <p class="card-text">Fonte: <a href="@Model.News.Font" target="_blank">@Model.News.Font</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

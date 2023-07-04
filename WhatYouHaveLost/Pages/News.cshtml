@@ -6,17 +6,32 @@
 <head>
     <meta name="viewport" content="width=device-width"/>
     <title>OQVP</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<h1>Nesta página você vai selecionar uma das notícias que você pode ter perdido, porque estava no celular</h1>
-<h2>Qual a notícia que quer ver?</h2>
-<p>
-<a style="color:blue" asp-page="Details" asp-route-id="idosoOAB">Aos 92 anos, advogado é inscrito na OAB-GO</a>
-    <a asp-page-handler="PalavraClicada" asp-route-palavra="idosoOAB">Aos 92 anos, advogado é inscrito na OAB-GO</a><br/>
-    <a asp-page-handler="PalavraClicada" asp-route-palavra="viniJr">Vini Jr é convidado para chefiar novo comitê antirracista na Fifa</a><br/>
-    <a asp-page-handler="PalavraClicada" asp-route-palavra="pacienteCancer">Paciente que teve remissão de câncer com terapia revolucionária volta a andar</a><br/>
-    <a asp-page-handler="PalavraClicada" asp-route-palavra="idosaFeliz">Idosa que vivia em barraco sem porta e chuveiro ganha casa após vaquinha</a><br/>
-    <a asp-page-handler="PalavraClicada" asp-route-palavra="terapiaCancer">Terapia aplicada no Brasil faz câncer entrar em remissão em 1 mês. Paciente sofria há 13 anos></a><br/>
-</p>
+    <div class="text-center">
+        <h1 class="display-4">Nesta página você vai selecionar uma das notícias que você pode ter perdido, porque estava no celular</h1>
+    </div>
+
+    <div>
+        <h2>Qual a notícia que quer ver?</h2>
+        <ul>
+            <li>
+                <a asp-page="Details" asp-route-id="idosoOAB">Aos 92 anos, advogado é inscrito na OAB-GO</a>
+            </li>
+            <li>
+                <a asp-page="Details" asp-route-id="viniJr">Vini Jr é convidado para chefiar novo comitê antirracista na Fifa</a>
+            </li>
+            <li>
+                <a asp-page="Details" asp-route-id="pacienteCancer">Paciente que teve remissão de câncer com terapia revolucionária volta a andar</a>
+            </li>
+            <li>
+                <a asp-page="Details" asp-route-id="idosaFeliz">Idosa que vivia em barraco sem porta e chuveiro ganha casa após vaquinha</a>
+            </li>
+            <li>
+                <a asp-page="Details" asp-route-id="terapiaCancer">Terapia aplicada no Brasil faz câncer entrar em remissão em 1 mês. Paciente sofria há 13 anos</a>
+            </li>
+        </ul>
+    </div>
 </body>
 </html>

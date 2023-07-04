@@ -4,35 +4,31 @@ using Microsoft.Extensions.Logging;
 using WhatYouHaveLost.Repository;
 using WhatYouHaveLost.Repository.Data;
 
-namespace WhatYouHaveLost.Pages;
-
-public class Details : PageModel
+namespace WhatYouHaveLost.Pages
 {
-    private readonly ILogger<Details> _logger;
-    private readonly INewsRepository _newsRepository;
+    public class Details : PageModel
+    {
+        private readonly ILogger<Details> _logger;
+        private readonly INewsRepository _newsRepository;
 
-    public Details(ILogger<Details> logger)
-    {
-        _logger = logger;
-    }
+        public NewsData News { get; set; }
 
-    public void OnGet(string palavraChave)
-    {
-        PalavraClicada(palavraChave);
-    }
-    
-    private ActionResult<NewsData> PalavraClicada(string palavra)
-    {
-        //var result = _newsRepository.GetNewsContent(palavra);
-        //return RedirectToPage("detalhes", new {result});
-        var result = new NewsData
+        public Details(ILogger<Details> logger, INewsRepository newsRepository)
         {
-            Content = "teste content",
-            Image = "chrome-extension://jgnejnfdbomaelibbccppknilnnhklnk/icons/CamFlip-Dark-64.png",
-            Font = "globo",
-            Title = "Não ha",
-            NewsName = palavra
-        };
-        return result;
+            _logger = logger;
+            _newsRepository = newsRepository;
+        }
+
+        public IActionResult OnGet(string id)
+        {
+            News = Palavra(id);
+
+            return Page();
+        }
+
+        private NewsData Palavra(string palavra)
+        {
+            return _newsRepository.GetNewsContent(palavra);
+        }
     }
 }
