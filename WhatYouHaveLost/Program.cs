@@ -1,4 +1,7 @@
 using System.Diagnostics.CodeAnalysis;
+using System.Text;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
 using WhatYouHaveLost.Repository;
 
 namespace WhatYouHaveLost;
@@ -15,6 +18,25 @@ public class Program
 
         var app = builder.Build();
 
+        var key = Encoding.ASCII.GetBytes("initialtestkey"); 
+        builder.Services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+            .AddJwtBearer(options =>
+            {
+                options.RequireHttpsMetadata = false;
+                options.SaveToken = true;
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(key),
+                    ValidateIssuer = false,
+                    ValidateAudience = false
+                };
+            });
+        
         if (!app.Environment.IsDevelopment())
         {
             app.UseExceptionHandler("/Error");

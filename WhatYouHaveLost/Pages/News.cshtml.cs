@@ -9,7 +9,7 @@ public class News : PageModel
 {
     private readonly INewsRepository _newsRepository;
    
-    public List<NewsData> NewsList { get; set; }
+    public List<NewsData> NewsList { get; set; } 
 
     public News(INewsRepository newsRepository)
     {
