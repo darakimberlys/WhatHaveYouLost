@@ -5,13 +5,13 @@ using WhatYouHaveLost.Repository.Data;
 
 namespace WhatYouHaveLost.Pages;
 
-public class News : PageModel
+public class NewsModel : PageModel
 {
     private readonly INewsRepository _newsRepository;
    
-    public List<NewsData> NewsList { get; set; }
+    public List<News> NewsList { get; set; }
 
-    public News(INewsRepository newsRepository)
+    public NewsModel (INewsRepository newsRepository)
     {
         _newsRepository = newsRepository;
     }
@@ -21,8 +21,8 @@ public class News : PageModel
         return RedirectToPage("detalhes", new { id });
     }
 
-    public void OnGet()
+    public async Task OnGet()
     {
-        NewsList = _newsRepository.GetAllNews();
+        NewsList = await _newsRepository.ReadAllNewsAsync();
     }
 }

@@ -1,5 +1,7 @@
 using System.Diagnostics.CodeAnalysis;
 using WhatYouHaveLost.Repository;
+using WhatYouHaveLost.Services;
+using WhatYouHaveLost.Services.Interface;
 
 namespace WhatYouHaveLost;
 
@@ -12,6 +14,7 @@ public class Program
 
         builder.Services.AddRazorPages();
         builder.Services.AddScoped<INewsRepository, NewsRepository>();
+        builder.Services.AddScoped<INewsService, NewsService>();
 
         var app = builder.Build();
 

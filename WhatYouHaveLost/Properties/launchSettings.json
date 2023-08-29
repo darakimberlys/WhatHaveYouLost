@@ -1,4 +1,4 @@
-﻿{
+{
   "iisSettings": {
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
@@ -23,6 +23,10 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
-    }
+    },
+  "ConnectionStrings": {
+    "commandName": "IISExpress"
+  },
+  "URI" : "http://localhost:5000"
   }
 
