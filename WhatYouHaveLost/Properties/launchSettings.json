@@ -8,15 +8,15 @@
     }
   },
   "profiles": {
-    "WhatYouHaveLost": {
+    "Kestrel": {
       "commandName": "Project",
-      "dotnetRunMessages": true,
       "launchBrowser": true,
-      "applicationUrl": "https://localhost:7201;http://localhost:5175",
+      "applicationUrl": "http://localhost:5000",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
-    },
+    }
+  },
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
@@ -25,4 +25,4 @@
       }
     }
   }
-}
+
