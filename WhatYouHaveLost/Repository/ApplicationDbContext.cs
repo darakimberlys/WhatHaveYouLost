@@ -4,6 +4,12 @@ namespace WhatYouHaveLost.Repository;
 
 public class ApplicationDbContext : DbContext
 {
-    public DbSet<NewsData> NewsData { get; set; }
+    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+        : base(options)
+    {
+    }
+
+    public DbSet<Task> Tasks { get; set; }
+    public DbSet<News> NewsData { get; set; }
+
 }
-    

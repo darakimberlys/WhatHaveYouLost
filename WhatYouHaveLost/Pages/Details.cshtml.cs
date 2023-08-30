@@ -1,30 +1,35 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using WhatYouHaveLost.Repository;
 using WhatYouHaveLost.Repository.Data;
+using WhatYouHaveLost.Services.Interface;
 
-namespace WhatYouHaveLost.Pages;
-
-public class Details : PageModel
+namespace WhatYouHaveLost.Pages
 {
-    private readonly INewsRepository _newsRepository;
-
-    public NewsData News { get; set; }
-
-    public Details(INewsRepository newsRepository)
+    public class DetailsModel : PageModel
     {
-        _newsRepository = newsRepository;
-    }
+        private readonly INewsService _newsService;
 
-    public IActionResult OnGet(string id)
-    {
-        News = GetNewsById(id);
+        public DetailsModel(INewsService newsService)
+        {
+            _newsService = newsService;
+        }
 
-        return Page();
-    }
+        [BindProperty]
+        public News News { get; set; }
 
-    private NewsData GetNewsById(string id)
-    {
-        return _newsRepository.GetNewsContent(id);
+        public void OnGet()
+        { }
+
+        public async Task<IActionResult> OnPost()
+        {
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
+
+            _newsService.AddNews(News);
+
+            return RedirectToPage("news");
+        }
     }
 }
