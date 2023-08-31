@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using WhatYouHaveLost.Repository;
-using WhatYouHaveLost.Repository.Data;
 
 namespace WhatYouHaveLost.Pages;
 
@@ -9,7 +8,7 @@ public class NewsModel : PageModel
 {
     private readonly INewsRepository _newsRepository;
 
-    public List<News> NewsList { get; set; }
+    public List<Repository.Data.News> NewsList { get; set; }
 
     public NewsModel(INewsRepository newsRepository)
     {

@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WhatYouHaveLost", "WhatYouHaveLost\WhatYouHaveLost.csproj", "{E6C897EB-6D41-4E99-9029-2D436C8112FE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1E663234-447E-4D9B-9C7F-83BA37123EBC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,5 +23,8 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6562304D-66BE-430A-A0D1-4AB4DEC3CC7E}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E6C897EB-6D41-4E99-9029-2D436C8112FE} = {1E663234-447E-4D9B-9C7F-83BA37123EBC}
 	EndGlobalSection
 EndGlobal

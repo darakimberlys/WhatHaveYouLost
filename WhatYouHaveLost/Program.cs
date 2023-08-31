@@ -1,18 +1,15 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
-using System.Diagnostics.CodeAnalysis;
 using WhatYouHaveLost.Repository;
 using WhatYouHaveLost.Services;
 using WhatYouHaveLost.Services.Interface;
 
 namespace WhatYouHaveLost;
 
-[ExcludeFromCodeCoverage]
 public class Program
 {
     public static void Main(string[] args)
     {
-        var test = Environment.GetEnvironmentVariable("CONNECTION");
-
         var builder = WebApplication.CreateBuilder(args);
 
         builder.Services.AddRazorPages();
@@ -23,6 +20,10 @@ public class Program
         {
             options.UseSqlServer(Environment.GetEnvironmentVariable("CONNECTION"));
         });
+
+        builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+            .AddCookie(options => { options.LoginPath = "/Login"; });
+
 
         var app = builder.Build();
 
@@ -36,6 +37,8 @@ public class Program
         app.UseStaticFiles();
 
         app.UseRouting();
+
+        app.UseAuthentication();
 
         app.UseAuthorization();
 
