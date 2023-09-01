@@ -12,28 +12,37 @@ public class NewsRepository : INewsRepository
         _context = context;
     }
 
-    public async Task<News> GetCompleteNewsByIdAsync(string selectedNews)
+    public async Task<News> GetCompleteNewsByIdAsync(int selectedNews)
     {
-        return await _context.NewsData.FirstOrDefaultAsync(news => news.Id == selectedNews);
+        return await _context.News.FirstOrDefaultAsync(news => news.Id == selectedNews);
     }
 
     public async Task<List<News>> ReadAllNewsAsync()
     {
-        return await _context.NewsData.ToListAsync();
+        try
+        {
+            var teste =  await _context.News.ToListAsync();
+            return teste;
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
     }
 
     public async Task CreateNewsAsync(News news)
     {
-        await _context.NewsData.AddAsync(news);
+        await _context.News.AddAsync(news);
     }
 
     public void DeleteNews(News news)
     {
-        _context.NewsData.Remove(news);
+        _context.News.Remove(news);
     }
 
     public void UpdateNews(News news, string id)
     {
-        _context.NewsData.Update(news);
+        _context.News.Update(news);
     }
 }

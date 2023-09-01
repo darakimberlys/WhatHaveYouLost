@@ -22,7 +22,7 @@ public class Program
         });
 
         builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-            .AddCookie(options => { options.LoginPath = "/Login"; });
+            .AddCookie(options => { options.LoginPath = "/login"; });
 
 
         var app = builder.Build();

@@ -2,7 +2,7 @@ namespace WhatYouHaveLost.Repository.Data;
 
 public class News
 {
-    public string Id { get; set; }
+    public int Id { get; set; }
     public string Content { get; set; }
     public string Image { get; set; }
     public DateTime PublishDate { get; set; }

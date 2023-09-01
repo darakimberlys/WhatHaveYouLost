@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using WhatYouHaveLost.Repository.Configurations;
 using WhatYouHaveLost.Repository.Data;
 namespace WhatYouHaveLost.Repository;
 
@@ -8,8 +9,11 @@ public class ApplicationDbContext : DbContext
         : base(options)
     {
     }
-
-    public DbSet<Task> Tasks { get; set; }
-    public DbSet<News> NewsData { get; set; }
+    public DbSet<News> News { get; set; }
+    
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.ApplyConfiguration(new NewsConfiguration());
+    }
 
 }

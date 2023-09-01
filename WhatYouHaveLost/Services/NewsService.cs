@@ -15,13 +15,12 @@ public class NewsService : INewsService
 
     public void AddNews(News news)
     {
-        news.Id = Guid.NewGuid().ToString();
         news.PublishDate = DateTime.Now.Date;
 
         _newsRepository.CreateNewsAsync(news);
     }
 
-    public async Task DeleteNews(string id)
+    public async Task DeleteNews(int id)
     {
         var newsObject = await _newsRepository.GetCompleteNewsByIdAsync(id);
         _newsRepository.DeleteNews(newsObject);
