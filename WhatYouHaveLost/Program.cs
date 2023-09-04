@@ -1,10 +1,8 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
+using WhatYouHaveLost.Data.Repository;
 using WhatYouHaveLost.IoC;
-using WhatYouHaveLost.Repository;
-using WhatYouHaveLost.Repository.Interfaces;
 using WhatYouHaveLost.Services;
-using WhatYouHaveLost.Services.Interface;
 
 namespace WhatYouHaveLost;
 
@@ -15,17 +13,9 @@ public class Program
         var builder = WebApplication.CreateBuilder(args);
 
         builder.Services.AddRazorPages();
-        builder.Services.AddScoped<INewsRepository, NewsRepository>();
-        builder.Services.AddScoped<INewsService, NewsService>();
+        builder.Services.AddServices();
         builder.Services.AddIdentityValidation();
-        builder.Services.AddDbContext<ApplicationDbContext>(options =>
-        {
-            options.UseSqlServer(Environment.GetEnvironmentVariable("CONNECTION"));
-        });
-
-        builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-            .AddCookie(options => { options.LoginPath = "/login"; });
-
+        builder.Services.AddDataBaseConnection();
 
         var app = builder.Build();
 

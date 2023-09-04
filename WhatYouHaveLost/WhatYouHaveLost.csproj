@@ -172,4 +172,9 @@
     <None Include="wwwroot\lib\jquery\LICENSE.txt" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Data\" />
+    <Folder Include="Model\" />
+  </ItemGroup>
+
 </Project>

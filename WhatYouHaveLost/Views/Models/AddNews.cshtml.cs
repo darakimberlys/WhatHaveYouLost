@@ -1,35 +1,35 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using WhatYouHaveLost.Repository.Data;
-using WhatYouHaveLost.Services.Interface;
+using WhatYouHaveLost.Model.Data;
+using WhatYouHaveLost.Services;
+using WhatYouHaveLost.Services.Interfaces;
 
-namespace WhatYouHaveLost.Views.Models
+namespace WhatYouHaveLost.Views.Models;
+
+public class AddNewsModel : PageModel
 {
-    public class AddNewsModel : PageModel
+    private readonly INewsService _newsService;
+
+    public AddNewsModel(INewsService newsService)
     {
-        private readonly INewsService _newsService;
+        _newsService = newsService;
+    }
 
-        public AddNewsModel(INewsService newsService)
+    [BindProperty]
+    public News News { get; set; }
+
+    public void OnGet()
+    { }
+
+    public async Task<IActionResult> OnPost()
+    {
+        if (!ModelState.IsValid)
         {
-            _newsService = newsService;
+            return Page();
         }
-
-        [BindProperty]
-        public News News { get; set; }
-
-        public void OnGet()
-        { }
-
-        public async Task<IActionResult> OnPost()
-        {
-            if (!ModelState.IsValid)
-            {
-                return Page();
-            }
             
-            _newsService.AddNews(News);
+        _newsService.AddNews(News);
 
-            return RedirectToPage("news");
-        }
+        return RedirectToPage("news");
     }
 }

@@ -1,6 +1,6 @@
-using WhatYouHaveLost.Repository.Data;
+using WhatYouHaveLost.Model.Data;
 
-namespace WhatYouHaveLost.Repository.Interfaces;
+namespace WhatYouHaveLost.Data.Repository.Interfaces;
 
 public interface INewsRepository
 {

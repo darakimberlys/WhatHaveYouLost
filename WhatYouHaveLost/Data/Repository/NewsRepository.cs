@@ -1,8 +1,8 @@
 using Microsoft.EntityFrameworkCore;
-using WhatYouHaveLost.Repository.Data;
-using WhatYouHaveLost.Repository.Interfaces;
+using WhatYouHaveLost.Data.Repository.Interfaces;
+using WhatYouHaveLost.Model.Data;
 
-namespace WhatYouHaveLost.Repository;
+namespace WhatYouHaveLost.Data.Repository;
 
 public class NewsRepository : INewsRepository
 {

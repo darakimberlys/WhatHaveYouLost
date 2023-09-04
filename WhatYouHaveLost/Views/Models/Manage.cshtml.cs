@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using WhatYouHaveLost.Repository;
-using WhatYouHaveLost.Repository.Interfaces;
+using WhatYouHaveLost.Data.Repository.Interfaces;
+using WhatYouHaveLost.Model.Data;
 
 namespace WhatYouHaveLost.Views.Models;
 
@@ -9,7 +9,7 @@ namespace WhatYouHaveLost.Views.Models;
 public class ManageModel : PageModel
 {
     private readonly INewsRepository _newsRepository; 
-    public IEnumerable<Repository.Data.News> NewsItems { get; set; }
+    public IEnumerable<News> NewsItems { get; set; }
 
     public ManageModel(INewsRepository newsRepository) 
     {

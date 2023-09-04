@@ -1,8 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using WhatYouHaveLost.Repository;
-using WhatYouHaveLost.Repository.Data;
-using WhatYouHaveLost.Repository.Interfaces;
+using WhatYouHaveLost.Data.Repository.Interfaces;
+using WhatYouHaveLost.Model.Data;
 
 namespace WhatYouHaveLost.Views.Models;
 

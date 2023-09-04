@@ -1,7 +1,6 @@
-﻿using WhatYouHaveLost.Repository;
-using WhatYouHaveLost.Repository.Data;
-using WhatYouHaveLost.Repository.Interfaces;
-using WhatYouHaveLost.Services.Interface;
+﻿using WhatYouHaveLost.Data.Repository.Interfaces;
+using WhatYouHaveLost.Model.Data;
+using WhatYouHaveLost.Services.Interfaces;
 
 namespace WhatYouHaveLost.Services;
 

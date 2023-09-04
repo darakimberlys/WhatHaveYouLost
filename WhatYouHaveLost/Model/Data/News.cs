@@ -1,4 +1,4 @@
-namespace WhatYouHaveLost.Repository.Data;
+namespace WhatYouHaveLost.Model.Data;
 
 public class News
 {

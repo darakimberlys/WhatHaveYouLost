@@ -1,116 +1,97 @@
 using Microsoft.AspNetCore.Mvc;
-using WhatYouHaveLost.Repository;
-using WhatYouHaveLost.Repository.Interfaces;
-using WhatYouHaveLost.Views.Home;
+using WhatYouHaveLost.Data.Repository.Interfaces;
+using WhatYouHaveLost.Model.Data;
+using WhatYouHaveLost.Services.Interfaces;
 using WhatYouHaveLost.Views.Models;
 
 namespace WhatYouHaveLost.Controllers;
 
     public class HomeController : Controller
     {
-        private readonly ApplicationDbContext _context;
         private readonly INewsRepository _newsRepository;
+        private readonly IAuthenticationService _authenticationService;
 
-        public HomeController(ApplicationDbContext context, INewsRepository newsRepository)
+        public HomeController(INewsRepository newsRepository,
+            IAuthenticationService authenticationService)
         {
-            _context = context;
             _newsRepository = newsRepository;
+            _authenticationService = authenticationService;
         }
 
+        /// <summary>
+        /// Página inicial
+        /// </summary>
+        /// <returns></returns>
         public IActionResult Index()
         {
             return View();
         }
         
-        public IActionResult Login()
+        [HttpPost]
+        public async Task<IActionResult> Login(UserData userData)
+        {
+            if (ModelState.IsValid)
+            {
+               var signInResult = await _authenticationService.LoginAsync(userData.LoginName, userData.Password);
+
+                if (signInResult.Succeeded)
+                {
+                    return RedirectToAction("Manage");
+
+                }
+                else
+                {
+                    ModelState.AddModelError(string.Empty, "Login inválido. Verifique seu nome de usuário e senha.");
+                }
+            }
+            return View(userData);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Logout()
+        {
+            await _authenticationService.SignOutAsync();
+            return RedirectToAction("Index", "Home");
+        }
+
+        public IActionResult AddNews()
+        {
+            return View();
+        }
+        
+        public IActionResult Manage()
         {
             return View();
         }
         
         /// <summary>
-        /// Visualizar todas as noticias no banco de dados
+        /// Visualizar todas as notícias existentes no banco de dados
         /// </summary>
         /// <returns></returns>
         public IActionResult News()
         {
-            var newsmodel = new NewsModel(_newsRepository);
-            newsmodel.NewsList = _newsRepository.ReadAllNews();
+            var newsModel = new NewsModel(_newsRepository)
+            {
+                NewsList = _newsRepository.ReadAllNews()
+            };
 
-            return View(newsmodel);
+            return View(newsModel);
         }
 
+        /// <summary>
+        /// Ver detalhes da notícia clicada na página de todas as notícias
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [Route("Home/Details/{id}")]
         public async Task<IActionResult> Details(int id)
         {
-            var detailsModel = new DetailsModel();
-            detailsModel.News = await _newsRepository.GetCompleteNewsByIdAsync(id);
+            var detailsModel = new DetailsModel
+            {
+                News = await _newsRepository.GetCompleteNewsByIdAsync(id)
+            };
 
             return View(detailsModel);
         }
-        
-        // [HttpGet("{id}")]
-        // public async Task<ActionResult<News>> GetNewsContentAsync(string id)
-        // {
-        //     return await _newsRepository.GetCompleteNewsByIdAsync(id);
-        // }
-        //
-        // [HttpPost]
-        // public async Task<ActionResult<Task>> CreateNewsAsync(News news)
-        // {
-        //     _context.News.Add(news);
-        //     await _context.SaveChangesAsync();
-        //
-        //     return null;
-        // }
-        //
-        // [HttpPatch("{id}")]
-        // public async Task<IActionResult> UpdateTask(int id, Task task)
-        // {
-        //     if (id != task.Id)
-        //     {
-        //         return BadRequest();
-        //     }
-        //
-        //     _context.Entry(task).State = EntityState.Modified;
-        //
-        //     try
-        //     {
-        //         await _context.SaveChangesAsync();
-        //     }
-        //     catch (DbUpdateConcurrencyException)
-        //     {
-        //         if (!TaskExists(id))
-        //         {
-        //             return NotFound();
-        //         }
-        //         else
-        //         {
-        //             throw;
-        //         }
-        //     }
-        //
-        //     return NoContent();
-        // }
-        //
-        // [HttpDelete("{id}")]
-        // public async Task<IActionResult> DeleteTask(int id)
-        // {
-        //     var task = await _context.Tasks.FindAsync(id);
-        //
-        //     if (task == null)
-        //     {
-        //         return NotFound();
-        //     }
-        //
-        //     _context.Tasks.Remove(task);
-        //     await _context.SaveChangesAsync();
-        //
-        //     return NoContent();
-        // }
-        //
-        // private bool TaskExists(int id)
-        // {
-        //     return _context.Tasks.Any(e => e.Id == id);
-        // }
     }
 

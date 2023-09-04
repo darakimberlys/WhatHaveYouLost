@@ -1,4 +1,10 @@
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using WhatYouHaveLost.Data.Repository;
+using WhatYouHaveLost.Data.Repository.Interfaces;
+using WhatYouHaveLost.Model.Data;
+using WhatYouHaveLost.Services;
+using WhatYouHaveLost.Services.Interfaces;
 
 namespace WhatYouHaveLost.IoC;
 
@@ -21,9 +27,31 @@ public static class SettingsCollection
             options.Cookie.HttpOnly = true;
             options.ExpireTimeSpan = TimeSpan.FromDays(1);
             options.LoginPath = "/Home/Login"; 
-            options.AccessDeniedPath = "/Home/Account/AccessDenied"; // Define a página de acesso negado personalizada
+            options.AccessDeniedPath = "/Home/Account/AccessDenied"; 
             options.SlidingExpiration = true;
         });
 
+    }
+
+    public static void AddServices(this IServiceCollection services)
+    {
+        //Repositories
+        services.AddScoped<INewsRepository, NewsRepository>();
+        
+        //Services
+        services.AddScoped<INewsService, NewsService>();
+        services.AddScoped<IAuthenticationService, AuthenticationService>();
+        
+        services.AddScoped<UserManager<UserData>, UserManager<UserData>>();
+        services.AddScoped<SignInManager<UserData>, SignInManager<UserData>>();
+
+    }
+
+    public static void AddDataBaseConnection(this IServiceCollection services)
+    {
+        services.AddDbContext<ApplicationDbContext>(options =>
+        {
+            options.UseSqlServer(Environment.GetEnvironmentVariable("CONNECTION"));
+        });
     }
 }

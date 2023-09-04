@@ -16,16 +16,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b921db3-f342-4e9d-b359-851261f10bdc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost/Data/Repository/ApplicationDbContext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WhatYouHaveLost/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WhatYouHaveLost/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Controllers/HomeController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/IoC/SettingsCollection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/IoC/SettingsCollection.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Properties/launchSettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Repository/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Repository/ApplicationDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Repository/INewsRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Repository/Interfaces/INewsRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Repository/NewsRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Repository/NewsRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Repository/ApplicationDbContext.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Repository/Configurations/NewsConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Data/Repository/Configurations/NewsConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Repository/Data/News.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Model/Data/News.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Repository/Interfaces/INewsRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Data/Repository/Interfaces/INewsRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Repository/NewsRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Data/Repository/NewsRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Services/INewsService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Services/Interfaces/INewsService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Services/NewsService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Services/NewsService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Views/AddNews.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Views/Home/AddNews.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Views/Error.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Views/Home/Error.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Views/Home/Login.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Views/Home/Login.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Views/Manage.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Views/Home/Manage.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Views/Models/AddNews.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Views/Models/AddNews.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Views/Models/Details.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Views/Models/Details.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Views/Models/Login.cshtml.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Views/Models/Manage.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Views/Models/Manage.cshtml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Views/Models/News.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Views/Models/News.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/WhatYouHaveLost.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/WhatYouHaveLost.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,18 +53,14 @@
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WhatYouHaveLost.View/Controllers/HomeController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WhatYouHaveLost.View/Models/ErrorViewModel.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WhatYouHaveLost.View/Views/Home/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WhatYouHaveLost.View/Views/Home/Privacy.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WhatYouHaveLost.View/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WhatYouHaveLost/Model/Data/UserData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WhatYouHaveLost/Views/Home/Login.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WhatYouHaveLost/Views/Models/Login.cshtml.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5ec79bcb541f45a9be0ec843d9486f8618f010/37/b50e7134/SqlConnection.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5ec79bcb541f45a9be0ec843d9486f8618f010/39/15cd7aa3/SqlCommand.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/333717bd1cce3876d133e8e23428a3dca892c18641b7eb745fe17d1eed102cbc/ExecutorFactory.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/41cc2659897ded1c75869e25f414a6dce3380d39586a3b5a93cc7ebd6ce5/SignInManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4339ea715f37b0f03d2b320e0045fb388f69ec8c11189ee29a9fc119d/SecretClient.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4ea681aa1df24442c1a5e1e18582b1a2d29ac5bfd41390c94a5d2cc958b5ff/UserManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/53f275362d7abbf585b11ccb5c3918ebcb0fc8b6b472144e910674b58b794a5/TokenCredential.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/575c31ecc35a636b6f962cb71d53992552941a18982aae1c8e6c16305cc3761b/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/595a578380fad7a0c4ade2cb256e4ff7233d9368473f9d35a898197d7762a0/DbContextOptions`.cs" root0="SKIP_HIGHLIGHTING" />
@@ -80,7 +89,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="SWEA" />
   </component>
   <component name="ProjectId" id="2QqzTwgDaYQk2nGcYj1BvmBM5AX" />
   <component name="ProjectLevelVcsManager">
@@ -95,7 +104,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "fix-for-windows",
+    "git-widget-placeholder": "add-login",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -115,7 +124,14 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.WhatYouHaveLost">
+  <component name="RiderProblemsViewState">
+    <hideBySeverity>
+      <option value="11" />
+      <option value="15" />
+      <option value="20" />
+    </hideBySeverity>
+  </component>
+  <component name="RunManager" selected=".NET Launch Settings Profile.WhatYouHaveLost: IIS Express">
     <configuration name="WhatYouHaveLost.Web" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -238,7 +254,7 @@
       <workItem from="1688423209294" duration="10135000" />
       <workItem from="1688474396671" duration="6214000" />
       <workItem from="1693500942346" duration="16435000" />
-      <workItem from="1693759418546" duration="22954000" />
+      <workItem from="1693759418546" duration="30051000" />
     </task>
     <servers />
   </component>
@@ -278,26 +294,26 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/WhatYouHaveLost/Controllers/HomeController.cs</url>
-          <line>34</line>
+          <line>71</line>
           <properties documentPath="C:\Source\techChallenge\WhatYouHaveLost\WhatYouHaveLost\Controllers\HomeController.cs" initialLine="33" containingFunctionPresentation="Method 'News'">
             <startOffsets>
-              <option value="945" />
+              <option value="2074" />
             </startOffsets>
             <endOffsets>
-              <option value="946" />
+              <option value="2075" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/WhatYouHaveLost/Repository/NewsRepository.cs</url>
+          <url>file://$PROJECT_DIR$/WhatYouHaveLost/Data/Repository/NewsRepository.cs</url>
           <line>21</line>
           <properties documentPath="C:\Source\techChallenge\WhatYouHaveLost\WhatYouHaveLost\Repository\NewsRepository.cs" initialLine="20" containingFunctionPresentation="Method 'ReadAllNewsAsync'">
             <startOffsets>
-              <option value="572" />
+              <option value="577" />
             </startOffsets>
             <endOffsets>
-              <option value="573" />
+              <option value="578" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="31" />
