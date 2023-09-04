@@ -1,7 +1,6 @@
-using Microsoft.EntityFrameworkCore.ChangeTracking;
 using WhatYouHaveLost.Repository.Data;
 
-namespace WhatYouHaveLost.Repository;
+namespace WhatYouHaveLost.Repository.Interfaces;
 
 public interface INewsRepository
 {

@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using WhatYouHaveLost.Repository;
+using WhatYouHaveLost.Repository.Interfaces;
 using WhatYouHaveLost.Views.Home;
 using WhatYouHaveLost.Views.Models;
 

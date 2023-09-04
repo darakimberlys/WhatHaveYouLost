@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using WhatYouHaveLost.Repository.Data;
+using WhatYouHaveLost.Repository.Interfaces;
 
 namespace WhatYouHaveLost.Repository;
 
@@ -21,8 +22,7 @@ public class NewsRepository : INewsRepository
     {
         try
         {
-            var teste =  _context.News.ToList();
-            return teste;
+           return _context.News.ToList();
         }
         catch (Exception e)
         {

@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using WhatYouHaveLost.Repository;
+using WhatYouHaveLost.Repository.Interfaces;
 
 namespace WhatYouHaveLost.Views.Models;
 

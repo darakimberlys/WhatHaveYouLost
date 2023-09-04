@@ -1,5 +1,6 @@
 ﻿using WhatYouHaveLost.Repository;
 using WhatYouHaveLost.Repository.Data;
+using WhatYouHaveLost.Repository.Interfaces;
 using WhatYouHaveLost.Services.Interface;
 
 namespace WhatYouHaveLost.Services;

@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using WhatYouHaveLost.IoC;
 using WhatYouHaveLost.Repository;
+using WhatYouHaveLost.Repository.Interfaces;
 using WhatYouHaveLost.Services;
 using WhatYouHaveLost.Services.Interface;
 
