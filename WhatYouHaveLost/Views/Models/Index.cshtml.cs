@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace WhatYouHaveLost.Pages;
+namespace WhatYouHaveLost.Views.Models;
 
 public class IndexModel : PageModel
 {

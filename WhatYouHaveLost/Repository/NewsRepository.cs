@@ -17,11 +17,11 @@ public class NewsRepository : INewsRepository
         return await _context.News.FirstOrDefaultAsync(news => news.Id == selectedNews);
     }
 
-    public async Task<List<News>> ReadAllNewsAsync()
+    public List<News> ReadAllNews()
     {
         try
         {
-            var teste =  await _context.News.ToListAsync();
+            var teste =  _context.News.ToList();
             return teste;
         }
         catch (Exception e)

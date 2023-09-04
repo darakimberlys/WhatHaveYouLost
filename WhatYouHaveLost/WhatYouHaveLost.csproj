@@ -81,6 +81,30 @@
     <_ContentIncludedByDefault Remove="wwwroot\lib\jquery\dist\jquery.min.js" />
     <_ContentIncludedByDefault Remove="wwwroot\lib\jquery\dist\jquery.min.map" />
     <_ContentIncludedByDefault Remove="wwwroot\lib\jquery\LICENSE.txt" />
+    <_ContentIncludedByDefault Remove="Services\Home\News.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Home\News.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Pages\AddNews.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Pages\Details.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Pages\Error.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Pages\Home\News.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Pages\Index.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Pages\Login.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Pages\Manage.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Pages\Shared\_Layout.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Pages\Shared\_ValidationScriptsPartial.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Pages\_ViewImports.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Pages\_ViewStart.cshtml" />
+    <_ContentIncludedByDefault Remove="Pages\AddNews.cshtml" />
+    <_ContentIncludedByDefault Remove="Pages\Details.cshtml" />
+    <_ContentIncludedByDefault Remove="Pages\Error.cshtml" />
+    <_ContentIncludedByDefault Remove="Pages\Home\News.cshtml" />
+    <_ContentIncludedByDefault Remove="Pages\Index.cshtml" />
+    <_ContentIncludedByDefault Remove="Pages\Login.cshtml" />
+    <_ContentIncludedByDefault Remove="Pages\Manage.cshtml" />
+    <_ContentIncludedByDefault Remove="Pages\Shared\_Layout.cshtml" />
+    <_ContentIncludedByDefault Remove="Pages\Shared\_ValidationScriptsPartial.cshtml" />
+    <_ContentIncludedByDefault Remove="Pages\_ViewImports.cshtml" />
+    <_ContentIncludedByDefault Remove="Pages\_ViewStart.cshtml" />
   </ItemGroup>
 
   <ItemGroup>

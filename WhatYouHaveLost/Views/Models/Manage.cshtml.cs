@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using WhatYouHaveLost.Repository;
 
-namespace WhatYouHaveLost.Pages;
+namespace WhatYouHaveLost.Views.Models;
 
 [Authorize]
 public class ManageModel : PageModel
@@ -15,8 +15,8 @@ public class ManageModel : PageModel
         _newsRepository = newsRepository;
     }
 
-    public async Task OnGetAsync()
+    public void OnGetAsync()
     {
-        NewsItems = await _newsRepository.ReadAllNewsAsync();
+        NewsItems =  _newsRepository.ReadAllNews();
     }
 }

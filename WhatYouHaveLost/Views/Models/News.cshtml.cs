@@ -1,27 +1,28 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using WhatYouHaveLost.Repository;
+using WhatYouHaveLost.Repository.Data;
 
-namespace WhatYouHaveLost.Pages;
+namespace WhatYouHaveLost.Views.Models;
 
 public class NewsModel : PageModel
 {
     private readonly INewsRepository _newsRepository;
-
-    public List<Repository.Data.News> NewsList { get; set; }
-
+    
     public NewsModel(INewsRepository newsRepository)
     {
         _newsRepository = newsRepository;
     }
-
-    public IActionResult Id(string id)
+    
+    public List<News> NewsList { get; set; }
+    
+    public IActionResult OnPost(int id)
     {
-        return RedirectToPage("detalhes", new { id });
+        return RedirectToPage("/detalhes", new { id });
     }
-
-    public async Task OnGet()
+    
+    public void OnGet()
     {
-        NewsList = await _newsRepository.ReadAllNewsAsync();
+        NewsList = _newsRepository.ReadAllNews();
     }
 }

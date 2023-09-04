@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
+using WhatYouHaveLost.IoC;
 using WhatYouHaveLost.Repository;
 using WhatYouHaveLost.Services;
 using WhatYouHaveLost.Services.Interface;
@@ -15,7 +16,7 @@ public class Program
         builder.Services.AddRazorPages();
         builder.Services.AddScoped<INewsRepository, NewsRepository>();
         builder.Services.AddScoped<INewsService, NewsService>();
-
+        builder.Services.AddIdentityValidation();
         builder.Services.AddDbContext<ApplicationDbContext>(options =>
         {
             options.UseSqlServer(Environment.GetEnvironmentVariable("CONNECTION"));

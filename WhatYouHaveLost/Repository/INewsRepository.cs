@@ -6,7 +6,7 @@ namespace WhatYouHaveLost.Repository;
 public interface INewsRepository
 {
     Task<News> GetCompleteNewsByIdAsync(int selectedNews);
-    Task<List<News>> ReadAllNewsAsync();
+    List<News> ReadAllNews();
     Task CreateNewsAsync(News news);
     void DeleteNews(News news);
 }

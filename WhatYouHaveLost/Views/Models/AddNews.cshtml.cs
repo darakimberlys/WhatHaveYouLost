@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using WhatYouHaveLost.Repository.Data;
 using WhatYouHaveLost.Services.Interface;
 
-namespace WhatYouHaveLost.Pages
+namespace WhatYouHaveLost.Views.Models
 {
     public class AddNewsModel : PageModel
     {
