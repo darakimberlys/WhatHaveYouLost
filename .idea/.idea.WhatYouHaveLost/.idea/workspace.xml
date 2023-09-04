@@ -16,109 +16,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b921db3-f342-4e9d-b359-851261f10bdc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/Controllers/HomeController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/Models/ErrorViewModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/Properties/launchSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/Views/Home/Index.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/Views/Home/Privacy.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/Views/Shared/_Layout.cshtml.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/Views/Shared/_ValidationScriptsPartial.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/Views/_ViewImports.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/WhatYouHaveLost.View.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/appsettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/css/site.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/js/site.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/bootstrap/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/bootstrap/dist/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/bootstrap/dist/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/jquery-validation/LICENSE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/jquery-validation/dist/additional-methods.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/jquery-validation/dist/additional-methods.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/jquery-validation/dist/jquery.validate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/jquery/LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/jquery/dist/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/jquery/dist/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/wwwroot/lib/jquery/dist/jquery.min.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost/Controllers/HomeController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WhatYouHaveLost/IoC/SettingsCollection.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WhatYouHaveLost/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WhatYouHaveLost/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/config/applicationhost.config" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/config/applicationhost.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost.sln" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/IOC/SettingsCollection.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Pages/AddNews.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Pages/AddNews.cshtml.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Pages/Details.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Pages/Details.cshtml.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Pages/Error.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/Views/Shared/Error.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Pages/Error.cshtml.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Pages/Index.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Pages/Index.cshtml.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Pages/Login.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Pages/Login.cshtml.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Pages/Manage.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Pages/Manage.cshtml.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Pages/News.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Pages/News.cshtml.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Pages/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/Views/Shared/_Layout.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Pages/Shared/_Layout.cshtml.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Pages/Shared/_ValidationScriptsPartial.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Pages/_ViewImports.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Pages/_ViewStart.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost.View/Views/_ViewStart.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Controllers/HomeController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Properties/launchSettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Repository/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Repository/ApplicationDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Repository/INewsRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Repository/INewsRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Repository/INewsRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Repository/Interfaces/INewsRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Repository/NewsRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Repository/NewsRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/WhatYouHaveLost.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/WhatYouHaveLost.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Services/NewsService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Services/NewsService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Views/Models/Manage.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Views/Models/Manage.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Views/Models/News.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Views/Models/News.cshtml.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -331,7 +238,7 @@
       <workItem from="1688423209294" duration="10135000" />
       <workItem from="1688474396671" duration="6214000" />
       <workItem from="1693500942346" duration="16435000" />
-      <workItem from="1693759418546" duration="22462000" />
+      <workItem from="1693759418546" duration="22954000" />
     </task>
     <servers />
   </component>
@@ -371,26 +278,26 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/WhatYouHaveLost/Controllers/HomeController.cs</url>
-          <line>33</line>
+          <line>34</line>
           <properties documentPath="C:\Source\techChallenge\WhatYouHaveLost\WhatYouHaveLost\Controllers\HomeController.cs" initialLine="33" containingFunctionPresentation="Method 'News'">
             <startOffsets>
-              <option value="900" />
+              <option value="945" />
             </startOffsets>
             <endOffsets>
-              <option value="901" />
+              <option value="946" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/WhatYouHaveLost/Repository/NewsRepository.cs</url>
-          <line>20</line>
+          <line>21</line>
           <properties documentPath="C:\Source\techChallenge\WhatYouHaveLost\WhatYouHaveLost\Repository\NewsRepository.cs" initialLine="20" containingFunctionPresentation="Method 'ReadAllNewsAsync'">
             <startOffsets>
-              <option value="527" />
+              <option value="572" />
             </startOffsets>
             <endOffsets>
-              <option value="528" />
+              <option value="573" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="31" />
