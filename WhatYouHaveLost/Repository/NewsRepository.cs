@@ -1,24 +1,48 @@
+using Microsoft.EntityFrameworkCore;
 using WhatYouHaveLost.Repository.Data;
+using WhatYouHaveLost.Repository.Interfaces;
 
-namespace WhatYouHaveLost.Repository
+namespace WhatYouHaveLost.Repository;
+
+public class NewsRepository : INewsRepository
 {
-    public class NewsRepository : INewsRepository
+    private readonly ApplicationDbContext _context;
+
+    public NewsRepository(ApplicationDbContext context)
     {
-        private readonly ApplicationDbContext _context;
+        _context = context;
+    }
 
-        public NewsRepository(ApplicationDbContext context)
-        {
-            _context = context;
-        }
+    public async Task<News> GetCompleteNewsByIdAsync(int selectedNews)
+    {
+        return await _context.News.FirstOrDefaultAsync(news => news.Id == selectedNews);
+    }
 
-        public NewsData GetNewsContent(string selectedNews)
+    public List<News> ReadAllNews()
+    {
+        try
         {
-            return _context.NewsData.FirstOrDefault(news => news.Id == selectedNews);
+           return _context.News.ToList();
         }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
+    }
 
-        public List<NewsData> GetAllNews()
-        {
-            return _context.NewsData.ToList();
-        }
+    public async Task CreateNewsAsync(News news)
+    {
+        await _context.News.AddAsync(news);
+    }
+
+    public void DeleteNews(News news)
+    {
+        _context.News.Remove(news);
+    }
+
+    public void UpdateNews(News news, string id)
+    {
+        _context.News.Update(news);
     }
 }

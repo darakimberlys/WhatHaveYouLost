@@ -1,0 +1,15 @@
+@model WhatYouHaveLost.Views.Models.NewsModel
+
+<div class="text-center">
+	<h1 class="display-4">Nesta página você vai selecionar uma das notícias que você pode ter perdido, porque estava no celular</h1>
+</div>
+
+<div>
+	<h2>Qual a notícia que quer ver?</h2>
+	<ul>
+		@foreach (var news in Model.NewsList)
+		{
+			<a class="nav-link text-blue" asp-controller="Home" asp-action="Details" asp-route-id="@news.Id">@news.Title</a>
+		}
+	</ul>
+</div>
