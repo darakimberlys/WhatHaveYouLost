@@ -1,14 +1,8 @@
-@page "/manage"
-@model WhatYouHaveLost.Views.Models.ManageModel
-@{
-    ViewData["Title"] = "Gestão de Notícias";
-}
-
 <div class="container">
-    <h1>@ViewData["Title"]</h1>
+    <h1>Gerenciamento das notícias</h1>
     
-    <a class="btn btn-primary" asp-page="Create">Criar Nova Notícia</a>
-    
+    <a class="btn btn-primary" asp-controller="Home" asp-action="AddNews">Criar Nova Notícia</a>
+
     <table class="table">
         <thead>
         <tr>
@@ -22,8 +16,8 @@
             <tr>
                 <td>@newsItem.Title</td>
                 <td>
-                    <a class="btn btn-info" asp-page="Edit" asp-route-id="@newsItem.Id">Editar</a>
-                    <a class="btn btn-danger" asp-page-handler="Delete" asp-route-id="@newsItem.Id">Apagar</a>
+                    <a class="btn btn-info" asp-controller="Home" asp-action="UpdateNews" asp-route-id="@newsItem.Id">Editar</a>
+                    <a class="btn btn-danger" asp-controller="Home" asp-action="DeleteNews" asp-route-id="@newsItem.Id">Apagar</a>
                 </td>
             </tr>
         }

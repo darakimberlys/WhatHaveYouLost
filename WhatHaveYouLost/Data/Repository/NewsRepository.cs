@@ -41,7 +41,7 @@ public class NewsRepository : INewsRepository
         _context.News.Remove(news);
     }
 
-    public void UpdateNews(News news, string id)
+    public void UpdateNews(News news)
     {
         _context.News.Update(news);
     }

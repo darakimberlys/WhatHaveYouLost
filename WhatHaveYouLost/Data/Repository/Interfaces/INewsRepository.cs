@@ -8,4 +8,5 @@ public interface INewsRepository
     List<News> ReadAllNews();
     Task CreateNewsAsync(News news);
     void DeleteNews(News news);
+    void UpdateNews(News news);
 }

@@ -27,7 +27,7 @@ public class AddNewsModel : PageModel
             return Page();
         }
             
-        _newsService.AddNews(News);
+        _newsService.CreateNews(News);
 
         return RedirectToPage("news");
     }

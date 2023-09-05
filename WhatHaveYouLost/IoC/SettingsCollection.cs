@@ -37,7 +37,14 @@ public static class SettingsCollection
             var configuration = provider.GetRequiredService<IConfiguration>();
             var encryptionKey = configuration.GetValue<string>("JwtSecret");
             return new PasswordEncryptor(encryptionKey);
-        });        
+        });   
+        
+        services.AddScoped<IJwtTokenValidator>(provider =>
+        {
+            var configuration = provider.GetRequiredService<IConfiguration>();
+            var encryptionKey = configuration.GetValue<string>("JwtSecret");
+            return new JwtTokenValidator(encryptionKey);
+        });
     }
 
     public static void AddServices(this IServiceCollection services)
