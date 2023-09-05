@@ -1,0 +1,39 @@
+using Microsoft.Extensions.Caching.Distributed;
+using WhatYouHaveLost.Infrastructure;
+using WhatYouHaveLost.Services.Interfaces;
+
+namespace WhatYouHaveLost.Services
+{
+    public class AuthCacheService : IAuthCacheService
+    {
+        private const int TTL_Days = 7;
+        private const string AliasKey = "UserToken";
+        private readonly ICacheProvider _cacheProvider;
+
+        public AuthCacheService(ICacheProvider cacheProvider)
+        {
+            _cacheProvider = cacheProvider;
+        }
+
+        public async Task SetTokenCacheAsync(Guid userId, string token)
+        {
+            var cacheEntryOptions = new DistributedCacheEntryOptions().SetSlidingExpiration(TimeSpan.FromDays(TTL_Days));
+
+            var tokenFromCache = await GetTokenCacheAsync(userId);
+
+            if(tokenFromCache is not null && !string.IsNullOrWhiteSpace(tokenFromCache))
+            {
+                await _cacheProvider.ClearCache(ComposeKey(userId));
+            }
+
+            await _cacheProvider.SetCache(ComposeKey(userId), token, cacheEntryOptions);
+        }
+
+        public async Task<string> GetTokenCacheAsync(Guid userId)
+        {
+            return await _cacheProvider.GetFromCache(ComposeKey(userId));
+        }
+
+        private string ComposeKey(Guid userId) => $"{AliasKey}-{userId}";
+    }
+}
