@@ -8,12 +8,12 @@ public class UserConfiguration : IEntityTypeConfiguration<UserData>
 {
     public void Configure(EntityTypeBuilder<UserData> builder)
     {
-        builder.ToTable("User"); 
+        builder.ToTable("Users"); 
 
         builder.HasKey(n => n.UserId);
             
         builder.Property(n => n.LoginName).HasColumnName("LoginName").HasMaxLength(40).IsRequired();
         builder.Property(n => n.Password).HasColumnName("PasswordHash").HasMaxLength(64).IsRequired();
-        builder.Property(n => n.Salt).HasColumnName("Salt");
+        builder.Property(n => n.ID).HasColumnName("ID");
     }
 }

@@ -1,6 +1,8 @@
+using WhatYouHaveLost.Model.Data;
+
 namespace WhatYouHaveLost.Data.Repository.Interfaces;
 
 public interface IUserRepository
 {
-    Task<bool> UserExistAsync(string userName);
+    Task<UserData> GetUserDataAsync(string userName);
 }

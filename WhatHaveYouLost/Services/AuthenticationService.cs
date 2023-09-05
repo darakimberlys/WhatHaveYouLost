@@ -13,45 +13,38 @@ public class AuthenticationService : IAuthenticationService
 {
     private readonly IUserRepository _userRepository;
     private readonly IPasswordEncryptor _passwordEncryptor;
-    private readonly IAuthCacheService _authCacheService;
     private readonly IConfiguration _configuration;
 
     public AuthenticationService(
         IUserRepository userRepository,
         IPasswordEncryptor passwordEncryptor,
-        IAuthCacheService authCacheService,
         IConfiguration configuration)
     {
         _configuration = configuration;
         _userRepository = userRepository;
         _passwordEncryptor = passwordEncryptor;
-        _authCacheService = authCacheService;
     }
 
-    public async Task<bool> LoginAsync(UserData userData)
+    public async Task<(bool, string)> LoginAsync(UserData userData)
     {
-        var user = await _userRepository.UserExistAsync(userData.LoginName);
+        var user = await _userRepository.GetUserDataAsync(userData.LoginName);
 
-        if (user is false)
+        if (user is null)
         {
-            return false;
+            return (false, string.Empty);
         }
 
         var userPassword = _passwordEncryptor.DecryptPassword(userData.Password);
 
-        if (!string.IsNullOrWhiteSpace(userPassword) && !string.IsNullOrWhiteSpace(userData.Password))
+        if (user.Password == userPassword)
         {
-            if (userData.Password == userPassword)
-            {
-                var token = GenerateJwtToken(userData);
-                await _authCacheService.SetTokenCacheAsync(Guid.Parse(userData.UserId.ToString()), token);
-                return true;
-            }
-
-            return false;
+           var token =  GenerateJwtToken(userData);
+            return (true, token);
         }
-
-        return false;
+        else
+        {
+            return (false, string.Empty);
+        }
     }
 
     private string GenerateJwtToken(UserData userData)
@@ -66,11 +59,12 @@ public class AuthenticationService : IAuthenticationService
                 new Claim(ClaimTypes.Name, userData.LoginName),
             }),
             Expires = DateTime.UtcNow.AddHours(3),
-            SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
+            SigningCredentials =
+                new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
         };
+
 
         var token = tokenHandler.CreateToken(tokenDescriptor);
         return tokenHandler.WriteToken(token);
     }
 }
-

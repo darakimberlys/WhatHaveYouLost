@@ -1,6 +1,9 @@
+using System.Net.Http.Headers;
+using System.Text;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Primitives;
+using WhatYouHaveLost.Data.Repository.Configurations;
 using WhatYouHaveLost.Data.Repository.Interfaces;
 using WhatYouHaveLost.Model.Data;
 using WhatYouHaveLost.Services.Interfaces;
@@ -8,16 +11,20 @@ using WhatYouHaveLost.Views.Models;
 
 namespace WhatYouHaveLost.Controllers;
 
+[Authorize]
 public class HomeController : Controller
 {
     private readonly INewsRepository _newsRepository;
     private readonly IAuthenticationService _authenticationService;
+    private readonly IPasswordEncryptor _passwordEncryptor;
 
     public HomeController(INewsRepository newsRepository,
-        IAuthenticationService authenticationService)
+        IAuthenticationService authenticationService,
+        IPasswordEncryptor passwordEncryptor)
     {
         _newsRepository = newsRepository;
         _authenticationService = authenticationService;
+        _passwordEncryptor = passwordEncryptor;
     }
 
     /// <summary>
@@ -42,33 +49,35 @@ public class HomeController : Controller
     {
         if (ModelState.IsValid)
         {
+            var encriptedPassword = _passwordEncryptor.EncryptPassword(loginModel.Password);
             var result = await _authenticationService.LoginAsync(
                 new UserData
                 {
                 LoginName = loginModel.UserName,
-                Password = loginModel.Password 
+                Password = encriptedPassword
                 });
 
-            if (result)
+            if (result.Item1)
             {
+                Request.Headers.Authorization = new StringValues(result.Item2);
+                
                 return RedirectToAction("Manage");
-            }
+            }else
             {
                 ModelState.AddModelError(string.Empty, "Tentativa de login inválida.");
                 return View();
             }
         }
-
+        
         return View(loginModel);
+        
     }
     
-    [Authorize]
     public IActionResult AddNews()
     {
         return View();
     }
 
-    [Authorize]
     public IActionResult Manage()
     {
         return View();

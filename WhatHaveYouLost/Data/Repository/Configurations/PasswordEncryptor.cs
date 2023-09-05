@@ -1,72 +1,63 @@
 using System.Security.Cryptography;
 using System.Text;
 
-namespace WhatYouHaveLost.Data.Repository.Configurations;
-
-public class PasswordEncryptor : IPasswordEncryptor
+namespace WhatYouHaveLost.Data.Repository.Configurations
 {
-    private readonly string _encryptionKey;
-
-    public PasswordEncryptor(string encryptionKey)
+    public class PasswordEncryptor : IPasswordEncryptor
     {
-        _encryptionKey = encryptionKey;
-    }
+        private readonly byte[] _encryptionKeyBytes;
+        private readonly byte[] _ivBytes;
 
-    public string EncryptPassword(string password)
-    {
-        using (RijndaelManaged aesAlg = new RijndaelManaged())
+        public PasswordEncryptor(string encryptionKey)
         {
-            aesAlg.KeySize = 128;
-            aesAlg.BlockSize = 128;
-            aesAlg.Mode = CipherMode.CBC;
-            aesAlg.Padding = PaddingMode.PKCS7;
+            _encryptionKeyBytes = Encoding.UTF8.GetBytes(encryptionKey);
+            _ivBytes = new byte[16];
+        }
 
-            byte[] keyBytes = Encoding.UTF8.GetBytes(_encryptionKey);
-            byte[] ivBytes = new byte[16]; // O IV (Vetor de Inicialização) deve ser aleatório e não secreto.
-
-            aesAlg.Key = keyBytes;
-            aesAlg.IV = ivBytes;
-
-            ICryptoTransform encryptor = aesAlg.CreateEncryptor(aesAlg.Key, aesAlg.IV);
-
-            using (MemoryStream msEncrypt = new MemoryStream())
+        public string EncryptPassword(string password)
+        {
+            using (RijndaelManaged aesAlg = new RijndaelManaged())
             {
-                using (CryptoStream csEncrypt = new CryptoStream(msEncrypt, encryptor, CryptoStreamMode.Write))
+                aesAlg.Key = _encryptionKeyBytes;
+                aesAlg.IV = _ivBytes;
+                aesAlg.Mode = CipherMode.CBC;
+                aesAlg.Padding = PaddingMode.PKCS7;
+
+                ICryptoTransform encryptor = aesAlg.CreateEncryptor(aesAlg.Key, aesAlg.IV);
+
+                using (MemoryStream msEncrypt = new MemoryStream())
                 {
-                    using (StreamWriter swEncrypt = new StreamWriter(csEncrypt))
+                    using (CryptoStream csEncrypt = new CryptoStream(msEncrypt, encryptor, CryptoStreamMode.Write))
                     {
-                        swEncrypt.Write(password);
+                        using (StreamWriter swEncrypt = new StreamWriter(csEncrypt))
+                        {
+                            swEncrypt.Write(password);
+                        }
                     }
+                    return Convert.ToBase64String(msEncrypt.ToArray());
                 }
-                return Convert.ToBase64String(msEncrypt.ToArray());
             }
         }
-    }
 
-    public string DecryptPassword(string encryptedPassword)
-    {
-        using (RijndaelManaged aesAlg = new RijndaelManaged())
+        public string DecryptPassword(string encryptedPassword)
         {
-            aesAlg.KeySize = 128;
-            aesAlg.BlockSize = 128;
-            aesAlg.Mode = CipherMode.CBC;
-            aesAlg.Padding = PaddingMode.PKCS7;
-
-            byte[] keyBytes = Encoding.UTF8.GetBytes(_encryptionKey);
-            byte[] ivBytes = new byte[16]; // O IV (Vetor de Inicialização) deve ser o mesmo usado para criptografar.
-
-            aesAlg.Key = keyBytes;
-            aesAlg.IV = ivBytes;
-
-            ICryptoTransform decryptor = aesAlg.CreateDecryptor(aesAlg.Key, aesAlg.IV);
-
-            using (MemoryStream msDecrypt = new MemoryStream(Convert.FromBase64String(encryptedPassword)))
+            using (RijndaelManaged aesAlg = new RijndaelManaged())
             {
-                using (CryptoStream csDecrypt = new CryptoStream(msDecrypt, decryptor, CryptoStreamMode.Read))
+                aesAlg.Key = _encryptionKeyBytes;
+                aesAlg.IV = _ivBytes;
+                aesAlg.Mode = CipherMode.CBC;
+                aesAlg.Padding = PaddingMode.PKCS7;
+
+                ICryptoTransform decryptor = aesAlg.CreateDecryptor(aesAlg.Key, aesAlg.IV);
+
+                using (MemoryStream msDecrypt = new MemoryStream(Convert.FromBase64String(encryptedPassword)))
                 {
-                    using (StreamReader srDecrypt = new StreamReader(csDecrypt))
+                    using (CryptoStream csDecrypt = new CryptoStream(msDecrypt, decryptor, CryptoStreamMode.Read))
                     {
-                        return srDecrypt.ReadToEnd();
+                        using (StreamReader srDecrypt = new StreamReader(csDecrypt))
+                        {
+                            return srDecrypt.ReadToEnd();
+                        }
                     }
                 }
             }

@@ -5,7 +5,6 @@ using Microsoft.IdentityModel.Tokens;
 using WhatYouHaveLost.Data.Repository;
 using WhatYouHaveLost.Data.Repository.Configurations;
 using WhatYouHaveLost.Data.Repository.Interfaces;
-using WhatYouHaveLost.Infrastructure;
 using WhatYouHaveLost.Services;
 using WhatYouHaveLost.Services.Interfaces;
 
@@ -16,10 +15,10 @@ public static class SettingsCollection
     public static void AddJWTValidation(this IServiceCollection services, IConfiguration configuration)
     {
         var key = Encoding.ASCII.GetBytes(configuration.GetSection("JwtSecret").Value);
-        services.AddAuthentication(x =>
+        services.AddAuthentication(options =>
             {
-                x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
             })
             .AddJwtBearer(options =>
             {
@@ -32,8 +31,6 @@ public static class SettingsCollection
                     ValidateAudience = false
                 };
             });
-        
-        services.AddScoped<ICacheProvider, CacheProvider>();
         
         services.AddScoped<IPasswordEncryptor>(provider =>
         {
@@ -52,8 +49,6 @@ public static class SettingsCollection
         //Services
         services.AddScoped<INewsService, NewsService>();
         services.AddScoped<IAuthenticationService, AuthenticationService>();
-        services.AddScoped<IAuthCacheService, AuthCacheService>();
-
     }
 
     public static void AddDataBaseConnection(this IServiceCollection services)

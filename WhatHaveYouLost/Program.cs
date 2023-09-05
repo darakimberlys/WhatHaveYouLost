@@ -1,3 +1,4 @@
+using WhatYouHaveLost.Data.Repository.Configurations;
 using WhatYouHaveLost.IoC;
 
 namespace WhatYouHaveLost;
@@ -23,6 +24,8 @@ public class Program
 
         app.UseHttpsRedirection();
         app.UseStaticFiles();
+
+        app.UseMiddleware<JwtTokenValidationMiddleware>(); 
 
         app.UseRouting();
 

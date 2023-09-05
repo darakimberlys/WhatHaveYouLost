@@ -4,5 +4,5 @@ namespace WhatYouHaveLost.Services.Interfaces;
 
 public interface IAuthenticationService
 {
-    Task<bool> LoginAsync(UserData userData);
+    Task<(bool, string)> LoginAsync(UserData userData);
 }
