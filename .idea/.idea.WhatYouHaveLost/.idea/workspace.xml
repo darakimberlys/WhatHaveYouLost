@@ -21,8 +21,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WhatYouHaveLost/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WhatYouHaveLost/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WhatYouHaveLost.Tests/AuthenticationServiceTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost.Tests/AuthenticationServiceTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Controllers/HomeController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Controllers/ManageController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Controllers/ManageController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/WhatYouHaveLost.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/WhatYouHaveLost.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Services/Interfaces/INewsService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Services/Interfaces/INewsService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Services/NewsService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Services/NewsService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -292,7 +294,7 @@
       <workItem from="1693971015602" duration="54000" />
       <workItem from="1693971099200" duration="88000" />
       <workItem from="1693971207095" duration="516000" />
-      <workItem from="1693972590494" duration="2282000" />
+      <workItem from="1693972590494" duration="3981000" />
     </task>
     <servers />
   </component>
@@ -324,12 +326,6 @@
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/WhatYouHaveLost/Controllers/HomeController.cs</url>
-          <line>71</line>
-          <properties documentPath="C:\Source\techChallenge\WhatYouHaveLost\WhatYouHaveLost\Controllers\HomeController.cs" initialLine="33" containingFunctionPresentation="Method 'News'" />
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/WhatYouHaveLost/Data/Repository/NewsRepository.cs</url>
           <line>21</line>
           <properties documentPath="C:\Source\techChallenge\WhatYouHaveLost\WhatYouHaveLost\Repository\NewsRepository.cs" initialLine="20" containingFunctionPresentation="Method 'ReadAllNewsAsync'" />
@@ -352,6 +348,32 @@
           <line>43</line>
           <properties documentPath="C:\Source\techChallenge\WhatYouHaveLost\WhatHaveYouLost\Data\Repository\NewsRepository.cs" initialLine="43" containingFunctionPresentation="Method 'DeleteNews'" />
           <option name="timeStamp" value="117" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/WhatYouHaveLost/Controllers/ManageController.cs</url>
+          <line>108</line>
+          <properties documentPath="C:\Source\techChallenge\WhatYouHaveLost\WhatYouHaveLost\Controllers\ManageController.cs" initialLine="108" containingFunctionPresentation="Method 'UpdateNews'">
+            <startOffsets>
+              <option value="3352" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3353" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="123" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/WhatYouHaveLost/Services/NewsService.cs</url>
+          <line>63</line>
+          <properties documentPath="C:\Source\techChallenge\WhatYouHaveLost\WhatYouHaveLost\Services\NewsService.cs" initialLine="96" containingFunctionPresentation="Method 'UpdateNewsAsync'">
+            <startOffsets>
+              <option value="1734" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1804" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="127" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -77,7 +77,7 @@ public class ManageController : Controller
     {
         if (ModelState.IsValid)
         {
-            await _newsService.CreateNews(model);
+            await _newsService.CreateNewsAsync(model);
 
             return Accepted();
         }
@@ -104,13 +104,12 @@ public class ManageController : Controller
     /// <param name="model"></param>
     /// <returns></returns>
     [Authorize]
-    [HttpPatch("update/{id}")]
-    public async Task<IActionResult> UpdateNews([FromRoute]UpsertModel model, int id)
+    [HttpPatch("update")]
+    public async Task<IActionResult> UpdateNews([FromBody]UpsertModel model)
     {
         if (ModelState.IsValid)
         {
-            model.Id = id;
-            await _newsService.UpdateNews(model);
+            await _newsService.UpdateNewsAsync(model);
 
             return Accepted();
         }
