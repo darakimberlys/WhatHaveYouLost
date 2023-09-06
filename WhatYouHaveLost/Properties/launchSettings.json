@@ -5,8 +5,7 @@
       "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "CONNECTION": ""
-      },
+        "CONNECTION":"Server=tcp:sv-techchallenges.database.windows.net,1433;Database=db_noticias;User Id=techchallenge;Password=Fiapchallenge64;"      },
       "dotnetRunMessages": true,
       "applicationUrl": "https://localhost:7201;http://localhost:5175"
     },
@@ -15,8 +14,7 @@
       "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "CONNECTION": ""
-      }
+        "CONNECTION":"Server=tcp:sv-techchallenges.database.windows.net,1433;Database=db_noticias;User Id=techchallenge;Password=Fiapchallenge64;"      }
     }
   },
   "iisSettings": {

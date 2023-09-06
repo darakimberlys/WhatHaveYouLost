@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WhatHaveYouLost", "WhatHaveYouLost\WhatHaveYouLost.csproj", "{E6C897EB-6D41-4E99-9029-2D436C8112FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WhatYouHaveLost", "WhatYouHaveLost\WhatYouHaveLost.csproj", "{E6C897EB-6D41-4E99-9029-2D436C8112FE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1E663234-447E-4D9B-9C7F-83BA37123EBC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhatHaveYouLost.Tests", "WhatHaveYouLost.Tests\WhatHaveYouLost.Tests.csproj", "{BB7968BF-9E1E-4443-88C9-36DA3D823E99}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhatYouHaveLost.Tests", "WhatYouHaveLost.Tests\WhatYouHaveLost.Tests.csproj", "{BB7968BF-9E1E-4443-88C9-36DA3D823E99}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
