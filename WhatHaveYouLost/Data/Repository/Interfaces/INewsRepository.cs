@@ -7,6 +7,6 @@ public interface INewsRepository
     Task<News> GetCompleteNewsByIdAsync(int selectedNews);
     List<News> ReadAllNews();
     void CreateNewsAsync(News news);
-    Task DeleteNews(int id);
+    void DeleteNews(int id);
     Task SaveChangesForNews();
 }

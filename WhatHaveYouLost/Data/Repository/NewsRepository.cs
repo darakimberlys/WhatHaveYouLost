@@ -36,13 +36,15 @@ public class NewsRepository : INewsRepository
         _context.News.Add(news);
     }
 
-    public async Task DeleteNews(int id)
+    public void DeleteNews(int id)
     {
-        var newsToDelete = await GetCompleteNewsByIdAsync(id);
-        
-        _context.News.Remove(newsToDelete);
+        var newsToDelete = _context.News.Find(id);
+        if (newsToDelete != null)
+        {
+            _context.News.Remove(newsToDelete);
 
-        await SaveChangesForNews();
+            _context.SaveChanges();
+        }
     }
 
     public async Task SaveChangesForNews()
