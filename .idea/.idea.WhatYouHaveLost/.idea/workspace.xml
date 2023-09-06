@@ -22,7 +22,6 @@
       <change beforePath="$PROJECT_DIR$/WhatYouHaveLost.Tests/AuthenticationServiceTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost.Tests/AuthenticationServiceTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Controllers/HomeController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Controllers/ManageController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Controllers/ManageController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Services/Interfaces/INewsService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Services/Interfaces/INewsService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Services/NewsService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Services/NewsService.cs" afterDir="false" />
     </list>
@@ -354,10 +353,10 @@
           <line>108</line>
           <properties documentPath="C:\Source\techChallenge\WhatYouHaveLost\WhatYouHaveLost\Controllers\ManageController.cs" initialLine="108" containingFunctionPresentation="Method 'UpdateNews'">
             <startOffsets>
-              <option value="3352" />
+              <option value="3347" />
             </startOffsets>
             <endOffsets>
-              <option value="3353" />
+              <option value="3348" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="123" />
@@ -367,13 +366,26 @@
           <line>63</line>
           <properties documentPath="C:\Source\techChallenge\WhatYouHaveLost\WhatYouHaveLost\Services\NewsService.cs" initialLine="96" containingFunctionPresentation="Method 'UpdateNewsAsync'">
             <startOffsets>
-              <option value="1734" />
+              <option value="1783" />
             </startOffsets>
             <endOffsets>
-              <option value="1804" />
+              <option value="1784" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="127" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/WhatYouHaveLost/Controllers/HomeController.cs</url>
+          <line>209</line>
+          <properties documentPath="C:\Source\techChallenge\WhatYouHaveLost\WhatYouHaveLost\Controllers\HomeController.cs" initialLine="201" containingFunctionPresentation="Method 'UpdateNews'">
+            <startOffsets>
+              <option value="5905" />
+            </startOffsets>
+            <endOffsets>
+              <option value="5906" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="128" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

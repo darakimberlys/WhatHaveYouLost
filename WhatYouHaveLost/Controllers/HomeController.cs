@@ -118,7 +118,7 @@ public class HomeController : Controller
             
             if (isValid)
             { 
-                _newsService.CreateNewsAsync(model);
+                _newsService.CreateNews(model);
                 
                 return RedirectToAction("Manage");
             }

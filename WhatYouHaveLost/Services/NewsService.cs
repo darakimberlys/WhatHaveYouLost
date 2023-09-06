@@ -37,31 +37,31 @@ public class NewsService : INewsService
         
     }
 
-    public async Task UpdateNews(UpsertModel model)
+    public async Task UpdateNewsAsync(UpsertModel model)
     {
         var news = new News();
         
         news = await _newsRepository.GetCompleteNewsByIdAsync(model.Id);
         
-        if (news.Title != model.Title)
+        if (news.Title != model.Title && model.Title is not null)
         {
             news.Title = model.Title;
             news.PublishDate = DateTime.Today;
         }
         
-        if (news.Content != model.Content)
+        if (news.Content != model.Content && model.Content is not null)
         {
             news.Content = model.Content;
             news.PublishDate = DateTime.Today;
         }
         
-        if (news.Image != model.ImageLink)
+        if (news.Image != model.ImageLink && model.Content is not null)
         {
             news.Image = model.ImageLink;
             news.PublishDate = DateTime.Today;
         }
         
-        if (news.Author != model.AuthorLink)
+        if (news.Author != model.AuthorLink && model.Content is not null)
         {
             news.Author = model.AuthorLink;
             news.PublishDate = DateTime.Today;
