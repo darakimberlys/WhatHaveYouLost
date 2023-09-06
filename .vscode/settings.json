@@ -1,5 +1,6 @@
 {
     "dotnet.defaultSolution": "WhatYouHaveLost.sln",
     "appService.preDeployTask": "publish-release",
-    "appService.deploySubpath": "WhatYouHaveLost/bin/Release/net6.0/publish"
+    "appService.deploySubpath": "WhatYouHaveLost\\bin\\Release\\net6.0\\publish",
+    "appService.defaultWebAppToDeploy": "/subscriptions/d854eed7-b5de-4c99-9411-66c1230be933/resourceGroups/techChallenge/providers/Microsoft.Web/sites/oqueeuperdi"
 }

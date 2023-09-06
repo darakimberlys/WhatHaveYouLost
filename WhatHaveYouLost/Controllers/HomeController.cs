@@ -29,7 +29,6 @@ public class HomeController : Controller
         _authenticationService = authenticationService;
         _passwordEncryptor = passwordEncryptor;
         _tokenValidator = tokenValidator;
-        var test = token;
     }
 
     /// <summary>
@@ -38,14 +37,27 @@ public class HomeController : Controller
     /// <returns></returns>
     public IActionResult Index()
     {
+        ViewBag.Token = token;
+       
         return View();
     }
 
+    /// <summary>
+    /// Direcionamento para a página de login
+    /// </summary>
+    /// <returns></returns>
     public IActionResult LoginPage()
     {
+        ViewBag.Token = token;
+
         return View(new LoginModel());
     }
 
+    /// <summary>
+    /// Validação do formulário de login
+    /// </summary>
+    /// <param name="loginModel"></param>
+    /// <returns></returns>
     [HttpPost]
     public async Task<IActionResult> LoginPage(LoginModel loginModel)
     {
@@ -71,32 +83,70 @@ public class HomeController : Controller
             }
         }
         
-        return View(loginModel);
-        
+        return RedirectToAction("LoginPage");
     }
     
-    public IActionResult AddNews(string token)
+    /// <summary>
+    /// Direciona para a página do formulário de criação da nova notícia
+    /// </summary>
+    /// <returns></returns>
+    public IActionResult CreateNews()
     {
         var isValid = _tokenValidator.ValidateToken(token);
 
         if (isValid)
         {
-            return View();
+            ViewBag.Token = token;
+            
+            return View(new CreateNewsModel());
         }
 
         return RedirectToAction("LoginPage");    
     }
 
+    /// <summary>
+    /// Valida o formulário de criação da nova notícia e salva no banco
+    /// </summary>
+    /// <param name="model"></param>
+    /// <returns></returns>
+    [HttpPost]
+    public async Task<IActionResult> CreateNews(CreateNewsModel model)
+    {
+        if (ModelState.IsValid)
+        {
+            var isValid = _tokenValidator.ValidateToken(token);
+            
+            if (isValid)
+            { 
+                _newsService.CreateNews(model);
+                
+                return RedirectToAction("Manage");
+            }
+            else
+            {
+                ModelState.AddModelError(string.Empty, "Tentativa de login inválida.");
+                return RedirectToAction("LoginPage");
+            }
+        }
+        
+        return RedirectToAction("CreateNews");
+    }
+    
+    /// <summary>
+    /// Direcionamento para a página de gerenciamento das notícias
+    /// </summary>
+    /// <returns></returns>
     public IActionResult Manage()
     {
         var isValid = _tokenValidator.ValidateToken(token);
 
         if (isValid)
         {
+            ViewBag.Token = token;
+
             var model = new ManageModel
             {
                 NewsItems = _newsRepository.ReadAllNews(),
-                Token = token
             };
             
             return View(model);
@@ -109,46 +159,64 @@ public class HomeController : Controller
     /// Visualizar todas as notícias existentes no banco de dados
     /// </summary>
     /// <returns></returns>
-    public IActionResult News()
+    public IActionResult ReadAllNews()
     {
-        var newsModel = new NewsModel
-        {
-            NewsList = _newsRepository.ReadAllNews()
-        };
+        ViewBag.Token = token;
 
-        return View(newsModel);
+        return View(new NewsModel
+            {
+                NewsList = _newsRepository.ReadAllNews()
+            });
     }
     
-    public IActionResult UpdateNews(int id)
+    /// <summary>
+    /// Direcionamento para a página de atuzalização das notícias existentes
+    /// </summary>
+    /// <param name="id"></param>
+    /// <returns></returns>
+    public async Task<IActionResult> UpdateNews(int id)
     {
         var isValid = _tokenValidator.ValidateToken(token);
 
         if (isValid)
         {
-            _newsRepository.GetCompleteNewsByIdAsync(id);
+            ViewBag.Token = token;
+
+            var news = await _newsRepository.GetCompleteNewsByIdAsync(id);
             return View
             (
-                new UpdateModel
+                new UpsertModel
             {
-                Id = id
+                Id = id,
+                Title = news.Title,
+                Content = news.Content,
+                ImageLink = news.Image,
+                AuthorLink = news.Author,
             });
         }
 
         return RedirectToAction("LoginPage");
     }
     
+    /// <summary>
+    /// Validação e atualização da notícia
+    /// </summary>
+    /// <param name="model"></param>
+    /// <returns></returns>
     [HttpPost]
-    public async Task<IActionResult> UpdateNews(UpdateModel model)
+    public async Task<IActionResult> UpdateNews(UpsertModel model)
     {
         if (ModelState.IsValid)
         {
-            var isValid = _tokenValidator.ValidateToken(model.Token);
+            ViewBag.Token = token;
+
+            var isValid = _tokenValidator.ValidateToken(token);
             
             if (isValid)
             { 
                 await _newsService.UpdateNews(model);
                 
-                return RedirectToAction("Manage", new {token = model.Token});
+                return RedirectToAction("Manage");
             }
             else
             {
@@ -157,8 +225,7 @@ public class HomeController : Controller
             }
         }
         
-        return View(model);
-        
+        return RedirectToAction("UpdateNews");
     }
     
     public IActionResult DeleteNews(int id)
@@ -167,8 +234,8 @@ public class HomeController : Controller
 
         if (isValid)
         {
-            _newsService.DeleteNews(id);
-            return RedirectToAction("Manage", new {token = token});
+            _newsRepository.DeleteNews(id);
+            return RedirectToAction("Manage");
         }
 
         return RedirectToAction("LoginPage");
@@ -183,11 +250,20 @@ public class HomeController : Controller
     [Route("Home/Details/{id}")]
     public async Task<IActionResult> Details(int id)
     {
+        ViewBag.Token = token;
+
         var detailsModel = new DetailsModel
         {
             News = await _newsRepository.GetCompleteNewsByIdAsync(id)
         };
 
         return View(detailsModel);
+    }
+    
+    public IActionResult SignOut()
+    {
+        token = string.Empty;
+
+        return RedirectToAction("Index");    
     }
 }

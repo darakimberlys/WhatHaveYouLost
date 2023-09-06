@@ -5,7 +5,6 @@ namespace WhatYouHaveLost.Services.Interfaces;
 
 public interface INewsService
 {
-    void CreateNews(News news);
-    Task DeleteNews(int id);
-    Task UpdateNews(UpdateModel model);
+    Task CreateNews(CreateNewsModel model);
+    Task UpdateNews(UpsertModel model);
 }

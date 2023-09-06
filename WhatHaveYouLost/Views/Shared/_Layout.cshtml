@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - WhatHaveYouLost</title>
+    <title>@ViewData["Title"] O Que Você Perdeu?</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="icon" href="~/flor-icon.ico" asp-append-version="true" />
@@ -26,13 +26,31 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
-	                    <li class="nav-item"> 
-		                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="News">Notícias</a>
-	                    </li>
-	                    <li class="nav-item">
-		                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="LoginPage">Trabalho aqui</a>
-	                    </li>
+                        <li class="nav-item"> 
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="ReadAllNews">Notícias</a>
+                        </li>
+                    @if (string.IsNullOrWhiteSpace(@ViewBag.Token))
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="LoginPage">Trabalho aqui</a>
+                        </li>
+                    }
+                    
+                    @if (!string.IsNullOrWhiteSpace(@ViewBag.Token))
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Manage">Gerenciar</a>
+                        </li>
+                    }
                     </ul>
+                    @if (!string.IsNullOrWhiteSpace(@ViewBag.Token))
+                    {
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link text-red" asp-controller="Home" asp-action="SignOut">Logout</a>
+                            </li>
+                        </ul>
+                    }
                 </div>
             </div>
         </nav>
