@@ -1,0 +1,26 @@
+<div class="container">
+    <h1>Gerenciamento das notícias</h1>
+    
+    <a class="btn btn-primary" asp-controller="Home" asp-action="AddNews">Criar Nova Notícia</a>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Título</th>
+            <th>Ações</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var newsItem in Model.NewsItems)
+        {
+            <tr>
+                <td>@newsItem.Title</td>
+                <td>
+                    <a class="btn btn-info" asp-controller="Home" asp-action="UpdateNews" asp-route-id="@newsItem.Id">Editar</a>
+                    <a class="btn btn-danger" asp-controller="Home" asp-action="DeleteNews" asp-route-id="@newsItem.Id">Apagar</a>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>
