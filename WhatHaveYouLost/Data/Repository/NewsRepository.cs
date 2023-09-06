@@ -15,7 +15,7 @@ public class NewsRepository : INewsRepository
 
     public async Task<News> GetCompleteNewsByIdAsync(int selectedNews)
     {
-        return await _context.News.FirstOrDefaultAsync(news => news.Id == selectedNews);
+        return await _context.News.FindAsync(selectedNews);
     }
 
     public List<News> ReadAllNews()
@@ -31,18 +31,22 @@ public class NewsRepository : INewsRepository
         }
     }
 
-    public async Task CreateNewsAsync(News news)
+    public void CreateNewsAsync(News news)
     {
-        await _context.News.AddAsync(news);
+        _context.News.Add(news);
     }
 
-    public void DeleteNews(News news)
+    public async Task DeleteNews(int id)
     {
-        _context.News.Remove(news);
+        var newsToDelete = await GetCompleteNewsByIdAsync(id);
+        
+        _context.News.Remove(newsToDelete);
+
+        await SaveChangesForNews();
     }
 
-    public void UpdateNews(News news)
+    public async Task SaveChangesForNews()
     {
-        _context.News.Update(news);
+        await _context.SaveChangesAsync();
     }
 }

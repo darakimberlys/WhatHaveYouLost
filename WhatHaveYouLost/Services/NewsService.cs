@@ -14,52 +14,59 @@ public class NewsService : INewsService
         _newsRepository = newsRepository;
     }
 
-    public void CreateNews(News news)
+    public async Task CreateNews(CreateNewsModel model)
     {
-        news.PublishDate = DateTime.Now.Date;
+        try
+        {
+            _newsRepository.CreateNewsAsync(new News
+            {
+                Title = model.Title,
+                Content = model.Content,
+                Image = model.ImageLink,
+                Author = model.AuthorLink,
+                PublishDate = DateTime.Today
+            });
 
-        _newsRepository.CreateNewsAsync(news);
+            await _newsRepository.SaveChangesForNews();
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
+        
     }
 
-    public async Task UpdateNews(UpdateModel model)
+    public async Task UpdateNews(UpsertModel model)
     {
         var news = new News();
         
         news = await _newsRepository.GetCompleteNewsByIdAsync(model.Id);
         
-        if (!string.IsNullOrWhiteSpace(model.Title))
+        if (news.Title != model.Title)
         {
             news.Title = model.Title;
             news.PublishDate = DateTime.Today;
         }
         
-        if (!string.IsNullOrWhiteSpace(model.Content))
+        if (news.Content != model.Content)
         {
             news.Content = model.Content;
             news.PublishDate = DateTime.Today;
         }
         
-        if (!string.IsNullOrWhiteSpace(model.ImageLink))
+        if (news.Image != model.ImageLink)
         {
             news.Image = model.ImageLink;
             news.PublishDate = DateTime.Today;
         }
         
-        if (!string.IsNullOrWhiteSpace(model.AuthorLink))
+        if (news.Author != model.AuthorLink)
         {
             news.Author = model.AuthorLink;
             news.PublishDate = DateTime.Today;
         }
-
-        if (news.PublishDate == DateTime.Today)
-        {
-            _newsRepository.UpdateNews(news);
-        }
-    }
-    
-    public async Task DeleteNews(int id)
-    {
-        var newsObject = await _newsRepository.GetCompleteNewsByIdAsync(id);
-        _newsRepository.DeleteNews(newsObject);
+        
+        await _newsRepository.SaveChangesForNews();
     }
 }
