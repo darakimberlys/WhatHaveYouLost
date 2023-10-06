@@ -15,7 +15,8 @@ public class UserRepository : IUserRepository
     
     public async Task<UserData> GetUserDataAsync(string userName)
     {
-        var user = await _context.User.FirstOrDefaultAsync(u => u.LoginName == userName);
+        var user = await _context.User.FirstOrDefaultAsync(u => 
+                u.LoginName == userName);
         return user;
     }
 }

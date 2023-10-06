@@ -25,7 +25,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\WhatHaveYouLost\WhatHaveYouLost.csproj" />
+      <ProjectReference Include="..\WhatYouHaveLost\WhatYouHaveLost.csproj" />
     </ItemGroup>
 
 </Project>

@@ -38,7 +38,7 @@ public class AuthenticationService : IAuthenticationService
 
         if (user.Password == userPassword)
         {
-           var token =  GenerateJwtToken(userData);
+           var token = GenerateJwtToken(userData);
             return (true, token);
         }
         else
@@ -50,7 +50,8 @@ public class AuthenticationService : IAuthenticationService
     private string GenerateJwtToken(UserData userData)
     {
         var tokenHandler = new JwtSecurityTokenHandler();
-        var key = Encoding.ASCII.GetBytes(_configuration.GetSection("JwtSecret").Value);
+        
+        var key = Encoding.ASCII.GetBytes(Environment.GetEnvironmentVariable("JwtSecret"));
 
         var tokenDescriptor = new SecurityTokenDescriptor
         {
@@ -62,8 +63,7 @@ public class AuthenticationService : IAuthenticationService
             SigningCredentials =
                 new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
         };
-
-
+        
         var token = tokenHandler.CreateToken(tokenDescriptor);
         return tokenHandler.WriteToken(token);
     }

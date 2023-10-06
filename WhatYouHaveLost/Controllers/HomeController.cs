@@ -67,8 +67,8 @@ public class HomeController : Controller
             var result = await _authenticationService.LoginAsync(
                 new UserData
                 {
-                LoginName = loginModel.UserName,
-                Password = encriptedPassword
+                    LoginName = loginModel.UserName,
+                    Password = encriptedPassword
                 });
 
             if (result.Item1)
