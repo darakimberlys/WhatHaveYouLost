@@ -1,66 +1,55 @@
 using System.Security.Cryptography;
 using System.Text;
+using WhatYouHaveLost.Services.Interfaces;
 
-namespace WhatYouHaveLost.Data.Repository.Configurations
+namespace WhatYouHaveLost.Data.Repository.Configurations;
+
+public class PasswordEncryptor : IPasswordEncryptor
 {
-    public class PasswordEncryptor : IPasswordEncryptor
+    private readonly byte[] _encryptionKeyBytes;
+    private readonly byte[] _ivBytes = new byte[16];
+    private readonly IRijndaelProvider _rijndaelProvider;
+
+    public PasswordEncryptor(string encryptionKey, IRijndaelProvider rijndaelProvider)
     {
-        private readonly byte[] _encryptionKeyBytes;
-        private readonly byte[] _ivBytes;
+        _encryptionKeyBytes = Encoding.UTF8.GetBytes(encryptionKey);
+        _rijndaelProvider = rijndaelProvider;
+    }
 
-        public PasswordEncryptor(string encryptionKey)
+    public string EncryptPassword(string password)
+    {
+        if (string.IsNullOrWhiteSpace(password))
         {
-            _encryptionKeyBytes = Encoding.UTF8.GetBytes(encryptionKey);
-            _ivBytes = new byte[16];
+            return string.Empty;
         }
 
-        public string EncryptPassword(string password)
+        var encryptor = _rijndaelProvider.CreateEncryptor(_encryptionKeyBytes, _ivBytes);
+
+        using (MemoryStream msEncrypt = new MemoryStream())
         {
-            using (RijndaelManaged aesAlg = new RijndaelManaged())
+            using (CryptoStream csEncrypt = new CryptoStream(msEncrypt, encryptor, CryptoStreamMode.Write))
             {
-                aesAlg.Key = _encryptionKeyBytes;
-                aesAlg.IV = _ivBytes;
-                aesAlg.Mode = CipherMode.CBC;
-                aesAlg.Padding = PaddingMode.PKCS7;
-
-                ICryptoTransform encryptor = aesAlg.CreateEncryptor(aesAlg.Key, aesAlg.IV);
-
-                using (MemoryStream msEncrypt = new MemoryStream())
+                using (StreamWriter swEncrypt = new StreamWriter(csEncrypt))
                 {
-                    using (CryptoStream csEncrypt = new CryptoStream(msEncrypt, encryptor, CryptoStreamMode.Write))
-                    {
-                        using (StreamWriter swEncrypt = new StreamWriter(csEncrypt))
-                        {
-                            swEncrypt.Write(password);
-                        }
-                    }
-                    return Convert.ToBase64String(msEncrypt.ToArray());
+                    swEncrypt.Write(password);
                 }
             }
+            return Convert.ToBase64String(msEncrypt.ToArray());
         }
+    }
 
-        public string DecryptPassword(string encryptedPassword)
+    public string DecryptPassword(string encryptedPassword)
+    {
+        if (string.IsNullOrWhiteSpace(encryptedPassword))
         {
-            using (RijndaelManaged aesAlg = new RijndaelManaged())
-            {
-                aesAlg.Key = _encryptionKeyBytes;
-                aesAlg.IV = _ivBytes;
-                aesAlg.Mode = CipherMode.CBC;
-                aesAlg.Padding = PaddingMode.PKCS7;
-
-                ICryptoTransform decryptor = aesAlg.CreateDecryptor(aesAlg.Key, aesAlg.IV);
-
-                using (MemoryStream msDecrypt = new MemoryStream(Convert.FromBase64String(encryptedPassword)))
-                {
-                    using (CryptoStream csDecrypt = new CryptoStream(msDecrypt, decryptor, CryptoStreamMode.Read))
-                    {
-                        using (StreamReader srDecrypt = new StreamReader(csDecrypt))
-                        {
-                            return srDecrypt.ReadToEnd();
-                        }
-                    }
-                }
-            }
+            return string.Empty;
         }
+
+        var decryptor = _rijndaelProvider.CreateDecryptor(_encryptionKeyBytes, _ivBytes);
+
+        using var msDecrypt = new MemoryStream(Convert.FromBase64String(encryptedPassword));
+        using var csDecrypt = new CryptoStream(msDecrypt, decryptor, CryptoStreamMode.Read);
+        using var srDecrypt = new StreamReader(csDecrypt);
+        return srDecrypt.ReadToEnd();
     }
 }

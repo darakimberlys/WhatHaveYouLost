@@ -21,9 +21,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WhatYouHaveLost/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WhatYouHaveLost/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WhatYouHaveLost.Tests/AuthenticationServiceTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost.Tests/AuthenticationServiceTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WhatYouHaveLost.Tests/WhatYouHaveLost.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost.Tests/WhatYouHaveLost.Tests.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Controllers/HomeController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Data/Repository/UserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Data/Repository/UserRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Data/Repository/Configurations/PasswordEncryptor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Data/Repository/Configurations/PasswordEncryptor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/IoC/SettingsCollection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/IoC/SettingsCollection.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Services/AuthenticationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Services/AuthenticationService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/appsettings.json" afterDir="false" />
     </list>
@@ -59,6 +58,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7cb7424fd293afbd058d95c82aaf7b12b3cf57037576ecc8fd333ccfad7ad/Encoding.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7d9a41d47547e1fe7fe548b21ab4de12cc2671170a023bc8c629017837eb5f4/ActionMethodExecutor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/84f28e9b56c06474b877ee255eefbbee29aef25d998edfc9d4e85b33e1edf882/AuthorizationMiddleware.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/86affa4daeb781ae36ad5df2bc50a466638a25fb26de83e94b0715141/RijndaelManaged.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/8b17eea7411eb1ee7e80413e8229dc445ba073ab591c18196db8b55712aabb/ControllerFactoryProvider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/8d3195c9ba918c7860b66ce3965d4b9f173653cfea2479e8bb842d3513a89b/RazorPageOfT.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/90bcc0bb7bb125bf29cbf8bcf8917c261be732d96c1fefb169b1a2686687cf5/IHeaderDictionary.Keyed.cs" root0="SKIP_HIGHLIGHTING" />
@@ -80,7 +80,9 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e8383eafdb3fcfdc3625b4caef3730d5769bb177bac72360812c9f5bb4a78/ModelBuilder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e8d3bcb75657e1215392dfd276529f3c965e923e468ed653f863cdffe755472/HttpProtocol.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/eaf48d290b118e4b123edeca9152a696d26d4e2f25b8287c37d64b15a5c17b/ViewResult.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f4efe1a05e309cf71ce280a392e1cfac5a8db3b6a76be486a57ae686444815/NullAsserts.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f5297661c332adde375e682e974228832372ef64d6fd9c55e716bce7f72c655/ResourceInvoker.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f5545b2656401abe1a371ad2756d7d2328a38293f7ee8b163801bbf55cee8/TestInvoker.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/faf4a4b37056302738a46865827c3d2d3b6b1b977603a3932b0cd749921118/Controller.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -109,7 +111,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -295,11 +297,82 @@
       <workItem from="1693971207095" duration="516000" />
       <workItem from="1693972590494" duration="3981000" />
       <workItem from="1696546406070" duration="4187000" />
+      <workItem from="1696891267661" duration="731000" />
+      <workItem from="1696892079953" duration="7412000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnitTestsCoverage.Settings">
+    <option name="coveragePercentColumnWidth" value="86" />
+    <option name="sortOrder" value="DESCENDING" />
+    <option name="sortedColumn" value="1" />
+    <option name="symbolColumnWidth" value="46" />
+    <coverage-tree-state>
+      <expand>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 10% 554/613" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 10% 554/613" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="src 10% 554/613" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 10% 554/613" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="src 10% 554/613" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="WhatYouHaveLost 5% 520/548" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 10% 554/613" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="src 10% 554/613" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="WhatYouHaveLost 5% 520/548" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="WhatYouHaveLost 5% 501/529" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 10% 554/613" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="src 10% 554/613" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="WhatYouHaveLost 5% 520/548" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="WhatYouHaveLost 5% 501/529" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Services 32% 52/76" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 10% 554/613" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="src 10% 554/613" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="WhatYouHaveLost 5% 520/548" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="WhatYouHaveLost 5% 501/529" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Services 32% 52/76" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="AuthenticationService 100% 0/24" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 10% 554/613" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="src 10% 554/613" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="WhatYouHaveLost 5% 520/548" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="WhatYouHaveLost 5% 501/529" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Services 32% 52/76" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="AuthenticationService 100% 0/24" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="LoginAsync(UserData) 100% 0/12" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 10% 554/613" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="src 10% 554/613" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="WhatYouHaveLost 5% 520/548" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="WhatYouHaveLost 5% 501/529" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Services 32% 52/76" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="NewsService 0% 39/39" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+      </expand>
+      <select />
+    </coverage-tree-state>
   </component>
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="Vcs.Log.Tabs.Properties">

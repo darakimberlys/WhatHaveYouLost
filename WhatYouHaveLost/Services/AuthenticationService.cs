@@ -13,14 +13,11 @@ public class AuthenticationService : IAuthenticationService
 {
     private readonly IUserRepository _userRepository;
     private readonly IPasswordEncryptor _passwordEncryptor;
-    private readonly IConfiguration _configuration;
 
     public AuthenticationService(
         IUserRepository userRepository,
-        IPasswordEncryptor passwordEncryptor,
-        IConfiguration configuration)
+        IPasswordEncryptor passwordEncryptor)
     {
-        _configuration = configuration;
         _userRepository = userRepository;
         _passwordEncryptor = passwordEncryptor;
     }
@@ -29,25 +26,23 @@ public class AuthenticationService : IAuthenticationService
     {
         var user = await _userRepository.GetUserDataAsync(userData.LoginName);
 
-        if (user is null)
+        if (string.IsNullOrWhiteSpace(user.LoginName))
         {
             return (false, string.Empty);
         }
 
         var userPassword = _passwordEncryptor.DecryptPassword(userData.Password);
-
-        if (user.Password == userPassword)
-        {
-           var token = GenerateJwtToken(userData);
-            return (true, token);
-        }
-        else
+        
+        if (user.Password != userPassword || string.IsNullOrWhiteSpace(userPassword))
         {
             return (false, string.Empty);
         }
+
+        var token = GenerateJwtToken(userData);
+        return (true, token);
     }
 
-    private string GenerateJwtToken(UserData userData)
+    private static string GenerateJwtToken(UserData userData)
     {
         var tokenHandler = new JwtSecurityTokenHandler();
         
