@@ -47,8 +47,8 @@ public class NewsRepository : INewsRepository
         }
     }
 
-    public async Task SaveChangesForNews()
+    public async Task<int> SaveChangesForNews()
     {
-        await _context.SaveChangesAsync();
+        return await _context.SaveChangesAsync();
     }
 }

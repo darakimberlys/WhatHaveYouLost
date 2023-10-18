@@ -14,10 +14,15 @@ public class NewsService : INewsService
         _newsRepository = newsRepository;
     }
 
-    public async Task CreateNews(CreateNewsModel model)
+    public async Task<bool> CreateNewsAsync(CreateNewsModel model)
     {
         try
         {
+            if (model.Content == null)
+            {
+                throw new ArgumentNullException(nameof(model));
+            }
+
             _newsRepository.CreateNewsAsync(new News
             {
                 Title = model.Title,
@@ -27,46 +32,60 @@ public class NewsService : INewsService
                 PublishDate = DateTime.Today
             });
 
-            await _newsRepository.SaveChangesForNews();
+            var resultForTest = await _newsRepository.SaveChangesForNews();
+            return resultForTest == 0 ? true : false;
         }
         catch (Exception e)
         {
             Console.WriteLine(e);
             throw;
         }
-        
     }
 
-    public async Task UpdateNewsAsync(UpsertModel model)
+    public async Task<bool> UpdateNewsAsync(UpsertModel model)
     {
-        var news = new News();
-        
-        news = await _newsRepository.GetCompleteNewsByIdAsync(model.Id);
-        
-        if (news.Title != model.Title && model.Title is not null)
+        try
         {
-            news.Title = model.Title;
-            news.PublishDate = DateTime.Today;
+            if (model.Content == null)
+            {
+                throw new ArgumentNullException(nameof(model));
+            }
+
+            var news = new News();
+
+            news = await _newsRepository.GetCompleteNewsByIdAsync(model.Id);
+
+            if (news.Title != model.Title && model.Title is not null)
+            {
+                news.Title = model.Title;
+                news.PublishDate = DateTime.Today;
+            }
+
+            if (news.Content != model.Content && model.Content is not null)
+            {
+                news.Content = model.Content;
+                news.PublishDate = DateTime.Today;
+            }
+
+            if (news.Image != model.ImageLink && model.Content is not null)
+            {
+                news.Image = model.ImageLink;
+                news.PublishDate = DateTime.Today;
+            }
+
+            if (news.Author != model.AuthorLink && model.Content is not null)
+            {
+                news.Author = model.AuthorLink;
+                news.PublishDate = DateTime.Today;
+            }
+
+            var resultForTest = await _newsRepository.SaveChangesForNews();
+            return resultForTest == 0 ? true : false;
         }
-        
-        if (news.Content != model.Content && model.Content is not null)
+        catch (Exception e)
         {
-            news.Content = model.Content;
-            news.PublishDate = DateTime.Today;
+            Console.WriteLine(e);
+            throw;
         }
-        
-        if (news.Image != model.ImageLink && model.Content is not null)
-        {
-            news.Image = model.ImageLink;
-            news.PublishDate = DateTime.Today;
-        }
-        
-        if (news.Author != model.AuthorLink && model.Content is not null)
-        {
-            news.Author = model.AuthorLink;
-            news.PublishDate = DateTime.Today;
-        }
-        
-        await _newsRepository.SaveChangesForNews();
     }
 }
