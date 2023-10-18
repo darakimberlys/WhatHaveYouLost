@@ -19,12 +19,12 @@
   <component name="ChangeListManager">
     <list default="true" id="0b921db3-f342-4e9d-b359-851261f10bdc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WhatYouHaveLost/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WhatYouHaveLost/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost.Tests/AuthenticationServiceTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost.Tests/AuthenticationServiceTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost.Tests/WhatYouHaveLost.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost.Tests/WhatYouHaveLost.Tests.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost.Tests/PasswordEncryptorTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost.Tests/PasswordEncryptorTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Data/Repository/Configurations/PasswordEncryptor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Data/Repository/Configurations/PasswordEncryptor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/IoC/SettingsCollection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/IoC/SettingsCollection.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Services/AuthenticationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Services/AuthenticationService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Services/Authentication/RijndaelProvider.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Services/Interfaces/IRijndaelProvider.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/WhatYouHaveLost.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/WhatYouHaveLost.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +43,10 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/23e0a6ed95b573d36dbdc685ea2fed2f1cf90f580cdc93ee7d3e3d784379810/AnchorTagHelper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/333717bd1cce3876d133e8e23428a3dca892c18641b7eb745fe17d1eed102cbc/ExecutorFactory.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/37a954845b52703c5cce1aacf8fa1292378878e82bf68c4c4b5effc447316e9/IdentityUser.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/38284ca4f4afe378f96fccac3e179f4bceda7a74eb151623b66d2dc3634d9b/ExceptionAggregator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3b92f859131bde25d0f7a63de08963e995d1e1426e584dfd4b8e833d2d3dba/ExecutionTimer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea95343b9387b73062a9b61b7538f826c54ce3529632b4472ba4494044d23/AsyncTaskMethodBuilderT.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4117ae48b3954af098dc2bcb9d4faf457872e2718768ea11ac4054d4f02a9fa9/Guard.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/41cc2659897ded1c75869e25f414a6dce3380d39586a3b5a93cc7ebd6ce5/SignInManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4339ea715f37b0f03d2b320e0045fb388f69ec8c11189ee29a9fc119d/SecretClient.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/485da50d43321b81edc28153271bdedb84943a243743e2deaa67a981587968/IConfiguration.cs" root0="SKIP_HIGHLIGHTING" />
@@ -105,7 +108,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.50119907&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;add-unit-tests&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -298,7 +301,9 @@
       <workItem from="1693972590494" duration="3981000" />
       <workItem from="1696546406070" duration="4187000" />
       <workItem from="1696891267661" duration="731000" />
-      <workItem from="1696892079953" duration="7412000" />
+      <workItem from="1696892079953" duration="7502000" />
+      <workItem from="1696975152417" duration="2338000" />
+      <workItem from="1697665883060" duration="2357000" />
     </task>
     <servers />
   </component>
@@ -306,68 +311,95 @@
     <option name="version" value="3" />
   </component>
   <component name="UnitTestsCoverage.Settings">
-    <option name="coveragePercentColumnWidth" value="86" />
+    <option name="coveragePercentColumnWidth" value="138" />
     <option name="sortOrder" value="DESCENDING" />
     <option name="sortedColumn" value="1" />
-    <option name="symbolColumnWidth" value="46" />
+    <option name="symbolColumnWidth" value="530" />
     <coverage-tree-state>
       <expand>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 10% 554/613" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 20% 482/606" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 10% 554/613" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="src 10% 554/613" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 20% 482/606" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="src 20% 482/606" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 10% 554/613" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="src 10% 554/613" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="WhatYouHaveLost 5% 520/548" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 20% 482/606" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="src 20% 482/606" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="WhatYouHaveLost 12% 481/546" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 10% 554/613" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="src 10% 554/613" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="WhatYouHaveLost 5% 520/548" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="WhatYouHaveLost 5% 501/529" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 20% 482/606" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="src 20% 482/606" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="WhatYouHaveLost 12% 481/546" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="WhatYouHaveLost 12% 462/527" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 10% 554/613" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="src 10% 554/613" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="WhatYouHaveLost 5% 520/548" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="WhatYouHaveLost 5% 501/529" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Services 32% 52/76" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 20% 482/606" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="src 20% 482/606" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="WhatYouHaveLost 12% 481/546" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="WhatYouHaveLost 12% 462/527" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Data 41% 66/112" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 10% 554/613" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="src 10% 554/613" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="WhatYouHaveLost 5% 520/548" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="WhatYouHaveLost 5% 501/529" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Services 32% 52/76" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="AuthenticationService 100% 0/24" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 20% 482/606" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="src 20% 482/606" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="WhatYouHaveLost 12% 481/546" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="WhatYouHaveLost 12% 462/527" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Data 41% 66/112" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Repository 42% 64/110" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 10% 554/613" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="src 10% 554/613" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="WhatYouHaveLost 5% 520/548" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="WhatYouHaveLost 5% 501/529" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Services 32% 52/76" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="AuthenticationService 100% 0/24" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 20% 482/606" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="src 20% 482/606" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="WhatYouHaveLost 12% 481/546" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="WhatYouHaveLost 12% 462/527" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Data 41% 66/112" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Repository 42% 64/110" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Configurations 74% 16/62" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 20% 482/606" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="src 20% 482/606" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="WhatYouHaveLost 12% 481/546" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="WhatYouHaveLost 12% 462/527" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Services 30% 44/63" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 20% 482/606" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="src 20% 482/606" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="WhatYouHaveLost 12% 481/546" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="WhatYouHaveLost 12% 462/527" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Services 30% 44/63" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="AuthenticationService 79% 5/24" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 20% 482/606" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="src 20% 482/606" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="WhatYouHaveLost 12% 481/546" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="WhatYouHaveLost 12% 462/527" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Services 30% 44/63" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="AuthenticationService 79% 5/24" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
           <item name="LoginAsync(UserData) 100% 0/12" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 10% 554/613" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="src 10% 554/613" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="WhatYouHaveLost 5% 520/548" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="WhatYouHaveLost 5% 501/529" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Services 32% 52/76" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 20% 482/606" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="src 20% 482/606" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="WhatYouHaveLost 12% 481/546" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="WhatYouHaveLost 12% 462/527" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Services 30% 44/63" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
           <item name="NewsService 0% 39/39" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
       </expand>
@@ -453,13 +485,39 @@
           <line>209</line>
           <properties documentPath="C:\Source\techChallenge\WhatYouHaveLost\WhatYouHaveLost\Controllers\HomeController.cs" initialLine="201" containingFunctionPresentation="Method 'UpdateNews'">
             <startOffsets>
-              <option value="5905" />
+              <option value="5913" />
             </startOffsets>
             <endOffsets>
-              <option value="5906" />
+              <option value="5914" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="128" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/WhatYouHaveLost.Tests/PasswordEncryptorTests.cs</url>
+          <line>43</line>
+          <properties documentPath="C:\Source\techChallenge\1\WhatHaveYouLost\WhatYouHaveLost.Tests\PasswordEncryptorTests.cs" initialLine="46" containingFunctionPresentation="Method 'ValidateEncryptor'">
+            <startOffsets>
+              <option value="1446" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1477" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="132" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/WhatYouHaveLost.Tests/PasswordEncryptorTests.cs</url>
+          <line>32</line>
+          <properties documentPath="C:\Source\techChallenge\1\WhatHaveYouLost\WhatYouHaveLost.Tests\PasswordEncryptorTests.cs" initialLine="35" containingFunctionPresentation="Method 'ValidateEncryptor'">
+            <startOffsets>
+              <option value="1075" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1076" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="133" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

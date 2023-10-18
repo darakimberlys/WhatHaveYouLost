@@ -6,7 +6,6 @@ using WhatYouHaveLost.Data.Repository;
 using WhatYouHaveLost.Data.Repository.Configurations;
 using WhatYouHaveLost.Data.Repository.Interfaces;
 using WhatYouHaveLost.Services;
-using WhatYouHaveLost.Services.Authentication;
 using WhatYouHaveLost.Services.Interfaces;
 
 namespace WhatYouHaveLost.IoC;
@@ -32,16 +31,12 @@ public static class SettingsCollection
                     ValidateAudience = false
                 };
             });
-        
-        services.AddScoped<IRijndaelProvider, RijndaelProvider>();
 
-        services.AddScoped<IPasswordEncryptor>(serviceProvider =>
+        services.AddScoped<IPasswordEncryptor>(provider =>
         {
-            var encryptionKey = Environment.GetEnvironmentVariable("JwtSecret");
-            var rijndaelProvider = serviceProvider.GetRequiredService<IRijndaelProvider>();
-            return new PasswordEncryptor(encryptionKey, rijndaelProvider);
-        });
-
+            return new PasswordEncryptor(Environment.GetEnvironmentVariable("JwtSecret"));
+        });   
+        
         services.AddScoped<IJwtTokenValidator>(_ =>
         {
             var encryptionKey = Environment.GetEnvironmentVariable("JwtSecret");

@@ -1,40 +1,49 @@
+using System;
+using System.IO;
 using System.Security.Cryptography;
 using System.Text;
-using WhatYouHaveLost.Services.Interfaces;
 
 namespace WhatYouHaveLost.Data.Repository.Configurations;
 
 public class PasswordEncryptor : IPasswordEncryptor
 {
     private readonly byte[] _encryptionKeyBytes;
-    private readonly byte[] _ivBytes = new byte[16];
-    private readonly IRijndaelProvider _rijndaelProvider;
+    private readonly byte[] _ivBytes;
 
-    public PasswordEncryptor(string encryptionKey, IRijndaelProvider rijndaelProvider)
+    public PasswordEncryptor(string encryptionKey)
     {
         _encryptionKeyBytes = Encoding.UTF8.GetBytes(encryptionKey);
-        _rijndaelProvider = rijndaelProvider;
+        _ivBytes = new byte[16]; 
     }
 
     public string EncryptPassword(string password)
     {
         if (string.IsNullOrWhiteSpace(password))
         {
-            return string.Empty;
+            throw new ArgumentNullException(nameof(password));
         }
 
-        var encryptor = _rijndaelProvider.CreateEncryptor(_encryptionKeyBytes, _ivBytes);
-
-        using (MemoryStream msEncrypt = new MemoryStream())
+        using (Aes aesAlg = Aes.Create())
         {
-            using (CryptoStream csEncrypt = new CryptoStream(msEncrypt, encryptor, CryptoStreamMode.Write))
+            aesAlg.Key = _encryptionKeyBytes;
+            aesAlg.IV = _ivBytes;
+            aesAlg.Mode = CipherMode.CBC;
+            aesAlg.Padding = PaddingMode.PKCS7;
+
+            ICryptoTransform encryptor = aesAlg.CreateEncryptor(aesAlg.Key, aesAlg.IV);
+
+            using (MemoryStream msEncrypt = new MemoryStream())
             {
-                using (StreamWriter swEncrypt = new StreamWriter(csEncrypt))
+                using (CryptoStream csEncrypt = new CryptoStream(msEncrypt, encryptor, CryptoStreamMode.Write))
                 {
-                    swEncrypt.Write(password);
+                    using (StreamWriter swEncrypt = new StreamWriter(csEncrypt))
+                    {
+                        swEncrypt.Write(password);
+                    }
                 }
+
+                return Convert.ToBase64String(msEncrypt.ToArray());
             }
-            return Convert.ToBase64String(msEncrypt.ToArray());
         }
     }
 
@@ -42,14 +51,28 @@ public class PasswordEncryptor : IPasswordEncryptor
     {
         if (string.IsNullOrWhiteSpace(encryptedPassword))
         {
-            return string.Empty;
+            throw new ArgumentNullException(nameof(encryptedPassword));
         }
 
-        var decryptor = _rijndaelProvider.CreateDecryptor(_encryptionKeyBytes, _ivBytes);
+        using (Aes aesAlg = Aes.Create())
+        {
+            aesAlg.Key = _encryptionKeyBytes;
+            aesAlg.IV = _ivBytes;
+            aesAlg.Mode = CipherMode.CBC;
+            aesAlg.Padding = PaddingMode.PKCS7;
 
-        using var msDecrypt = new MemoryStream(Convert.FromBase64String(encryptedPassword));
-        using var csDecrypt = new CryptoStream(msDecrypt, decryptor, CryptoStreamMode.Read);
-        using var srDecrypt = new StreamReader(csDecrypt);
-        return srDecrypt.ReadToEnd();
+            ICryptoTransform decryptor = aesAlg.CreateDecryptor(aesAlg.Key, aesAlg.IV);
+
+            using (MemoryStream msDecrypt = new MemoryStream(Convert.FromBase64String(encryptedPassword)))
+            {
+                using (CryptoStream csDecrypt = new CryptoStream(msDecrypt, decryptor, CryptoStreamMode.Read))
+                {
+                    using (StreamReader srDecrypt = new StreamReader(csDecrypt))
+                    {
+                        return srDecrypt.ReadToEnd();
+                    }
+                }
+            }
+        }
     }
 }

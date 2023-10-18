@@ -1,9 +1,6 @@
-using System.Security.Cryptography;
 using System.Text;
 using AutoFixture;
-using Moq;
 using WhatYouHaveLost.Data.Repository.Configurations;
-using WhatYouHaveLost.Services.Interfaces;
 
 namespace WhatYouHaveLost.Tests;
 
@@ -12,8 +9,6 @@ public class PasswordEncryptorTests
     private const string EncryptionKey = "1234545688885555";
 
     private readonly Fixture _fixture;
-    private readonly Mock<RijndaelManaged> _rijndaelManaged = new();
-    private readonly Mock<IRijndaelProvider> _rijndaelProvider = new();
     private readonly byte[] _encryptionKeyByte = Encoding.UTF8.GetBytes(EncryptionKey);
     private readonly byte[] _ivBytes = new byte[16];
     private readonly IPasswordEncryptor _passwordEncryptor;
@@ -21,10 +16,10 @@ public class PasswordEncryptorTests
     public PasswordEncryptorTests()
     {
         Environment.SetEnvironmentVariable("JwtSecret", "1234545688885555");
-       
-        _passwordEncryptor  = new PasswordEncryptor(EncryptionKey, _rijndaelProvider.Object);
+
+        _passwordEncryptor = new PasswordEncryptor(EncryptionKey);
     }
-    
+
     [Theory]
     [InlineData("passwordTest", "passwordTest", "Success")]
     [InlineData("passwordTest", null, "SecondNull")]
@@ -32,55 +27,42 @@ public class PasswordEncryptorTests
     [InlineData(null, "passwordTest", "FirstNull")]
     [InlineData("", "passwordTest", "FirstEmpty")]
     public void ValidateEncryptor(
-        string password, 
-        string secondPassword, 
+        string passwordToEncrypt,
+        string passwordToDecrypt,
         string testType)
     {
-        var decrypt = _fixture.Create<ICryptoTransform>();
-        
-        var rijndaelProviderMock = new Mock<IRijndaelProvider>();
+        var encryptResult = "";
+        var decryptResult = "";
+        var exception = new ArgumentNullException();
 
-        rijndaelProviderMock.Setup(r => 
-            r.CreateInstance()).Returns(new RijndaelManaged());
-        
-        var encryptResult = _passwordEncryptor.EncryptPassword(password);
-        var decryptResult = _passwordEncryptor.DecryptPassword(secondPassword);
-       
-       switch (testType)
-       {
-           case "Success":
-               Assert.NotEmpty(encryptResult);
-               Assert.NotEmpty(decryptResult);
-               break;
+        switch (testType)
+        {
+            case "Success":
+                encryptResult = _passwordEncryptor.EncryptPassword(passwordToEncrypt);
+                decryptResult = _passwordEncryptor.DecryptPassword(encryptResult);
 
-           case "SecondNull":
+                Assert.NotEmpty(encryptResult);
+                Assert.NotEmpty(decryptResult);
+                break;
 
-               Assert.NotEmpty(encryptResult);
-               Assert.Empty(decryptResult);
-               break;
+            case "SecondNull" or "SecondEmpty":
+                encryptResult = _passwordEncryptor.EncryptPassword(passwordToEncrypt);
+                
+                exception = Assert.ThrowsAny<ArgumentNullException>(() =>
+                    _passwordEncryptor.DecryptPassword(passwordToDecrypt));
 
-           case "SecondEmpty":
-               Assert.NotEmpty(encryptResult);
-               Assert.Empty(decryptResult);
-               break;
+                Assert.Equal("encryptedPassword", exception.ParamName);
+                Assert.NotEmpty(encryptResult);
+                break;
 
-           case "FirstNull":
-               Assert.Empty(encryptResult);
-               Assert.NotEmpty(decryptResult);
-               break;
+            case "FirstNull" or "FirstEmpty":
+                exception = Assert.ThrowsAny<ArgumentNullException>(() => _passwordEncryptor.EncryptPassword(passwordToEncrypt));
 
-           case "FirstEmpty":
-               
-               _rijndaelManaged.Setup(x =>
-                       x.CreateDecryptor(It.IsAny<byte[]>(), It.IsAny<byte[]?>()))
-                   .Returns(decrypt);
+                Assert.Equal("password", exception.ParamName);
+                break;
 
-               Assert.Empty(encryptResult);
-               Assert.NotEmpty(decryptResult);
-               break;
-
-           default:
-               throw new ArgumentException($"Invalid testType: {testType}");
-       }
+            default:
+                throw new ArgumentException($"Invalid testType: {testType}");
+        }
     }
 }
