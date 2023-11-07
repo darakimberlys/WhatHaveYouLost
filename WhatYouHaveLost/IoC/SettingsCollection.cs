@@ -14,7 +14,8 @@ public static class SettingsCollection
 {
     public static void AddJWTValidation(this IServiceCollection services, IConfiguration configuration)
     {
-        var key = Encoding.ASCII.GetBytes(configuration.GetSection("JwtSecret").Value);
+        var secret = Environment.GetEnvironmentVariable("JwtSecret");
+        var key = Encoding.ASCII.GetBytes(secret);
         services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;

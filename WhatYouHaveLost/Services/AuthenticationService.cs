@@ -2,6 +2,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
+using Serilog.Context;
 using WhatYouHaveLost.Data.Repository.Configurations;
 using WhatYouHaveLost.Data.Repository.Interfaces;
 using WhatYouHaveLost.Model.Data;
@@ -13,13 +14,17 @@ public class AuthenticationService : IAuthenticationService
 {
     private readonly IUserRepository _userRepository;
     private readonly IPasswordEncryptor _passwordEncryptor;
+    private readonly ILogger<AuthenticationService> _logger;
 
     public AuthenticationService(
         IUserRepository userRepository,
-        IPasswordEncryptor passwordEncryptor)
+        IPasswordEncryptor passwordEncryptor,
+        ILogger<AuthenticationService> logger)
+
     {
         _userRepository = userRepository;
         _passwordEncryptor = passwordEncryptor;
+        _logger = logger;
     }
 
     public async Task<(bool, string)> LoginAsync(UserData userData)
@@ -28,6 +33,11 @@ public class AuthenticationService : IAuthenticationService
 
         if (string.IsNullOrWhiteSpace(user.LoginName))
         {
+            using (LogContext.PushProperty("user", user.LoginName))
+            {
+                _logger.LogError("User not found");
+            }
+
             return (false, string.Empty);
         }
 
@@ -35,6 +45,10 @@ public class AuthenticationService : IAuthenticationService
         
         if (user.Password != userPassword || string.IsNullOrWhiteSpace(userPassword))
         {
+            using (LogContext.PushProperty("user", user.LoginName))
+            {
+                _logger.LogError("Invalid password");
+            }
             return (false, string.Empty);
         }
 

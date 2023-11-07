@@ -19,10 +19,14 @@
   <component name="ChangeListManager">
     <list default="true" id="0b921db3-f342-4e9d-b359-851261f10bdc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WhatYouHaveLost/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WhatYouHaveLost/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost.Tests/Repository/NewsRepositoryTests.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost.Tests/WhatYouHaveLost.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost.Tests/WhatYouHaveLost.Tests.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Controllers/HomeController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Data/Repository/NewsRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Data/Repository/NewsRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost.Tests/Services/AuthenticationServiceTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost.Tests/Services/AuthenticationServiceTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost.Tests/Services/NewsServiceTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost.Tests/Services/NewsServiceTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/IoC/SettingsCollection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/IoC/SettingsCollection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Services/AuthenticationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Services/AuthenticationService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Services/NewsService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Services/NewsService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/WhatYouHaveLost.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/WhatYouHaveLost.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,31 +111,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;add-unit-tests&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "XThreadsFramesViewSplitterKey": "0.50119907",
+    "git-widget-placeholder": "add-unit-tests",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;azure&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "azure"
     ],
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\darak\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\darak\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\darak\\AppData\\Local\\Symbols\\src&quot;
+    "rider.external.source.directories": [
+      "C:\\Users\\darak\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\darak\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\darak\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RiderProblemsViewState">
     <hideBySeverity>
       <option value="11" />
@@ -474,20 +479,20 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/WhatYouHaveLost/Services/NewsService.cs</url>
-          <line>17</line>
+          <line>21</line>
           <properties documentPath="C:\Source\techChallenge\1\WhatHaveYouLost\WhatYouHaveLost\Services\NewsService.cs" initialLine="17" containingFunctionPresentation="Method 'CreateNews'">
             <startOffsets>
-              <option value="479" />
+              <option value="609" />
             </startOffsets>
             <endOffsets>
-              <option value="480" />
+              <option value="610" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="135" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/WhatYouHaveLost.Tests/Services/NewsServiceTests.cs</url>
-          <line>27</line>
+          <line>29</line>
           <properties documentPath="C:\Source\techChallenge\1\WhatHaveYouLost\WhatYouHaveLost.Tests\NewsServiceTests.cs" initialLine="18" containingFunctionPresentation="Method 'VerifyCreateNews'" />
           <option name="timeStamp" value="136" />
         </line-breakpoint>
@@ -496,19 +501,6 @@
           <line>17</line>
           <properties documentPath="C:\Source\techChallenge\1\WhatHaveYouLost\WhatYouHaveLost.Tests\Repository\NewsRepositoryTests.cs" initialLine="17" containingFunctionPresentation="Constructor 'NewsRepositoryTests'" />
           <option name="timeStamp" value="138" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/WhatYouHaveLost/Controllers/HomeController.cs</url>
-          <line>73</line>
-          <properties documentPath="C:\Source\techChallenge\1\WhatHaveYouLost\WhatYouHaveLost\Controllers\HomeController.cs" initialLine="73" containingFunctionPresentation="Method 'LoginPage'">
-            <startOffsets>
-              <option value="2272" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2289" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="143" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/WhatYouHaveLost/Controllers/HomeController.cs</url>
@@ -575,6 +567,19 @@
           </properties>
           <option name="timeStamp" value="151" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/WhatYouHaveLost/Program.cs</url>
+          <line>17</line>
+          <properties documentPath="C:\Source\techChallenge\1\WhatHaveYouLost\WhatYouHaveLost\Program.cs" initialLine="17" containingFunctionPresentation="Method 'Main'">
+            <startOffsets>
+              <option value="567" />
+            </startOffsets>
+            <endOffsets>
+              <option value="624" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="160" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>
@@ -588,6 +593,7 @@
       <configuration name="LaunchSettings">
         <watch expression="this.userData.SecurityStamp" />
         <watch expression="this.userData.SecurityStamp" />
+        <watch expression="IIdentity.IsAuthenticated" />
         <watch expression="IIdentity.IsAuthenticated" />
       </configuration>
     </watches-manager>

@@ -1,4 +1,5 @@
 using AutoFixture;
+using Microsoft.Extensions.Logging;
 using Moq;
 using WhatYouHaveLost.Data.Repository.Interfaces;
 using WhatYouHaveLost.Model.Data;
@@ -11,12 +12,13 @@ namespace WhatYouHaveLost.Tests;
 public class NewsServiceTests
 {
     private readonly Fixture _fixture = new();
+    private readonly Mock<ILogger<NewsService>> _logger = new();
     private readonly Mock<INewsRepository> _newsRepository = new();
     private readonly INewsService _newsService;
 
     public NewsServiceTests()
     {
-        _newsService = new NewsService(_newsRepository.Object);
+        _newsService = new NewsService(_newsRepository.Object, _logger.Object);
     }
 
     [Theory]

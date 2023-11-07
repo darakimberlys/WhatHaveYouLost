@@ -1,4 +1,5 @@
-﻿using WhatYouHaveLost.Data.Repository.Interfaces;
+﻿using Serilog.Context;
+using WhatYouHaveLost.Data.Repository.Interfaces;
 using WhatYouHaveLost.Model.Data;
 using WhatYouHaveLost.Services.Interfaces;
 using WhatYouHaveLost.Views.Models;
@@ -8,10 +9,13 @@ namespace WhatYouHaveLost.Services;
 public class NewsService : INewsService
 {
     private readonly INewsRepository _newsRepository;
+    private readonly ILogger<NewsService> _logger;
 
-    public NewsService(INewsRepository newsRepository)
+
+    public NewsService(INewsRepository newsRepository, ILogger<NewsService> logger)
     {
         _newsRepository = newsRepository;
+        _logger = logger;
     }
 
     public async Task<bool> CreateNewsAsync(CreateNewsModel model)
@@ -20,6 +24,8 @@ public class NewsService : INewsService
         {
             if (model.Content == null)
             {
+                _logger.LogError("Invalid form");
+                
                 throw new ArgumentNullException(nameof(model));
             }
 
@@ -37,6 +43,7 @@ public class NewsService : INewsService
         }
         catch (Exception e)
         {
+            _logger.LogError(e.Message);
             Console.WriteLine(e);
             throw;
         }
@@ -84,6 +91,7 @@ public class NewsService : INewsService
         }
         catch (Exception e)
         {
+            _logger.LogError(e.Message);
             Console.WriteLine(e);
             throw;
         }

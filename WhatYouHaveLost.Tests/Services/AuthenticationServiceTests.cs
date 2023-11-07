@@ -1,3 +1,4 @@
+using Microsoft.Extensions.Logging;
 using Moq;
 using WhatYouHaveLost.Data.Repository.Configurations;
 using WhatYouHaveLost.Data.Repository.Interfaces;
@@ -11,6 +12,7 @@ public class AuthenticationServiceTests
 {
     private readonly Mock<IUserRepository> _userRepository = new();
     private readonly Mock<IPasswordEncryptor> _passwordEncryptor = new();
+    private readonly Mock<ILogger<AuthenticationService>> _loggerMock = new();
     private readonly IAuthenticationService _authenticationService;
         
     public AuthenticationServiceTests()
@@ -19,7 +21,8 @@ public class AuthenticationServiceTests
         
         _authenticationService = new AuthenticationService(
             _userRepository.Object,
-            _passwordEncryptor.Object);
+            _passwordEncryptor.Object,
+            _loggerMock.Object);
     }
 
     [Fact]
