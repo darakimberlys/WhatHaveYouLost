@@ -2,6 +2,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
+using Serilog.Context;
 using WhatYouHaveLost.Data.Repository.Configurations;
 using WhatYouHaveLost.Data.Repository.Interfaces;
 using WhatYouHaveLost.Model.Data;
@@ -13,16 +14,28 @@ public class AuthenticationService : IAuthenticationService
 {
     private readonly IUserRepository _userRepository;
     private readonly IPasswordEncryptor _passwordEncryptor;
+<<<<<<< Updated upstream
     private readonly IConfiguration _configuration;
+=======
+    private readonly ILogger<AuthenticationService> _logger;
+    private readonly IHttpContextAccessor _httpContextAccessor;
+>>>>>>> Stashed changes
 
     public AuthenticationService(
         IUserRepository userRepository,
         IPasswordEncryptor passwordEncryptor,
+<<<<<<< Updated upstream
         IConfiguration configuration)
+=======
+        IHttpContextAccessor httpContextAccessor,
+        ILogger<AuthenticationService> logger)
+>>>>>>> Stashed changes
     {
         _configuration = configuration;
         _userRepository = userRepository;
         _passwordEncryptor = passwordEncryptor;
+        _httpContextAccessor = httpContextAccessor;
+        _logger = logger;
     }
 
     public async Task<(bool, string)> LoginAsync(UserData userData)
@@ -31,6 +44,11 @@ public class AuthenticationService : IAuthenticationService
 
         if (user is null)
         {
+            using (LogContext.PushProperty("user", user.LoginName))
+            {
+                _logger.LogError("User not found");
+            }
+
             return (false, string.Empty);
         }
 
@@ -43,8 +61,19 @@ public class AuthenticationService : IAuthenticationService
         }
         else
         {
+            using (LogContext.PushProperty("user", user.LoginName))
+            {
+                _logger.LogError("Invalid password");
+            }
             return (false, string.Empty);
         }
+<<<<<<< Updated upstream
+=======
+
+        var token = GenerateJwtToken(userData);
+        
+        return (true, token);
+>>>>>>> Stashed changes
     }
 
     private string GenerateJwtToken(UserData userData)
@@ -65,6 +94,9 @@ public class AuthenticationService : IAuthenticationService
         };
         
         var token = tokenHandler.CreateToken(tokenDescriptor);
+        var tokenString = tokenHandler.WriteToken(token);
+
+        _httpContextAccessor.HttpContext.Session.SetString("Token", tokenString);
         return tokenHandler.WriteToken(token);
     }
 }

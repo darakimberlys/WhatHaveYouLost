@@ -1,10 +1,12 @@
 using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using WhatYouHaveLost.Data.Repository;
 using WhatYouHaveLost.Data.Repository.Configurations;
 using WhatYouHaveLost.Data.Repository.Interfaces;
+using WhatYouHaveLost.Model.Data;
 using WhatYouHaveLost.Services;
 using WhatYouHaveLost.Services.Interfaces;
 
@@ -12,23 +14,37 @@ namespace WhatYouHaveLost.IoC;
 
 public static class SettingsCollection
 {
-    public static void AddJWTValidation(this IServiceCollection services, IConfiguration configuration)
+    public static void AddJWTValidation(this IServiceCollection services, WebApplicationBuilder? builder)
     {
-        var key = Encoding.ASCII.GetBytes(configuration.GetSection("JwtSecret").Value);
+        var secret = Environment.GetEnvironmentVariable("JwtSecret");
+        var key = Encoding.ASCII.GetBytes(secret);
+        
+        //AddIdentity
+        services.AddIdentity<IdentityUser, IdentityRole>()
+            .AddEntityFrameworkStores<AuthDbContext>()
+            .AddDefaultTokenProviders();
+        
+        //AddAuthentication
         services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
             })
+            //AddJwtBearer
             .AddJwtBearer(options =>
             {
                 options.SaveToken = true;
-                options.TokenValidationParameters = new TokenValidationParameters
+                options.RequireHttpsMetadata = false;
+                options.TokenValidationParameters = new TokenValidationParameters()
                 {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
                     ValidateIssuerSigningKey = true,
-                    IssuerSigningKey = new SymmetricSecurityKey(key),
-                    ValidateIssuer = false,
-                    ValidateAudience = false
+                    ValidAudience = builder.Configuration["JWT:ValidAudience"],
+                    ValidIssuer = builder.Configuration["JWT:ValidIssuer"],
+                    IssuerSigningKey = new SymmetricSecurityKey(key)
                 };
             });
         
@@ -63,6 +79,16 @@ public static class SettingsCollection
         services.AddDbContext<ApplicationDbContext>(options =>
         {
             options.UseSqlServer(Environment.GetEnvironmentVariable("CONNECTION"));
+        });        
+        
+        services.AddDbContext<AuthDbContext>(options =>
+        {
+            options.UseSqlServer(Environment.GetEnvironmentVariable("CONNECTION"));
         });
+        
+        services.AddIdentity<UserData, IdentityRole>()
+            .AddEntityFrameworkStores<AuthDbContext>()
+            .AddDefaultTokenProviders();
+
     }
 }

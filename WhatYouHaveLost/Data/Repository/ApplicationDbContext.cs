@@ -11,11 +11,9 @@ public class ApplicationDbContext : DbContext
     { }
 
     public DbSet<News> News { get; set; }
-    public DbSet<UserData> User { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfiguration(new NewsConfiguration());
-        modelBuilder.ApplyConfiguration(new UserConfiguration());
     }
 }

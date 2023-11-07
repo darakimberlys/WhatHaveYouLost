@@ -1,8 +1,8 @@
-using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Identity;
 
 namespace WhatYouHaveLost.Model.Data;
 
-public class UserData
+public class UserData : IdentityUser
 {
     public int UserId { get; }
     public Guid ID { get; }
