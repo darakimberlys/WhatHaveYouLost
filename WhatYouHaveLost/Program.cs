@@ -10,7 +10,7 @@ public class Program
         var builder = WebApplication.CreateBuilder(args);
         builder.Host.ConfigureLogging(logging =>
         {
-            logging.AddApplicationInsights("your_instrumentation_key");
+            logging.AddApplicationInsights(Environment.GetEnvironmentVariable("InstrumentationKey"));
             logging.AddFilter<ApplicationInsightsLoggerProvider>("", LogLevel.Information);
         });
         builder.Services.AddRazorPages();
