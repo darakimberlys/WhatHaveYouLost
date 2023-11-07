@@ -5,6 +5,6 @@ namespace WhatYouHaveLost.Services.Interfaces;
 
 public interface INewsService
 {
-    Task CreateNews(CreateNewsModel model);
-    Task UpdateNewsAsync(UpsertModel model);
+    Task<bool> CreateNewsAsync(CreateNewsModel model);
+    Task<bool>  UpdateNewsAsync(UpsertModel model);
 }

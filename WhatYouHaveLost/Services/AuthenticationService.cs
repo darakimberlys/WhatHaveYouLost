@@ -2,6 +2,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
+using Serilog.Context;
 using WhatYouHaveLost.Data.Repository.Configurations;
 using WhatYouHaveLost.Data.Repository.Interfaces;
 using WhatYouHaveLost.Model.Data;
@@ -13,41 +14,49 @@ public class AuthenticationService : IAuthenticationService
 {
     private readonly IUserRepository _userRepository;
     private readonly IPasswordEncryptor _passwordEncryptor;
-    private readonly IConfiguration _configuration;
+    private readonly ILogger<AuthenticationService> _logger;
 
     public AuthenticationService(
         IUserRepository userRepository,
         IPasswordEncryptor passwordEncryptor,
-        IConfiguration configuration)
+        ILogger<AuthenticationService> logger)
+
     {
-        _configuration = configuration;
         _userRepository = userRepository;
         _passwordEncryptor = passwordEncryptor;
+        _logger = logger;
     }
 
     public async Task<(bool, string)> LoginAsync(UserData userData)
     {
         var user = await _userRepository.GetUserDataAsync(userData.LoginName);
 
-        if (user is null)
+        if (string.IsNullOrWhiteSpace(user.LoginName))
         {
+            using (LogContext.PushProperty("user", user.LoginName))
+            {
+                _logger.LogError("User not found");
+            }
+
             return (false, string.Empty);
         }
 
         var userPassword = _passwordEncryptor.DecryptPassword(userData.Password);
-
-        if (user.Password == userPassword)
+        
+        if (user.Password != userPassword || string.IsNullOrWhiteSpace(userPassword))
         {
-           var token = GenerateJwtToken(userData);
-            return (true, token);
-        }
-        else
-        {
+            using (LogContext.PushProperty("user", user.LoginName))
+            {
+                _logger.LogError("Invalid password");
+            }
             return (false, string.Empty);
         }
+
+        var token = GenerateJwtToken(userData);
+        return (true, token);
     }
 
-    private string GenerateJwtToken(UserData userData)
+    private static string GenerateJwtToken(UserData userData)
     {
         var tokenHandler = new JwtSecurityTokenHandler();
         

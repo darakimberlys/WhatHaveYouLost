@@ -77,7 +77,7 @@ public class ManageController : Controller
     {
         if (ModelState.IsValid)
         {
-            await _newsService.CreateNews(model);
+            await _newsService.CreateNewsAsync(model);
 
             return Accepted();
         }

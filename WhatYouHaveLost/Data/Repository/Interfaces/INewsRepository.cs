@@ -8,5 +8,5 @@ public interface INewsRepository
     List<News> ReadAllNews();
     void CreateNewsAsync(News news);
     void DeleteNews(int id);
-    Task SaveChangesForNews();
+    Task<int> SaveChangesForNews();
 }

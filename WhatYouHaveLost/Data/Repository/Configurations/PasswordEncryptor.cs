@@ -1,63 +1,75 @@
+using System;
+using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace WhatYouHaveLost.Data.Repository.Configurations
-{
-    public class PasswordEncryptor : IPasswordEncryptor
-    {
-        private readonly byte[] _encryptionKeyBytes;
-        private readonly byte[] _ivBytes;
+namespace WhatYouHaveLost.Data.Repository.Configurations;
 
-        public PasswordEncryptor(string encryptionKey)
+public class PasswordEncryptor : IPasswordEncryptor
+{
+    private readonly byte[] _encryptionKeyBytes;
+    private readonly byte[] _ivBytes;
+
+    public PasswordEncryptor(string encryptionKey)
+    {
+        _encryptionKeyBytes = Encoding.UTF8.GetBytes(encryptionKey);
+        _ivBytes = new byte[16]; 
+    }
+
+    public string EncryptPassword(string password)
+    {
+        if (string.IsNullOrWhiteSpace(password))
         {
-            _encryptionKeyBytes = Encoding.UTF8.GetBytes(encryptionKey);
-            _ivBytes = new byte[16];
+            throw new ArgumentNullException(nameof(password));
         }
 
-        public string EncryptPassword(string password)
+        using (Aes aesAlg = Aes.Create())
         {
-            using (RijndaelManaged aesAlg = new RijndaelManaged())
+            aesAlg.Key = _encryptionKeyBytes;
+            aesAlg.IV = _ivBytes;
+            aesAlg.Mode = CipherMode.CBC;
+            aesAlg.Padding = PaddingMode.PKCS7;
+
+            ICryptoTransform encryptor = aesAlg.CreateEncryptor(aesAlg.Key, aesAlg.IV);
+
+            using (MemoryStream msEncrypt = new MemoryStream())
             {
-                aesAlg.Key = _encryptionKeyBytes;
-                aesAlg.IV = _ivBytes;
-                aesAlg.Mode = CipherMode.CBC;
-                aesAlg.Padding = PaddingMode.PKCS7;
-
-                ICryptoTransform encryptor = aesAlg.CreateEncryptor(aesAlg.Key, aesAlg.IV);
-
-                using (MemoryStream msEncrypt = new MemoryStream())
+                using (CryptoStream csEncrypt = new CryptoStream(msEncrypt, encryptor, CryptoStreamMode.Write))
                 {
-                    using (CryptoStream csEncrypt = new CryptoStream(msEncrypt, encryptor, CryptoStreamMode.Write))
+                    using (StreamWriter swEncrypt = new StreamWriter(csEncrypt))
                     {
-                        using (StreamWriter swEncrypt = new StreamWriter(csEncrypt))
-                        {
-                            swEncrypt.Write(password);
-                        }
+                        swEncrypt.Write(password);
                     }
-                    return Convert.ToBase64String(msEncrypt.ToArray());
                 }
+
+                return Convert.ToBase64String(msEncrypt.ToArray());
             }
         }
+    }
 
-        public string DecryptPassword(string encryptedPassword)
+    public string DecryptPassword(string encryptedPassword)
+    {
+        if (string.IsNullOrWhiteSpace(encryptedPassword))
         {
-            using (RijndaelManaged aesAlg = new RijndaelManaged())
+            throw new ArgumentNullException(nameof(encryptedPassword));
+        }
+
+        using (Aes aesAlg = Aes.Create())
+        {
+            aesAlg.Key = _encryptionKeyBytes;
+            aesAlg.IV = _ivBytes;
+            aesAlg.Mode = CipherMode.CBC;
+            aesAlg.Padding = PaddingMode.PKCS7;
+
+            ICryptoTransform decryptor = aesAlg.CreateDecryptor(aesAlg.Key, aesAlg.IV);
+
+            using (MemoryStream msDecrypt = new MemoryStream(Convert.FromBase64String(encryptedPassword)))
             {
-                aesAlg.Key = _encryptionKeyBytes;
-                aesAlg.IV = _ivBytes;
-                aesAlg.Mode = CipherMode.CBC;
-                aesAlg.Padding = PaddingMode.PKCS7;
-
-                ICryptoTransform decryptor = aesAlg.CreateDecryptor(aesAlg.Key, aesAlg.IV);
-
-                using (MemoryStream msDecrypt = new MemoryStream(Convert.FromBase64String(encryptedPassword)))
+                using (CryptoStream csDecrypt = new CryptoStream(msDecrypt, decryptor, CryptoStreamMode.Read))
                 {
-                    using (CryptoStream csDecrypt = new CryptoStream(msDecrypt, decryptor, CryptoStreamMode.Read))
+                    using (StreamReader srDecrypt = new StreamReader(csDecrypt))
                     {
-                        using (StreamReader srDecrypt = new StreamReader(csDecrypt))
-                        {
-                            return srDecrypt.ReadToEnd();
-                        }
+                        return srDecrypt.ReadToEnd();
                     }
                 }
             }

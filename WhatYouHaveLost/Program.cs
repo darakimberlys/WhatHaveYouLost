@@ -1,3 +1,4 @@
+using Microsoft.Extensions.Logging.ApplicationInsights;
 using WhatYouHaveLost.IoC;
 
 namespace WhatYouHaveLost;
@@ -7,7 +8,11 @@ public class Program
     public static void Main(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
-
+        builder.Host.ConfigureLogging(logging =>
+        {
+            logging.AddApplicationInsights("your_instrumentation_key");
+            logging.AddFilter<ApplicationInsightsLoggerProvider>("", LogLevel.Information);
+        });
         builder.Services.AddRazorPages();
         builder.Services.AddServices();
         builder.Services.AddJWTValidation(builder.Configuration);

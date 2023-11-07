@@ -14,7 +14,8 @@ public static class SettingsCollection
 {
     public static void AddJWTValidation(this IServiceCollection services, IConfiguration configuration)
     {
-        var key = Encoding.ASCII.GetBytes(configuration.GetSection("JwtSecret").Value);
+        var secret = Environment.GetEnvironmentVariable("JwtSecret");
+        var key = Encoding.ASCII.GetBytes(secret);
         services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -31,18 +32,15 @@ public static class SettingsCollection
                     ValidateAudience = false
                 };
             });
-        
+
         services.AddScoped<IPasswordEncryptor>(provider =>
         {
-            var configuration = provider.GetRequiredService<IConfiguration>();
-            var encryptionKey = configuration.GetValue<string>("JwtSecret");
-            return new PasswordEncryptor(encryptionKey);
+            return new PasswordEncryptor(Environment.GetEnvironmentVariable("JwtSecret"));
         });   
         
-        services.AddScoped<IJwtTokenValidator>(provider =>
+        services.AddScoped<IJwtTokenValidator>(_ =>
         {
-            var configuration = provider.GetRequiredService<IConfiguration>();
-            var encryptionKey = configuration.GetValue<string>("JwtSecret");
+            var encryptionKey = Environment.GetEnvironmentVariable("JwtSecret");
             return new JwtTokenValidator(encryptionKey);
         });
     }
