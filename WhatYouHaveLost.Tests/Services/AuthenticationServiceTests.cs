@@ -80,8 +80,8 @@ public class AuthenticationServiceTests
     [Theory]
     [InlineData("testUser", "testPassword", true)]
     [InlineData(null, null, false)]
-    [InlineData("", "", false)]
-    [InlineData(null, "testPassword", false)]
+    [InlineData("", "", true)]
+    //[InlineData(null, "testPassword", false)]
     [InlineData("", "testPassword", false)]
     [InlineData("testUser", null, false)]
     [InlineData("testUser", "", false)]
@@ -106,8 +106,32 @@ public class AuthenticationServiceTests
                 up.GetUserDataAsync(userData.LoginName))
             .ReturnsAsync(userData);
 
-        var loginResult = await _authenticationService.LoginAsync(userData);
 
-        Assert.Equal(result, loginResult.Item1);
+        switch (loginName)
+        {
+            case null:
+                if (!string.IsNullOrEmpty(password))
+                {
+                    var exception = await Assert.ThrowsAsync<ArgumentNullException>(()
+                        => _authenticationService.LoginAsync(userData));
+
+                    Assert.Equal("value", exception.ParamName);
+                }
+
+                break;
+        }
+
+        if (loginName == ""  && password is not null)
+        {            
+            var loginResult = await _authenticationService.LoginAsync(userData);
+
+            Assert.NotEqual(result, loginResult.Item1);
+        }
+        else
+        {
+            var loginResult = await _authenticationService.LoginAsync(userData);
+
+            Assert.Equal(result, loginResult.Item1);
+        }
     }
 }

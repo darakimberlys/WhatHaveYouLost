@@ -19,9 +19,9 @@
   <component name="ChangeListManager">
     <list default="true" id="0b921db3-f342-4e9d-b359-851261f10bdc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WhatYouHaveLost/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WhatYouHaveLost/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Controllers/ManageController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Controllers/ManageController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost.Tests/Services/AuthenticationServiceTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost.Tests/Services/AuthenticationServiceTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost.Tests/Services/NewsServiceTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost.Tests/Services/NewsServiceTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Properties/launchSettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Services/AuthenticationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Services/AuthenticationService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Services/NewsService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Services/NewsService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,6 +36,9 @@
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WhatYouHaveLost/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WhatYouHaveLost/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WhatYouHaveLost/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/34e54cf52b4a4c2b82645ccc3a46837e5e000/11/027d8afd/ProxyGenerator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/34e54cf52b4a4c2b82645ccc3a46837e5e000/8b/ec38fb55/AbstractInvocation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5ec79bcb541f45a9be0ec843d9486f8618f010/37/b50e7134/SqlConnection.cs" root0="SKIP_HIGHLIGHTING" />
@@ -116,7 +119,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "XThreadsFramesViewSplitterKey": "0.37182447",
+    "XThreadsFramesViewSplitterKey": "0.24940048",
     "git-widget-placeholder": "master",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -316,7 +319,7 @@
       <workItem from="1698186366079" duration="3364000" />
       <workItem from="1699305589759" duration="883000" />
       <workItem from="1699307503385" duration="7227000" />
-      <workItem from="1699396602315" duration="7894000" />
+      <workItem from="1699396602315" duration="10359000" />
     </task>
     <servers />
   </component>
@@ -327,70 +330,23 @@
     <option name="coveragePercentColumnWidth" value="56" />
     <option name="sortOrder" value="DESCENDING" />
     <option name="sortedColumn" value="1" />
-    <option name="symbolColumnWidth" value="187" />
+    <option name="symbolColumnWidth" value="362" />
     <coverage-tree-state>
       <expand>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 51% 361/738" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 50% 388/773" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 51% 361/738" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="src 51% 361/738" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 50% 388/773" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="src 50% 388/773" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 51% 361/738" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="src 51% 361/738" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="WhatYouHaveLost.Tests 98% 4/180" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-        </path>
-        <path>
-          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 51% 361/738" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="src 51% 361/738" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="WhatYouHaveLost.Tests 98% 4/180" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="WhatYouHaveLost.Tests 98% 4/180" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-        </path>
-        <path>
-          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 51% 361/738" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="src 51% 361/738" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="WhatYouHaveLost 36% 357/558" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-        </path>
-        <path>
-          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 51% 361/738" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="src 51% 361/738" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="WhatYouHaveLost 36% 357/558" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="WhatYouHaveLost 37% 338/539" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-        </path>
-        <path>
-          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 51% 361/738" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="src 51% 361/738" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="WhatYouHaveLost 36% 357/558" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="WhatYouHaveLost 37% 338/539" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Controllers 28% 113/157" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-        </path>
-        <path>
-          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 51% 361/738" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="src 51% 361/738" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="WhatYouHaveLost 36% 357/558" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="WhatYouHaveLost 37% 338/539" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Controllers 28% 113/157" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="HomeController 42% 62/106" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-        </path>
-        <path>
-          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 51% 361/738" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="src 51% 361/738" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="WhatYouHaveLost 36% 357/558" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="WhatYouHaveLost 37% 338/539" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Controllers 28% 113/157" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="HomeController 42% 62/106" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="CreateNews(CreateNewsModel) 92% 1/13" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 50% 388/773" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="src 50% 388/773" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="WhatYouHaveLost 35% 382/584" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
       </expand>
       <select />
@@ -570,16 +526,16 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/WhatYouHaveLost/Controllers/ManageController.cs</url>
-          <line>109</line>
+          <line>110</line>
           <properties documentPath="C:\Source\techChallenge\1\WhatHaveYouLost\WhatYouHaveLost\Controllers\ManageController.cs" initialLine="110" containingFunctionPresentation="Method 'UpdateNews'">
             <startOffsets>
-              <option value="3330" />
+              <option value="3344" />
             </startOffsets>
             <endOffsets>
-              <option value="3331" />
+              <option value="3402" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="161" />
+          <option name="timeStamp" value="171" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

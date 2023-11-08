@@ -39,7 +39,7 @@ public class NewsService : INewsService
             });
 
             var resultForTest = await _newsRepository.SaveChangesForNews();
-            return resultForTest == 0 ? true : false;
+            return resultForTest != 0;
         }
         catch (Exception e)
         {
@@ -53,7 +53,7 @@ public class NewsService : INewsService
     {
         try
         {
-            if (model.Content == null)
+            if (model?.Content == null)
             {
                 _logger.LogError("Invalid form");
 
@@ -64,32 +64,32 @@ public class NewsService : INewsService
 
             news = await _newsRepository.GetCompleteNewsByIdAsync(model.Id);
 
-            if (news.Title != model.Title && model.Title is not null)
+            if (news.Title != model?.Title && model?.Title is not null)
             {
                 news.Title = model.Title;
                 news.PublishDate = DateTime.Today;
             }
 
-            if (news.Content != model.Content && model.Content is not null)
+            if (news.Content != model?.Content && model.Content is not null)
             {
                 news.Content = model.Content;
                 news.PublishDate = DateTime.Today;
             }
 
-            if (news.Image != model.ImageLink && model.Content is not null)
+            if (news.Image != model?.ImageLink && model?.ImageLink is not null)
             {
                 news.Image = model.ImageLink;
                 news.PublishDate = DateTime.Today;
             }
 
-            if (news.Author != model.AuthorLink && model.Content is not null)
+            if (news.Author != model?.AuthorLink && model?.AuthorLink is not null)
             {
                 news.Author = model.AuthorLink;
                 news.PublishDate = DateTime.Today;
             }
 
             var resultForTest = await _newsRepository.SaveChangesForNews();
-            return resultForTest == 0 ? true : false;
+            return resultForTest != 0;
         }
         catch (Exception e)
         {

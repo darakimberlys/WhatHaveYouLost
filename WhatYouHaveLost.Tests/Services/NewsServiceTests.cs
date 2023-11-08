@@ -46,7 +46,7 @@ public class NewsServiceTests
         {
             var result = await _newsService.CreateNewsAsync(model);
 
-            Assert.True(result);
+            Assert.False(result);
         }
     }
     
@@ -66,18 +66,10 @@ public class NewsServiceTests
         _newsRepository.Setup(x =>
             x.SaveChangesForNews());
 
-        if (expectedResult != "Success")
-        {
-            var exception = await Assert.ThrowsAsync<ArgumentNullException>(() 
-                => _newsService.UpdateNewsAsync(new UpsertModel()));
+        var result = await _newsService.UpdateNewsAsync(model);
+        
+            Assert.False(result);
+        
 
-            Assert.Equal("model", exception.ParamName);
-        }
-        else
-        {
-            var result = await _newsService.UpdateNewsAsync(model);
-
-            Assert.True(result);
-        }
     }
 }
