@@ -55,7 +55,9 @@ public class NewsService : INewsService
         {
             if (model.Content == null)
             {
-                throw new ArgumentNullException(nameof(model));
+                _logger.LogError("Invalid form");
+
+                return false;
             }
 
             var news = new News();

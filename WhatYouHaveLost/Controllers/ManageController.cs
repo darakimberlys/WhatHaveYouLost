@@ -58,12 +58,11 @@ public class ManageController : Controller
             }
             else
             {
-                ModelState.AddModelError(string.Empty, "Tentativa de login inválida.");
-                return Forbid(result.Item2);
+                return BadRequest("Invalid login");
             }
         }
 
-        return Forbid();
+        return Forbid("Invalid params");
     }
 
     /// <summary>
@@ -105,13 +104,18 @@ public class ManageController : Controller
     /// <returns></returns>
     [Authorize]
     [HttpPatch("update")]
-    public async Task<IActionResult> UpdateNews([FromBody]UpsertModel model)
+    public async Task<IActionResult> UpdateNews([FromBody] UpsertModel model)
     {
         if (ModelState.IsValid)
         {
-            await _newsService.UpdateNewsAsync(model);
+            var isUpdated = await _newsService.UpdateNewsAsync(model);
 
-            return Accepted();
+            if (isUpdated)
+            {
+                return Accepted();
+            }
+
+            return BadRequest();
         }
 
         return Forbid();
@@ -119,8 +123,16 @@ public class ManageController : Controller
 
     [Authorize]
     [HttpDelete("deleteById/{id}")]
-    public IActionResult DeleteNews(int id)
+    public async Task<IActionResult> DeleteNews(int id)
     {
+        var newsToDelete =
+            await _newsRepository.GetCompleteNewsByIdAsync(id);
+
+        if (newsToDelete is null)
+        {
+            return NotFound("News not found");
+        }
+
         _newsRepository.DeleteNews(id);
         return Accepted();
     }
@@ -137,10 +149,10 @@ public class ManageController : Controller
         var result = await _newsRepository.GetCompleteNewsByIdAsync(id);
 
         if (result is null)
-        { 
+        {
             return NotFound(result);
         }
-        
+
         return Accepted(result);
     }
 }

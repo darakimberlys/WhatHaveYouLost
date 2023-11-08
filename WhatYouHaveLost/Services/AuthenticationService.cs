@@ -31,9 +31,9 @@ public class AuthenticationService : IAuthenticationService
     {
         var user = await _userRepository.GetUserDataAsync(userData.LoginName);
 
-        if (string.IsNullOrWhiteSpace(user.LoginName))
+        if (user is null)
         {
-            using (LogContext.PushProperty("user", user.LoginName))
+            using (LogContext.PushProperty("user", userData.LoginName))
             {
                 _logger.LogError("User not found");
             }
