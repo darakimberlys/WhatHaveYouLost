@@ -11,6 +11,9 @@ pool:
 
 steps:
 - script: echo Hello, world!
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'test'
   displayName: 'Run a one-line script'
 
 - script: |
