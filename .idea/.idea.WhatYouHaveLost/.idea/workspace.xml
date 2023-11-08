@@ -18,10 +18,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b921db3-f342-4e9d-b359-851261f10bdc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WhatYouHaveLost/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WhatYouHaveLost/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost.Tests/Services/AuthenticationServiceTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost.Tests/Services/AuthenticationServiceTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost.Tests/Services/NewsServiceTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost.Tests/Services/NewsServiceTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Services/AuthenticationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Services/AuthenticationService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Services/NewsService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Services/NewsService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -319,7 +317,7 @@
       <workItem from="1698186366079" duration="3364000" />
       <workItem from="1699305589759" duration="883000" />
       <workItem from="1699307503385" duration="7227000" />
-      <workItem from="1699396602315" duration="10359000" />
+      <workItem from="1699396602315" duration="11069000" />
     </task>
     <servers />
   </component>
@@ -436,13 +434,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/WhatYouHaveLost/Services/NewsService.cs</url>
-          <line>21</line>
+          <line>20</line>
           <properties documentPath="C:\Source\techChallenge\1\WhatHaveYouLost\WhatYouHaveLost\Services\NewsService.cs" initialLine="17" containingFunctionPresentation="Method 'CreateNews'">
             <startOffsets>
-              <option value="609" />
+              <option value="608" />
             </startOffsets>
             <endOffsets>
-              <option value="610" />
+              <option value="609" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="135" />

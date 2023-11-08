@@ -52,6 +52,7 @@ public class AuthenticationService : IAuthenticationService
             return (false, string.Empty);
         }
 
+        _logger.LogInformation("Success to login!");
         var token = GenerateJwtToken(userData);
         return (true, token);
     }

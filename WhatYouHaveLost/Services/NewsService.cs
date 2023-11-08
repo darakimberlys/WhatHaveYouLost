@@ -11,7 +11,6 @@ public class NewsService : INewsService
     private readonly INewsRepository _newsRepository;
     private readonly ILogger<NewsService> _logger;
 
-
     public NewsService(INewsRepository newsRepository, ILogger<NewsService> logger)
     {
         _newsRepository = newsRepository;
