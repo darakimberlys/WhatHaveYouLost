@@ -39,3 +39,12 @@ Para rodar os testes integrados, siga os passos abaixo:
 ![Diagrama da Aplicação](https://github.com/darakimberlys/WhatHaveYouLost/blob/3c87fe934487d3df2095acc26354f3f2aa27c0b0/Diagrama-WHTL.png)
 
 [Colaboradores](https://github.com/darakimberlys/WhatHaveYouLost/graphs/contributors)
+
+## Docker Hub
+A imagem Docker desta aplicação está disponível no [Docker Hub](https://hub.docker.com/r/darakimberlys/whathaveyoulost).
+
+Para baixar a imagem e executar localmente, utilize o seguinte comando:
+
+```bash
+docker pull darakimberlys/whathaveyoulost
+docker run -p 8080:80 darakimberlys/whathaveyoulost
