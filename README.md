@@ -6,7 +6,6 @@ Este é o repositório da aplicação WhatHaveYouLost, que tem como objetivo mos
 | Branch | Status |
 | ----- | -----|
 | Build Azure | [![Build and deploy ASP.Net Core app to Azure Web App - oqueperdi](https://github.com/darakimberlys/WhatHaveYouLost/actions/workflows/master_oqueperdi.yml/badge.svg)](https://github.com/darakimberlys/WhatHaveYouLost/actions/workflows/master_oqueperdi.yml)
-| Docker Image | [![Docker Image CI](https://github.com/darakimberlys/WhatHaveYouLost/actions/workflows/docker-image.yml/badge.svg)](https://github.com/darakimberlys/WhatHaveYouLost/actions/workflows/docker-image.yml)
 | Tests | [![.NET](https://github.com/darakimberlys/WhatHaveYouLost/actions/workflows/dotnet.yml/badge.svg?branch=master)](https://github.com/darakimberlys/WhatHaveYouLost/actions/workflows/dotnet.yml)
 | Postman Integrated Tests | [![Automated API tests using Postman CLI](https://github.com/darakimberlys/WhatHaveYouLost/actions/workflows/postman_test.yml/badge.svg?branch=master)](https://github.com/darakimberlys/WhatHaveYouLost/actions/workflows/postman_test.yml)
 
@@ -32,8 +31,8 @@ Para rodar os testes integrados, siga os passos abaixo:
 
 ## Prévia do site
 
-[![Preview do Site](https://github.com/darakimberlys/WhatHaveYouLost/assets/40128511/29b87ac5-bc2f-42ce-841b-6ebf2aaefd9d)](https://oqueperdi.azurewebsites.net)
-*Esta é uma prévia do site mostrando a página inicial.*
+![Preview do Site](https://github.com/darakimberlys/WhatHaveYouLost/assets/40128511/29b87ac5-bc2f-42ce-841b-6ebf2aaefd9d)
+*Esta é uma prévia do [site](https://oqueperdi.azurewebsites.net) mostrando a página inicial.*
 
 ## Diagrama Simples
 
