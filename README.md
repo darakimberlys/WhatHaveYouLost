@@ -5,7 +5,9 @@ Este é o repositório da aplicação WhatHaveYouLost, que tem como objetivo mos
 # Status do Projeto
 | Branch | Status |
 | ----- | -----|
-| Master | [![Build Status](https://dev.azure.com/darakimberly/techChallenge/_apis/build/status%2Fdarakimberlys.WhatHaveYouLost?branchName=master)](https://dev.azure.com/darakimberly/techChallenge/_build/latest?definitionId=2&branchName=master)
+| Build Azure | [![Build and deploy ASP.Net Core app to Azure Web App - oqueperdi](https://github.com/darakimberlys/WhatHaveYouLost/actions/workflows/master_oqueperdi.yml/badge.svg)](https://github.com/darakimberlys/WhatHaveYouLost/actions/workflows/master_oqueperdi.yml)
+| Tests | [![.NET](https://github.com/darakimberlys/WhatHaveYouLost/actions/workflows/dotnet.yml/badge.svg?branch=master)](https://github.com/darakimberlys/WhatHaveYouLost/actions/workflows/dotnet.yml)
+| Docker Image | [![Docker Image CI](https://github.com/darakimberlys/WhatHaveYouLost/actions/workflows/docker-image.yml/badge.svg)](https://github.com/darakimberlys/WhatHaveYouLost/actions/workflows/docker-image.yml)
 
 ## Funcionalidades
 
