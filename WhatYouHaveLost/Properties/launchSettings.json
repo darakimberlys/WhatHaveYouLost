@@ -5,26 +5,19 @@
       "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "CONNECTION":"Server=tcp:sv-techchallenges.database.windows.net,1433;Integrated Security=true;Initial Catalog=db_noticias;User Id=techchallenge;Password=Fiapchallenge64;Trusted_Connection=false;TrustServerCertificate=true;",
-        "JwtSecret": "1234545688885555"
-
+        "CONNECTION":""
       },
       "dotnetRunMessages": true,
-      "applicationUrl": "https://localhost:7201;http://localhost:5175",
-      "JwtSecret": "1234545688885555"
-
+      "applicationUrl": "https://localhost:7201;http://localhost:5175"
     },
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "CONNECTION":"Server=tcp:sv-techchallenges.database.windows.net,1433;Integrated Security=true;Initial Catalog=db_noticias;User Id=techchallenge;Password=Fiapchallenge64;Trusted_Connection=false;TrustServerCertificate=true;",
+        "CONNECTION":"",
         "JwtSecret": "1234545688885555"
-
-      },
-      "JwtSecret": "1234545688885555"
-
+      }
     }
   },
   "iisSettings": {
@@ -33,9 +26,6 @@
     "iisExpress": {
       "applicationUrl": "http://localhost:49679",
       "sslPort": 44395
-    },
-    "JwtSecret": "1234545688885555"
-
-  },
-  "JwtSecret": "1234545688885555"
+    }
+  }
 }
