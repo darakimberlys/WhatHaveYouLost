@@ -37,15 +37,11 @@ jobs:
       arguments: '--configuration $(BuildConfiguration)'
 
   - task: Docker@2
-    inputs:
-      command: 'login'
-      
-  - task: Docker@2
     displayName: 'Build and push Docker image'
     inputs:
-      containerRegistry: 'dckr_pat_hWVcFqfPd-xsbJOssUgQeqergu0'
+      command: 'login'
+      containerRegistry: 'YourDockerHubServiceConnection'
       repository: 'darakimberlys/whathaveyoulost'
-      command: 'buildAndPush'
       Dockerfile: '**/Dockerfile'
       tags: |
         $(Build.BuildId)
