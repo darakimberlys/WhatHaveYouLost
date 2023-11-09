@@ -14,4 +14,12 @@ jobs:
         run: postman login --with-api-key ${{ secrets.POSTMAN_API_KEY }}
       - name: Run API tests
         run: |
-          postman collection run "31016440-bf2e88b8-3c6e-495f-bfc3-3fcd2d01a539" -e "31016440-d3f03b7a-90d9-496d-83f9-eaa0f919b499"
+          postman collection run "31016440-89a951f7-d117-41fc-a406-1afa6d38f3e9" -e "31016440-d3f03b7a-90d9-496d-83f9-eaa0f919b499"          
+          postman collection run "31016440-0dda7338-bc37-4635-99a5-223f6849fdd0" -e "31016440-d3f03b7a-90d9-496d-83f9-eaa0f919b499"
+          postman collection run "31016440-e5d87819-982a-44b1-a6b0-68bb389a0791" -e "31016440-d3f03b7a-90d9-496d-83f9-eaa0f919b499"
+          postman collection run "31016440-0fa26473-eb0e-4126-92e1-afb6d2d70de3" -e "31016440-d3f03b7a-90d9-496d-83f9-eaa0f919b499"
+          postman collection run "31016440-481aff79-5bd3-49d9-b69e-ec2e54b73e00" -e "31016440-d3f03b7a-90d9-496d-83f9-eaa0f919b499"
+          postman collection run "31016440-801557fb-d92d-4c25-9928-e92b3394e49b" -e "31016440-d3f03b7a-90d9-496d-83f9-eaa0f919b499"
+          postman collection run "31016440-253d0f0a-b4e2-4608-a924-697ac46df812" -e "31016440-d3f03b7a-90d9-496d-83f9-eaa0f919b499"
+          postman collection run "31016440-801557fb-d92d-4c25-9928-e92b3394e49b" -e "31016440-d3f03b7a-90d9-496d-83f9-eaa0f919b499"
+          
