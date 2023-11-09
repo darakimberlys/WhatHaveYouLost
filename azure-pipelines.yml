@@ -39,7 +39,7 @@ jobs:
   - task: Docker@2
     displayName: 'Build and push Docker image'
     inputs:
-      containerRegistry: 'docker.io/darakimberlys/whathaveyoulost'
+      containerRegistry: 'dckr_pat_hWVcFqfPd-xsbJOssUgQeqergu0'
       repository: 'darakimberlys/whathaveyoulost'
       command: 'buildAndPush'
       Dockerfile: '**/Dockerfile'
