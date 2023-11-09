@@ -1,0 +1,10 @@
+﻿version: '3.8'
+
+services:
+  whatyouhavelost:
+    image: whatyouhavelost
+    build:
+      context: .
+      dockerfile: WhatYouHaveLost/dockerfile
+    env_file:
+      - env

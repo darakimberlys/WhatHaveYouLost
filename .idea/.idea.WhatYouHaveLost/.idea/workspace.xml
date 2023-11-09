@@ -18,10 +18,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b921db3-f342-4e9d-b359-851261f10bdc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.WhatYouHaveLost/.idea/.name" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WhatYouHaveLost/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WhatYouHaveLost/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost.sln" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Dockerfile" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/Properties/launchSettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/WhatYouHaveLost.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/WhatYouHaveLost.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhatYouHaveLost/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/WhatYouHaveLost/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,72 +35,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/538811d0fba15c61b743814ea8b7193d48cfbb84a1a53c5db2512b1b329330/DbSet.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d1f68ef86315497c7b39ddb155d5cf3ace964abca69857f9943cd58479799/ServiceProvider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WhatYouHaveLost/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WhatYouHaveLost/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WhatYouHaveLost/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/34e54cf52b4a4c2b82645ccc3a46837e5e000/11/027d8afd/ProxyGenerator.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/34e54cf52b4a4c2b82645ccc3a46837e5e000/8b/ec38fb55/AbstractInvocation.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5ec79bcb541f45a9be0ec843d9486f8618f010/37/b50e7134/SqlConnection.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5ec79bcb541f45a9be0ec843d9486f8618f010/39/15cd7aa3/SqlCommand.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ca30da7642ff4b78875fb6e05c21058b30a00/68/9afe4a2b/SpecimenContext.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1af51483c9bf18871cce649b9f966dd7be686536f998c33bba3c5fc4adea4a0/Task.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1e8feaadf5c3fa14d36ea2a638c432a2e1a47b7837d8b83d88303c5d9c15cf/AsyncValueTaskMethodBuilderT.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/20b34b9a328994f3f3e215764dac6af1b2a66fdca278f58f1b4f3addcb29f4f/ViewDataDictionary.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/23e0a6ed95b573d36dbdc685ea2fed2f1cf90f580cdc93ee7d3e3d784379810/AnchorTagHelper.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/333717bd1cce3876d133e8e23428a3dca892c18641b7eb745fe17d1eed102cbc/ExecutorFactory.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/37a954845b52703c5cce1aacf8fa1292378878e82bf68c4c4b5effc447316e9/IdentityUser.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/38284ca4f4afe378f96fccac3e179f4bceda7a74eb151623b66d2dc3634d9b/ExceptionAggregator.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3b92f859131bde25d0f7a63de08963e995d1e1426e584dfd4b8e833d2d3dba/ExecutionTimer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea95343b9387b73062a9b61b7538f826c54ce3529632b4472ba4494044d23/AsyncTaskMethodBuilderT.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4117ae48b3954af098dc2bcb9d4faf457872e2718768ea11ac4054d4f02a9fa9/Guard.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/41cc2659897ded1c75869e25f414a6dce3380d39586a3b5a93cc7ebd6ce5/SignInManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4339ea715f37b0f03d2b320e0045fb388f69ec8c11189ee29a9fc119d/SecretClient.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/485da50d43321b81edc28153271bdedb84943a243743e2deaa67a981587968/IConfiguration.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4ea681aa1df24442c1a5e1e18582b1a2d29ac5bfd41390c94a5d2cc958b5ff/UserManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5330988bfaacf93f15e30f9b3dd6018a768f89da3b38d874fda77299c62164/DbContext.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/538811d0fba15c61b743814ea8b7193d48cfbb84a1a53c5db2512b1b329330/DbSet.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/53f275362d7abbf585b11ccb5c3918ebcb0fc8b6b472144e910674b58b794a5/TokenCredential.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/575c31ecc35a636b6f962cb71d53992552941a18982aae1c8e6c16305cc3761b/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/595a578380fad7a0c4ade2cb256e4ff7233d9368473f9d35a898197d7762a0/DbContextOptions`.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/598be7b76329747735b1e8e8b423ca7a2fff54b0a9474b23f1e0f920a889444d/RazorView.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/674c71843d84ca4dd4136791da5d304790392cdfdd5e202244bc5c42695743d/EndpointMiddleware.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/685375de32fa2adf315b38f6d22782547cd9795e6d4d109e94522c8b6cc446c0/DeveloperExceptionPageMiddleware.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7cb7424fd293afbd058d95c82aaf7b12b3cf57037576ecc8fd333ccfad7ad/Encoding.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7d9a41d47547e1fe7fe548b21ab4de12cc2671170a023bc8c629017837eb5f4/ActionMethodExecutor.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/84f28e9b56c06474b877ee255eefbbee29aef25d998edfc9d4e85b33e1edf882/AuthorizationMiddleware.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/86affa4daeb781ae36ad5df2bc50a466638a25fb26de83e94b0715141/RijndaelManaged.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/8b17eea7411eb1ee7e80413e8229dc445ba073ab591c18196db8b55712aabb/ControllerFactoryProvider.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/8d3195c9ba918c7860b66ce3965d4b9f173653cfea2479e8bb842d3513a89b/RazorPageOfT.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/90bcc0bb7bb125bf29cbf8bcf8917c261be732d96c1fefb169b1a2686687cf5/IHeaderDictionary.Keyed.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9555881785da8918c1fdc22b936cf1b76ae8dc9ab1ad51819915b85840fc5978/AuthenticationMiddleware.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9ba71596a5a0485cfe349ca0946d8092d25a69b4d3dad4374f80ef8d4d5a9dd4/ExceptionAsserts.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9ec9132df6c0984e9d24947ea20b4e217f4d5d358cdd93ed33f42db5fce12f/ViewResultExecutor.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/a2caab9c9a969ecb7451e249cc4371f2ed1ea38176d5543907f61fe9b31d5e/ViewExecutor.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/a33f963e53ab2a55379abc9cd414bafcc67b1ec2e76170f6de6b814aea98e6df/DefaultAzureCredential.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/a54edce4e91cb965fe389033e2b24044e512ee99e302e41c8c2909733443b14/CastleProxyFactory.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/acf1b6abd0c65bfb4dd378fac91ee884d46073faa6295340469651abdca69/PageModel.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/af5e8f58e0cd43a56f652468b1080bbdbf4276e50cddad25571e6f22556715/EntityFrameworkQueryableExtensions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b34cda9bf13421d0d691446062e86e73ba22b7a724d9d34a2425bb1cc627e1/SR.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b59bef9bc68cd40e4623999aab0fc8ac69e982d69d2d34e9c7866e6cda45d4/IdentityServiceCollectionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bc69edff33080487c71d5dde5c06b80af3f1d9dab4491ffe3250dee95c49/TelemetryConfiguration.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c1da7b6c7c71a954fe3eb2531c6476711b3e6d93a8d76795386d326bb9dbc/ExecutionContext.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c3172a3c4ec02c9b6e980f04f74b9bf955a8484dcd864d97215bf91363455e/UpdateDelegates.Generated.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c5d0892e96f92bbc034d4b1d6e3437492fbae1f3192cfcefe1efb21813988b/ActivatorUtilities.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c6354d55b4c1fdbe22621ea48185af62cdeadcf4f28d9ed0890dfdf36c6/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c9ca552eea9bb8fababbf1cd3f981cf68849ccc365dcca5627376f98e505c74/ControllerActionInvoker.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/cf91eb35ab781c324ad4fa382dce85631ec37cf3813529f7c92208d866c851/TaskContinuation.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d1f68ef86315497c7b39ddb155d5cf3ace964abca69857f9943cd58479799/ServiceProvider.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e8383eafdb3fcfdc3625b4caef3730d5769bb177bac72360812c9f5bb4a78/ModelBuilder.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e8d3bcb75657e1215392dfd276529f3c965e923e468ed653f863cdffe755472/HttpProtocol.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/eaf48d290b118e4b123edeca9152a696d26d4e2f25b8287c37d64b15a5c17b/ViewResult.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f369dce9ed9e871cca5c05b722a8e6218c58d21cceb16d61ae6853e818a34/HttpRequest.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f4efe1a05e309cf71ce280a392e1cfac5a8db3b6a76be486a57ae686444815/NullAsserts.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f5297661c332adde375e682e974228832372ef64d6fd9c55e716bce7f72c655/ResourceInvoker.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f5545b2656401abe1a371ad2756d7d2328a38293f7ee8b163801bbf55cee8/TestInvoker.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/faf4a4b37056302738a46865827c3d2d3b6b1b977603a3932b0cd749921118/Controller.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WhatYouHaveLost/wwwroot/lib/jquery/dist/jquery.min.map" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -105,6 +48,10 @@
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="SWEA" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2QqzTwgDaYQk2nGcYj1BvmBM5AX" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -125,7 +72,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;RiderUnitTestingPageId&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -133,9 +80,9 @@
       &quot;azure&quot;
     ],
     &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\darak\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\darak\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\darak\\AppData\\Local\\Symbols\\src&quot;
+      &quot;/Users/darakimberly/Library/Application Support/JetBrains/Rider2023.2/resharper-host/DecompilerCache&quot;,
+      &quot;/Users/darakimberly/Library/Application Support/JetBrains/Rider2023.2/resharper-host/SourcesCache&quot;,
+      &quot;/Users/darakimberly/.local/share/Symbols/src&quot;
     ]
   }
 }</component>
@@ -270,30 +217,56 @@
         <option name="Build" />
       </method>
     </configuration>
-    <configuration name="WhatYouHaveLost/Dockerfile" type="docker-deploy" factoryName="dockerfile">
+    <configuration name="WhatYouHaveLost/Dockerfile" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="imageTag" value="whatyouhavelost" />
+          <option name="containerName" value="whatyouhavelost" />
+          <option name="contextFolderPath" value="$PROJECT_DIR$" />
+          <option name="portBindings">
+            <list>
+              <DockerPortBindingImpl>
+                <option name="containerPort" value="80" />
+                <option name="hostPort" value="8080" />
+              </DockerPortBindingImpl>
+            </list>
+          </option>
+          <option name="sourceFilePath" value="WhatYouHaveLost/Dockerfile" />
+        </settings>
+      </deployment>
+      <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="WhatYouHaveLost/dockerfile: Compose Deployment" type="docker-deploy" factoryName="dockerfile">
       <deployment type="dockerfile">
         <settings>
           <option name="imageTag" value="whatyouhavelost" />
           <option name="containerName" value="whatyouhavelost" />
           <option name="contextFolderPath" value="C:\Source\techChallenge\1\WhatHaveYouLost" />
-          <option name="sourceFilePath" value="WhatYouHaveLost/Dockerfile" />
+          <option name="sourceFilePath" value="WhatYouHaveLost/dockerfile" />
         </settings>
       </deployment>
       <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="true" />
       <method v="2" />
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
-      <deployment type="docker-compose.yml" />
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="false" />
       <method v="2" />
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
-      <deployment type="dockerfile" />
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
+      <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="false" />
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml">
+    <configuration name="workflows: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml">
       <deployment type="docker-compose.yml">
         <settings>
-          <option name="sourceFilePath" value="docker-compose.yml" />
+          <option name="sourceFilePath" value=".github/workflows/docker-compose.yml" />
         </settings>
       </deployment>
       <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="true" />
@@ -308,8 +281,9 @@
       <item itemvalue=".NET Launch Settings Profile.WhatYouHaveLost: ConnectionStrings" />
       <item itemvalue=".NET Launch Settings Profile.WhatYouHaveLost: IIS Express" />
       <item itemvalue=".NET Project.WhatYouHaveLost.Web" />
+      <item itemvalue="Docker.WhatYouHaveLost/dockerfile: Compose Deployment" />
       <item itemvalue="Docker.WhatYouHaveLost/Dockerfile" />
-      <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+      <item itemvalue="Docker.workflows: Compose Deployment" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -351,6 +325,8 @@
       <workItem from="1699307503385" duration="7227000" />
       <workItem from="1699396602315" duration="11069000" />
       <workItem from="1699479526504" duration="489000" />
+      <workItem from="1699480296554" duration="1093000" />
+      <workItem from="1699482052355" duration="5755000" />
     </task>
     <servers />
   </component>
@@ -416,66 +392,25 @@
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/WhatYouHaveLost/Controllers/ManageController.cs</url>
           <line>106</line>
-          <properties documentPath="C:\Source\techChallenge\WhatYouHaveLost\WhatYouHaveLost\Controllers\ManageController.cs" initialLine="108" containingFunctionPresentation="Method 'UpdateNews'">
-            <startOffsets>
-              <option value="3347" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3348" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="C:\Source\techChallenge\WhatYouHaveLost\WhatYouHaveLost\Controllers\ManageController.cs" initialLine="108" containingFunctionPresentation="Method 'UpdateNews'" />
           <option name="timeStamp" value="123" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/WhatYouHaveLost/Controllers/HomeController.cs</url>
           <line>209</line>
-          <properties documentPath="C:\Source\techChallenge\WhatYouHaveLost\WhatYouHaveLost\Controllers\HomeController.cs" initialLine="201" containingFunctionPresentation="Method 'UpdateNews'">
-            <startOffsets>
-              <option value="5913" />
-            </startOffsets>
-            <endOffsets>
-              <option value="5914" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="C:\Source\techChallenge\WhatYouHaveLost\WhatYouHaveLost\Controllers\HomeController.cs" initialLine="201" containingFunctionPresentation="Method 'UpdateNews'" />
           <option name="timeStamp" value="128" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/WhatYouHaveLost.Tests/PasswordEncryptorTests.cs</url>
           <line>43</line>
-          <properties documentPath="C:\Source\techChallenge\1\WhatHaveYouLost\WhatYouHaveLost.Tests\PasswordEncryptorTests.cs" initialLine="46" containingFunctionPresentation="Method 'ValidateEncryptor'">
-            <startOffsets>
-              <option value="1446" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1477" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="C:\Source\techChallenge\1\WhatHaveYouLost\WhatYouHaveLost.Tests\PasswordEncryptorTests.cs" initialLine="46" containingFunctionPresentation="Method 'ValidateEncryptor'" />
           <option name="timeStamp" value="132" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/WhatYouHaveLost.Tests/PasswordEncryptorTests.cs</url>
-          <line>32</line>
-          <properties documentPath="C:\Source\techChallenge\1\WhatHaveYouLost\WhatYouHaveLost.Tests\PasswordEncryptorTests.cs" initialLine="35" containingFunctionPresentation="Method 'ValidateEncryptor'">
-            <startOffsets>
-              <option value="1075" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1076" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="133" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/WhatYouHaveLost/Services/NewsService.cs</url>
           <line>20</line>
-          <properties documentPath="C:\Source\techChallenge\1\WhatHaveYouLost\WhatYouHaveLost\Services\NewsService.cs" initialLine="17" containingFunctionPresentation="Method 'CreateNews'">
-            <startOffsets>
-              <option value="608" />
-            </startOffsets>
-            <endOffsets>
-              <option value="609" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="C:\Source\techChallenge\1\WhatHaveYouLost\WhatYouHaveLost\Services\NewsService.cs" initialLine="17" containingFunctionPresentation="Method 'CreateNews'" />
           <option name="timeStamp" value="135" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
@@ -493,79 +428,37 @@
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/WhatYouHaveLost/Controllers/HomeController.cs</url>
           <line>126</line>
-          <properties documentPath="C:\Source\techChallenge\1\WhatHaveYouLost\WhatYouHaveLost\Controllers\HomeController.cs" initialLine="126" containingFunctionPresentation="Method 'CreateNews'">
-            <startOffsets>
-              <option value="3765" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3836" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="C:\Source\techChallenge\1\WhatHaveYouLost\WhatYouHaveLost\Controllers\HomeController.cs" initialLine="126" containingFunctionPresentation="Method 'CreateNews'" />
           <option name="timeStamp" value="144" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/WhatYouHaveLost/Controllers/HomeController.cs</url>
           <line>115</line>
-          <properties documentPath="C:\Source\techChallenge\1\WhatHaveYouLost\WhatYouHaveLost\Controllers\HomeController.cs" initialLine="115" containingFunctionPresentation="Method 'CreateNews'">
-            <startOffsets>
-              <option value="3458" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3459" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="C:\Source\techChallenge\1\WhatHaveYouLost\WhatYouHaveLost\Controllers\HomeController.cs" initialLine="115" containingFunctionPresentation="Method 'CreateNews'" />
           <option name="timeStamp" value="145" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/WhatYouHaveLost/Controllers/HomeController.cs</url>
           <line>114</line>
-          <properties documentPath="C:\Source\techChallenge\1\WhatHaveYouLost\WhatYouHaveLost\Controllers\HomeController.cs" initialLine="114" containingFunctionPresentation="Method 'CreateNews'">
-            <startOffsets>
-              <option value="3426" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3449" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="C:\Source\techChallenge\1\WhatHaveYouLost\WhatYouHaveLost\Controllers\HomeController.cs" initialLine="114" containingFunctionPresentation="Method 'CreateNews'" />
           <option name="timeStamp" value="146" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/WhatYouHaveLost/Controllers/HomeController.cs</url>
           <line>215</line>
-          <properties documentPath="C:\Source\techChallenge\1\WhatHaveYouLost\WhatYouHaveLost\Controllers\HomeController.cs" initialLine="215" containingFunctionPresentation="Method 'UpdateNews'">
-            <startOffsets>
-              <option value="6076" />
-            </startOffsets>
-            <endOffsets>
-              <option value="6077" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="C:\Source\techChallenge\1\WhatHaveYouLost\WhatYouHaveLost\Controllers\HomeController.cs" initialLine="215" containingFunctionPresentation="Method 'UpdateNews'" />
           <option name="timeStamp" value="147" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/WhatYouHaveLost.Tests/Controller/HomeControllerTests.cs</url>
           <line>233</line>
-          <properties documentPath="C:\Source\techChallenge\1\WhatHaveYouLost\WhatYouHaveLost.Tests\Controller\HomeControllerTests.cs" initialLine="233" containingFunctionPresentation="Method 'UpdateNews_Validate'">
-            <startOffsets>
-              <option value="6970" />
-            </startOffsets>
-            <endOffsets>
-              <option value="7008" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="C:\Source\techChallenge\1\WhatHaveYouLost\WhatYouHaveLost.Tests\Controller\HomeControllerTests.cs" initialLine="233" containingFunctionPresentation="Method 'UpdateNews_Validate'" />
           <option name="timeStamp" value="151" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/WhatYouHaveLost/Controllers/ManageController.cs</url>
           <line>110</line>
-          <properties documentPath="C:\Source\techChallenge\1\WhatHaveYouLost\WhatYouHaveLost\Controllers\ManageController.cs" initialLine="110" containingFunctionPresentation="Method 'UpdateNews'">
-            <startOffsets>
-              <option value="3344" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3402" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="C:\Source\techChallenge\1\WhatHaveYouLost\WhatYouHaveLost\Controllers\ManageController.cs" initialLine="110" containingFunctionPresentation="Method 'UpdateNews'" />
           <option name="timeStamp" value="171" />
         </line-breakpoint>
       </breakpoints>

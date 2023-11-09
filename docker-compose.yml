@@ -1,6 +1,0 @@
-﻿services:
-  whatyouhavelost:
-    image: whatyouhavelost
-    build:
-      context: .
-      dockerfile: WhatYouHaveLost/Dockerfile

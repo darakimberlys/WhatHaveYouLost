@@ -5,19 +5,26 @@
       "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "CONNECTION":""
+        "CONNECTION":"Server=tcp:sv-techchallenges.database.windows.net,1433;Integrated Security=true;Initial Catalog=db_noticias;User Id=techchallenge;Password=Fiapchallenge64;Trusted_Connection=false;TrustServerCertificate=true;",
+        "JwtSecret": "1234545688885555",
+        "InstrumentationKey": "a473ef5d-6a99-4c01-87da-5a4e84ebab7c"
       },
       "dotnetRunMessages": true,
-      "applicationUrl": "https://localhost:7201;http://localhost:5175"
+      "applicationUrl": "https://localhost:7201;http://localhost:5175",
+      "JwtSecret": "1234545688885555",
+      "InstrumentationKey": "a473ef5d-6a99-4c01-87da-5a4e84ebab7c"
     },
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "CONNECTION":"",
-        "JwtSecret": "1234545688885555"
-      }
+        "CONNECTION":"Server=tcp:sv-techchallenges.database.windows.net,1433;Integrated Security=true;Initial Catalog=db_noticias;User Id=techchallenge;Password=Fiapchallenge64;Trusted_Connection=false;TrustServerCertificate=true;",
+        "JwtSecret": "1234545688885555",
+        "InstrumentationKey": "a473ef5d-6a99-4c01-87da-5a4e84ebab7c"
+      },
+      "JwtSecret": "1234545688885555",
+      "InstrumentationKey": "a473ef5d-6a99-4c01-87da-5a4e84ebab7c"
     }
   },
   "iisSettings": {
@@ -26,6 +33,10 @@
     "iisExpress": {
       "applicationUrl": "http://localhost:49679",
       "sslPort": 44395
-    }
-  }
+    },
+    "JwtSecret": "1234545688885555",
+    "InstrumentationKey": "a473ef5d-6a99-4c01-87da-5a4e84ebab7c"
+  },
+  "JwtSecret": "1234545688885555",
+  "InstrumentationKey": "a473ef5d-6a99-4c01-87da-5a4e84ebab7c"
 }
