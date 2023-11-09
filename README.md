@@ -2,6 +2,11 @@
 
 Este é o repositório da aplicação WhatHaveYouLost, que tem como objetivo mostrar notícias relevantes que os usuários podem ter perdido enquanto estavam no celular. A aplicação é construída utilizando C# e Razor Pages, e utiliza tecnologias como SQL e Azure para fornecer uma experiência de usuário intuitiva e eficiente.
 
+# Status do Projeto
+| Branch | Status |
+| ----- | -----|
+| Master | [![Build Status](https://dev.azure.com/darakimberly/techChallenge/_apis/build/status%2Fdarakimberlys.WhatHaveYouLost?branchName=master)](https://dev.azure.com/darakimberly/techChallenge/_build/latest?definitionId=2&branchName=master)
+
 ## Funcionalidades
 
 - Acesso à página de notícias, onde os usuários podem encontrar uma lista de títulos de notícias relevantes e interessantes.
