@@ -6,9 +6,9 @@ Este é o repositório da aplicação WhatHaveYouLost, que tem como objetivo mos
 | Branch | Status |
 | ----- | -----|
 | Build Azure | [![Build and deploy ASP.Net Core app to Azure Web App - oqueperdi](https://github.com/darakimberlys/WhatHaveYouLost/actions/workflows/master_oqueperdi.yml/badge.svg)](https://github.com/darakimberlys/WhatHaveYouLost/actions/workflows/master_oqueperdi.yml)
-| Tests | [![.NET](https://github.com/darakimberlys/WhatHaveYouLost/actions/workflows/dotnet.yml/badge.svg?branch=master)](https://github.com/darakimberlys/WhatHaveYouLost/actions/workflows/dotnet.yml)
 | Docker Image | [![Docker Image CI](https://github.com/darakimberlys/WhatHaveYouLost/actions/workflows/docker-image.yml/badge.svg)](https://github.com/darakimberlys/WhatHaveYouLost/actions/workflows/docker-image.yml)
-
+| Tests | [![.NET](https://github.com/darakimberlys/WhatHaveYouLost/actions/workflows/dotnet.yml/badge.svg?branch=master)](https://github.com/darakimberlys/WhatHaveYouLost/actions/workflows/dotnet.yml)
+| Postman Integrated Tests | [![Automated API tests using Postman CLI](https://github.com/darakimberlys/WhatHaveYouLost/actions/workflows/postman_test.yml/badge.svg?branch=master)](https://github.com/darakimberlys/WhatHaveYouLost/actions/workflows/postman_test.yml)
 ## Funcionalidades
 
 - Acesso à página de notícias, onde os usuários podem encontrar uma lista de títulos de notícias relevantes e interessantes.
