@@ -1,4 +1,4 @@
-# WhatHaveYouLost (O que você perdeu) // TechChallenge#1
+# WhatHaveYouLost (O que você perdeu) // TechChallenge
 
 Este é o repositório da aplicação WhatHaveYouLost, que tem como objetivo mostrar notícias relevantes que os usuários podem ter perdido enquanto estavam no celular. A aplicação é construída utilizando C# e Razor Pages, e utiliza tecnologias como SQL e Azure para fornecer uma experiência de usuário intuitiva e eficiente.
 
@@ -9,6 +9,7 @@ Este é o repositório da aplicação WhatHaveYouLost, que tem como objetivo mos
 | Docker Image | [![Docker Image CI](https://github.com/darakimberlys/WhatHaveYouLost/actions/workflows/docker-image.yml/badge.svg)](https://github.com/darakimberlys/WhatHaveYouLost/actions/workflows/docker-image.yml)
 | Tests | [![.NET](https://github.com/darakimberlys/WhatHaveYouLost/actions/workflows/dotnet.yml/badge.svg?branch=master)](https://github.com/darakimberlys/WhatHaveYouLost/actions/workflows/dotnet.yml)
 | Postman Integrated Tests | [![Automated API tests using Postman CLI](https://github.com/darakimberlys/WhatHaveYouLost/actions/workflows/postman_test.yml/badge.svg?branch=master)](https://github.com/darakimberlys/WhatHaveYouLost/actions/workflows/postman_test.yml)
+
 ## Funcionalidades
 
 - Acesso à página de notícias, onde os usuários podem encontrar uma lista de títulos de notícias relevantes e interessantes.
@@ -28,6 +29,11 @@ Para rodar os testes integrados, siga os passos abaixo:
 1. Acesse [este link](https://www.postman.com/payload-explorer-79364497/workspace/my-workspace/folder/31016440-fd5a71e5-efa6-4340-9997-02286321707c) para abrir a coleção de testes no Postman.
 2. Importe a coleção no seu ambiente Postman.
 3. Execute os testes para garantir que a aplicação está funcionando corretamente.
+
+## Prévia do site
+
+[![Preview do Site](https://github.com/darakimberlys/WhatHaveYouLost/assets/40128511/29b87ac5-bc2f-42ce-841b-6ebf2aaefd9d)](https://oqueperdi.azurewebsites.net)
+*Esta é uma prévia do site mostrando a página inicial.*
 
 ## Diagrama Simples
 
