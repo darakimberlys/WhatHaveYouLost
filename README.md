@@ -7,7 +7,7 @@ Este é o repositório da aplicação WhatHaveYouLost, que tem como objetivo mos
 | ----- | -----|
 | Build Azure | [![Build and deploy ASP.Net Core app to Azure Web App - oqueperdi](https://github.com/darakimberlys/WhatHaveYouLost/actions/workflows/master_oqueperdi.yml/badge.svg)](https://github.com/darakimberlys/WhatHaveYouLost/actions/workflows/master_oqueperdi.yml)
 | Tests | [![.NET](https://github.com/darakimberlys/WhatHaveYouLost/actions/workflows/dotnet.yml/badge.svg?branch=master)](https://github.com/darakimberlys/WhatHaveYouLost/actions/workflows/dotnet.yml)
-| Postman Integrated Tests | [![Automated API tests using Postman CLI](https://github.com/darakimberlys/WhatHaveYouLost/actions/workflows/postman_test.yml/badge.svg?branch=master)](https://github.com/darakimberlys/WhatHaveYouLost/actions/workflows/postman_test.yml)
+| Postman Integrated Tests | [![Automated API tests using Postman CLI](https://github.com/darakimberlys/WhatHaveYouLost/actions/workflows/postman_test.yml/badge.svg)](https://github.com/darakimberlys/WhatHaveYouLost/actions/workflows/postman_test.yml)
 
 ## Funcionalidades
 
